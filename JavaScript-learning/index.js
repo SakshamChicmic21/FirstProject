@@ -73,31 +73,31 @@ console.log( +"123.45" ); // 123.45
 console.log( -"123abc" ); // NaN
 console.log( +"abc123" ); // NaN
 
-console.log( Boolean(1) ); // 
-console.log( Boolean(0) );
-console.log( Boolean(-1) );
-console.log( Boolean("") );
-console.log( Boolean("hello") );
-console.log( Boolean(null) );
-console.log( Boolean(undefined) );
-console.log( Boolean(NaN) );  
-console.log( Boolean([]) );
-console.log( Boolean({}) );
-console.log( Boolean(function() {}) );
+console.log( Boolean(1) ); // true
+console.log( Boolean(0) ); // false
+console.log( Boolean(-1) ); // true
+console.log( Boolean("") ); // false
+console.log( Boolean("hello") ); // true
+console.log( Boolean(null) ); // false
+console.log( Boolean(undefined) ); // false
+console.log( Boolean(NaN) );  // false
+console.log( Boolean([]) ); // true
+console.log( Boolean({}) ); // true
+console.log( Boolean(function() {}) ); // true
 
-console.log( !!1 );
-console.log( !!0 );
-console.log( !!-1 );
-console.log( !!"" );
-console.log( !!"hello" );
-console.log( !!null );
-console.log( !!undefined );
-console.log( !!NaN );  
-console.log( !![] );
-console.log( !!{} );
-console.log( !!function() {} );
+console.log( !!1 );// true
+console.log( !!0 ); // false
+console.log( !!-1 ); // true
+console.log( !!"" ); // false
+console.log( !!"hello" ); // true
+console.log( !!null ); // false
+console.log( !!undefined ); // false
+console.log( !!NaN );  // false
+console.log( !![] ); // true
+console.log( !!{} ); // true
+console.log( !!function() {} ); // true
 
-console.log( String(123) );
+console.log( String(123) );    
 console.log( String(null) );
 console.log( String(undefined) );
 console.log( String(true) );
