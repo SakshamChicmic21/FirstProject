@@ -319,21 +319,150 @@
 // console.log(items);
 
 // the array to be sorted
-const data = ["delta", "alpha", "charlie", "bravo"];
+// const data = ["delta", "alpha", "charlie", "bravo"];
 
-// temporary array holds objects with position and sort-value
-const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
+// // temporary array holds objects with position and sort-value
+// const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
 
-// sorting the mapped array containing the reduced values
-mapped.sort((a, b) => {
-  if (a.value > b.value) {
-    return 1;
-  }
-  if (a.value < b.value) {
-    return -1;
-  }
-  return 0;
-});
+// // sorting the mapped array containing the reduced values
+// mapped.sort((a, b) => {
+//   if (a.value > b.value) {
+//     return 1;
+//   }
+//   if (a.value < b.value) {
+//     return -1;
+//   }
+//   return 0;
+// });
 
-const result = mapped.map((v) => data[v.i]);
-console.log(result);
+// const result = mapped.map((v) => data[v.i]);
+// console.log(result);
+let a=20;
+const obj={
+  a :10,
+  fun: function () {console.log(this.a)}
+}
+obj.fun();
+
+
+// (function a(x){
+//   return (function b(y){
+//     console.log(x);
+//   })(2);
+// })(1);
+
+console.log("😄".split("")); // ['\ud83d', '\ude04']; splits into two lone surrogates
+
+// "Backhand Index Pointing Right: Dark Skin Tone"
+console.log([..."👉🏿"]); // ['👉', '🏿']
+// splits into the basic "Backhand Index Pointing Right" emoji and
+// the "Dark skin tone" emoji
+
+// "Family: Man, Boy"
+console.log([..."👨‍👦"]); // [ '👨', '‍', '👦' ]
+// splits into the "Man" and "Boy" emoji, joined by a ZWJ
+
+// The United Nations flag
+console.log([..."🇺🇳"]); // [ '🇺', '🇳' ]
+// splits into two "region indicator" letters "U" and "N".
+// All flag emojis are formed by joining two region indicator letters
+
+
+// Shallow Copy:
+// A shallow copy creates a new object or array, but it only copies the top-level properties or elements by value. If any of these properties or elements are themselves objects or arrays (i.e., nested data structures), only their references are copied, not the actual nested data. This means that both the original and the copied object will point to the same nested objects in memory.
+// Characteristics of Shallow Copy:
+// Shared References for Nested Data: Changes made to a nested object or array in the shallow copy will also affect the original object, and vice versa, because they both refer to the same underlying data.
+// Faster and More Memory Efficient: Since it only copies references for nested data, shallow copying is generally faster and uses less memory than deep copying.
+// Methods for Shallow Copy:
+// Object.assign({}, originalObject)
+// Spread syntax ({ ...originalObject } for objects, [ ...originalArray ] for arrays)
+// Array.prototype.slice() for arrays
+// Array.from() for arrays
+// Example of Shallow Copy:
+// JavaScript
+
+// let originalObject = { a: 1, b: { c: 2 } };
+// let shallowCopy = { ...originalObject };
+
+// shallowCopy.a = 5; // Modifies top-level property in shallowCopy only
+// shallowCopy.b.c = 3; // Modifies nested object, affects both original and shallowCopy
+
+// console.log(originalObject.a); // Output: 1
+// console.log(shallowObject.a); // Output: 5
+// console.log(originalObject.b.c); // Output: 3 (original affected)
+// console.log(shallowObject.b.c); // Output: 3
+// Deep Copy:
+// A deep copy, in contrast, creates a completely independent duplicate of the original object or array, including all nested objects and arrays. It recursively copies all levels of the data structure, ensuring that no references are shared between the original and the copy.
+// Characteristics of Deep Copy:
+// Complete Independence: Modifications to the deep copy, including changes to nested objects or arrays, will not affect the original object, and vice versa.
+// Slower and More Memory Intensive: Due to the recursive copying of all levels, deep copying can be slower and consume more memory, especially for complex or deeply nested data structures.
+// Methods for Deep Copy:
+// JSON.parse(JSON.stringify(originalObject)): This is a common method, but it has limitations (e.g., cannot copy functions, undefined, Date objects lose their type).
+// structuredClone(): A modern JavaScript API designed for deep cloning, addressing many of the limitations of the JSON method.
+// Libraries like Lodash (_.cloneDeep()) provide robust deep cloning functionalities.
+// Example of Deep Copy:
+// JavaScript
+
+// let originalObject = { a: 1, b: { c: 2 } };
+// let deepCopy = JSON.parse(JSON.stringify(originalObject)); // Using JSON method for simplicity
+
+// deepCopy.a = 5; // Modifies top-level property in deepCopy only
+// deepCopy.b.c = 3; // Modifies nested object in deepCopy only
+
+// console.log(originalObject.a); // Output: 1
+// console.log(deepCopy.a); // Output: 5
+// console.log(originalObject.b.c); // Output: 2 (original unaffected)
+// console.log(deepCopy.b.c); // Output: 3
+// When to Choose Which:
+// Shallow Copy: Suitable for flat objects or arrays without nested objects, or when you intend to share references to nested data.
+// Deep Copy: Necessary when you need a completely independent copy of an object or array, especially with nested structures, to prevent unintended side effects on the original data.
+
+
+for(let i=0;i<10;i++){
+  setTimeout(function(){
+    console.log(i);
+  },1000);
+}
+// debouncing and throttling code
+// Debouncing
+// function debounce(func, delay) {
+//   let timeoutId;
+//   return function(...args) {
+//     clearTimeout(timeoutId);
+//     timeoutId = setTimeout(() => {
+//       func.apply(this, args);
+//     }, delay);
+//   };
+// }
+
+// // Example usage of debounce
+// const handleResize = debounce(() => {
+//   console.log('Window resized');
+// }, 500);
+
+// window.addEventListener('resize', handleResize);
+
+// // Throttling
+// function throttle(func, limit) {
+//   let lastFunc;
+//   let lastRan;
+//   return function(...args) {
+//     if (!lastRan) {
+//       func.apply(this, args);
+//       lastRan = Date.now();
+//     } else {
+//       clearTimeout(lastFunc);
+//       lastFunc = setTimeout(() => {
+//         if ((Date.now() - lastRan) >= limit) {
+//           func.apply(this, args);
+//           lastRan = Date.now();
+//         }
+//       }, limit - (Date.now() - lastRan));
+//     }
+//   };
+// }
+
+// // Example usage of throttle
+// const handleScroll = throttle(() => {
+//   console.log('Window scrolled');
+// }, 1000);       
