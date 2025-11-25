@@ -532,34 +532,62 @@
 // let allocc = str.lastIndexOf("l") - str.indexOf("l")+1;
 // console.log(allocc);
 
-let arr = [1,2,3,2,4,2,5];
-let narr = [];
-let idx = arr.indexOf(2);
-while (idx !== -1) {
-  narr.push(idx);
-  idx = arr.indexOf(2, idx + 1);
-}
+// let arr = [1,2,3,2,4,2,5];
+// let narr = [];
+// let idx = arr.indexOf(2);
+// while (idx !== -1) {
+//   narr.push(idx);
+//   idx = arr.indexOf(2, idx + 1);
+// }
 
-console.log(narr);
+// console.log(narr);
 
-let arr2 = [1,2,3,4,5];
+// let arr2 = [1,2,3,4,5];
 
-let narr2 = [];
-let sum=0;
-arr2.forEach((item,index)=>{
-  sum+=item;
-  narr2.push(sum);
+// let narr2 = [];
+// let sum=0;
+// arr2.forEach((item,index)=>{
+//   sum+=item;
+//   narr2.push(sum);
+// })
+
+// // console.log(narr2);
+
+// // with reduce method
+// let sum2=0;
+// let narr3=[];
+// arr2.reduce((acc,curr)=>{
+//   sum2=acc+curr
+//   //console.log(acc,"+",curr," => ",sum2);
+//   narr3.push(sum2);
+//   return sum2;
+// },0);
+// console.log(narr3);
+
+// let arrs=[
+//   ['name', 'John'],
+//   ['age', 30],
+//   ['email', 'john@example.com'],
+//   ['city', 'New York'],
+//   ['isActive', true],
+//   ['skills', ['JS', 'React', 'Node']],
+//   ['score', 92]
+// ]
+// let obj ={};
+// arrs.forEach((arr)=>{
+//   obj[arr[0]] = arr[1];
+// })
+
+// console.log(obj);
+
+let arr=[1, 5, "test", 9, "JS", "React", 22, 56, "Hello"]; //["olleH", 56, 22, "tcaeR", "SJ", 9, "tset", 5, 1] 
+const res = arr.reverse().map((item,idx)=>{
+  if(typeof item === "string"){
+    let revstr = item.split("").reverse().join("");
+    return revstr;
+  }else{
+    return item;
+  }
 })
 
-// console.log(narr2);
-
-// with reduce method
-let sum2=0;
-let narr3=[];
-arr2.reduce((acc,curr)=>{
-  sum2=acc+curr
-  //console.log(acc,"+",curr," => ",sum2);
-  narr3.push(sum2);
-  return sum2;
-},0);
-console.log(narr3);
+console.log(res);
