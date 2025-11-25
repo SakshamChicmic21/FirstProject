@@ -53,7 +53,7 @@
 // console.log( 5 - false);// 5
 
 // console.log( 5 - null);// 5
-// console.log( 5 - undefined);// NaN  
+// console.log( 5 - undefined);// NaN
 
 // console.log( NaN === NaN);// false
 // console.log( undefined === undefined);// true
@@ -99,7 +99,7 @@
 // console.log( !!NaN );  // false
 
 // console.log( String(123) ); // "123"
-// console.log( String(123.45) ); // "123.45"   
+// console.log( String(123.45) ); // "123.45"
 // console.log( String(null) );//  "null"
 // console.log( String(undefined) );// "undefined"
 // console.log( String(true) );// "true"
@@ -185,7 +185,6 @@
 // console.log( null % {} );
 // console.log( null % [1,2,3] );
 
-
 // console.log( undefined + [] );
 // console.log( undefined + {} );
 // console.log( undefined + [1,2,3] );
@@ -202,10 +201,6 @@
 // console.log( undefined % [] );
 // console.log( undefined % {} );
 // console.log( undefined % [1,2,3] );
-
-
-
-
 
 // let i = 0;
 // do {
@@ -274,10 +269,8 @@
 // console.log([0].concat(obj1, obj2));
 // // [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
 
-
 // let arr = [1, 2, 3,4,5];
 // console.log(arr.filter(()=> false));
-
 
 // const months = ["March", "Jan", "Feb", "Dec"];
 // months.sort();
@@ -337,13 +330,12 @@
 
 // const result = mapped.map((v) => data[v.i]);
 // console.log(result);
-let a=20;
-const obj={
-  a :10,
-  fun: function () {console.log(this.a)}
-}
-obj.fun();
-
+// let a=20;
+// const obj={
+//   a :10,
+//   fun: function () {console.log(this.a)}
+// }
+// obj.fun();
 
 // (function a(x){
 //   return (function b(y){
@@ -351,22 +343,21 @@ obj.fun();
 //   })(2);
 // })(1);
 
-console.log("😄".split("")); // ['\ud83d', '\ude04']; splits into two lone surrogates
+// console.log("😄".split("")); // ['\ud83d', '\ude04']; splits into two lone surrogates
 
 // "Backhand Index Pointing Right: Dark Skin Tone"
-console.log([..."👉🏿"]); // ['👉', '🏿']
+// console.log([..."👉🏿"]); // ['👉', '🏿']
 // splits into the basic "Backhand Index Pointing Right" emoji and
 // the "Dark skin tone" emoji
 
 // "Family: Man, Boy"
-console.log([..."👨‍👦"]); // [ '👨', '‍', '👦' ]
+// console.log([..."👨‍👦"]); // [ '👨', '‍', '👦' ]
 // splits into the "Man" and "Boy" emoji, joined by a ZWJ
 
 // The United Nations flag
-console.log([..."🇺🇳"]); // [ '🇺', '🇳' ]
+// console.log([..."🇺🇳"]); // [ '🇺', '🇳' ]
 // splits into two "region indicator" letters "U" and "N".
 // All flag emojis are formed by joining two region indicator letters
-
 
 // Shallow Copy:
 // A shallow copy creates a new object or array, but it only copies the top-level properties or elements by value. If any of these properties or elements are themselves objects or arrays (i.e., nested data structures), only their references are copied, not the actual nested data. This means that both the original and the copied object will point to the same nested objects in memory.
@@ -417,12 +408,12 @@ console.log([..."🇺🇳"]); // [ '🇺', '🇳' ]
 // Shallow Copy: Suitable for flat objects or arrays without nested objects, or when you intend to share references to nested data.
 // Deep Copy: Necessary when you need a completely independent copy of an object or array, especially with nested structures, to prevent unintended side effects on the original data.
 
+// for(let i=0;i<10;i++){
+//   setTimeout(function(){
+//     console.log(i);
+//   },1000);
+// }
 
-for(let i=0;i<10;i++){
-  setTimeout(function(){
-    console.log(i);
-  },1000);
-}
 // debouncing and throttling code
 // Debouncing
 // function debounce(func, delay) {
@@ -435,14 +426,14 @@ for(let i=0;i<10;i++){
 //   };
 // }
 
-// // Example usage of debounce
+// Example usage of debounce
 // const handleResize = debounce(() => {
 //   console.log('Window resized');
 // }, 500);
 
 // window.addEventListener('resize', handleResize);
 
-// // Throttling
+// Throttling
 // function throttle(func, limit) {
 //   let lastFunc;
 //   let lastRan;
@@ -462,7 +453,113 @@ for(let i=0;i<10;i++){
 //   };
 // }
 
-// // Example usage of throttle
+// Example usage of throttle
 // const handleScroll = throttle(() => {
 //   console.log('Window scrolled');
-// }, 1000);       
+// }, 1000);
+
+// function JSClock() {
+//   const time = new Date();
+//   const hour = time.getHours();
+//   const minute = time.getMinutes();
+//   const second = time.getSeconds();
+//   let temp = String(hour % 12);
+//   if (temp === "0") {
+//     temp = "12";
+//   }
+//   temp += (minute < 10 ? ":0" : ":") + minute;
+//   temp += (second < 10 ? ":0" : ":") + second;
+//   temp += hour >= 12 ? " P.M" : " A.M";
+//   // return temp;
+//   console.log(temp);
+// }
+// setInterval(JSClock,1000);
+
+// class Clock {
+//   constructor({ template }) {
+//     this.template = template;
+//   }
+
+//   render = () => {
+//     let date = new Date();
+
+//     let hours = date.getHours();
+//     if (hours < 10) hours = '0' + hours;
+
+//     let mins = date.getMinutes();
+//     if (mins < 10) mins = '0' + mins;
+
+//     let secs = date.getSeconds();
+//     if (secs < 10) secs = '0' + secs;
+
+//     let output = this.template
+//       .replace('h', hours)
+//       .replace('m', mins)
+//       .replace('s', secs);
+
+//     console.log(output);
+//   };
+
+//   stop = () => {
+//     clearInterval(this.timer);
+//   };
+
+//   start = () => {
+//     this.render();
+//     this.timer = setInterval(this.render, 1000);
+//   };
+// }
+
+// let clock = new Clock({ template: 'h:m:s' });
+// clock.start();
+
+
+
+
+// function timer(){
+//   const time = new Date();
+//   // const currtime = time.getHours();
+//   // const minutes = time.getMinutes();
+
+//   console.log(time);
+// }
+
+// setInterval(timer,1000);
+
+
+// let str = "Helllllo";
+
+// let allocc = str.lastIndexOf("l") - str.indexOf("l")+1;
+// console.log(allocc);
+
+let arr = [1,2,3,2,4,2,5];
+let narr = [];
+let idx = arr.indexOf(2);
+while (idx !== -1) {
+  narr.push(idx);
+  idx = arr.indexOf(2, idx + 1);
+}
+
+console.log(narr);
+
+let arr2 = [1,2,3,4,5];
+
+let narr2 = [];
+let sum=0;
+arr2.forEach((item,index)=>{
+  sum+=item;
+  narr2.push(sum);
+})
+
+// console.log(narr2);
+
+// with reduce method
+let sum2=0;
+let narr3=[];
+arr2.reduce((acc,curr)=>{
+  sum2=acc+curr
+  //console.log(acc,"+",curr," => ",sum2);
+  narr3.push(sum2);
+  return sum2;
+},0);
+console.log(narr3);
