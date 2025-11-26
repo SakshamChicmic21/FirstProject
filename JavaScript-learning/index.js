@@ -513,9 +513,6 @@
 // let clock = new Clock({ template: 'h:m:s' });
 // clock.start();
 
-
-
-
 // function timer(){
 //   const time = new Date();
 //   // const currtime = time.getHours();
@@ -525,7 +522,6 @@
 // }
 
 // setInterval(timer,1000);
-
 
 // let str = "Helllllo";
 
@@ -580,14 +576,223 @@
 
 // console.log(obj);
 
-let arr=[1, 5, "test", 9, "JS", "React", 22, 56, "Hello"]; //["olleH", 56, 22, "tcaeR", "SJ", 9, "tset", 5, 1] 
-const res = arr.reverse().map((item,idx)=>{
-  if(typeof item === "string"){
-    let revstr = item.split("").reverse().join("");
-    return revstr;
-  }else{
-    return item;
-  }
-})
+// let arr=[1, 5, "test", 9, "JS", "React", 22, 56, "Hello"]; //["olleH", 56, 22, "tcaeR", "SJ", 9, "tset", 5, 1]
+// const res = arr.reverse().map((item,idx)=>{
+//   if(typeof item === "string"){
+//     let revstr = item.split("").reverse().join("");
+//     return revstr;
+//   }else{
+//     return item;
+//   }
+// })
 
-console.log(res);
+// console.log(res);
+
+// In JavaScript, call(), apply(), and bind() are methods available on all functions that allow explicit control over the this keyword's value within a function's execution context.
+// 1. call():
+// The call() method immediately invokes a function with a specified this value and arguments provided individually.
+// Syntax: function.call(thisArg, arg1, arg2, ...)
+// Example:
+// JavaScript
+
+//    const person = { name: 'Alice' };
+//     function greet(message) {
+//       console.log(`${message}, ${this.name}!`);
+//     }
+//     greet.call(person, 'Hello'); // Output: Hello, Alice!
+// 2. apply():
+// The apply() method immediately invokes a function with a specified this value and arguments provided as an array or an array-like object.
+// Syntax: function.apply(thisArg, [argsArray])
+// Example:
+// JavaScript
+
+//     const person = { name: 'Bob' };
+//     function showDetails(age, city) {
+//       console.log(`${this.name} is ${age} years old and lives in ${city}.`);
+//     }
+//     const details = [30, 'New York'];
+//     showDetails.apply(person, details); // Output: Bob is 30 years old and lives in New York.
+// 3. bind():
+// The bind() method returns a new function with a specified this value and optional initial arguments. The original function is not immediately invoked. The new function can be called later.
+// Syntax: function.bind(thisArg, arg1, arg2, ...)
+// Example:
+// JavaScript
+
+//     const user = { name: 'Charlie' };
+//     function introduce() {
+//       console.log(`My name is ${this.name}.`);
+//     }
+//     const introduceUser = introduce.bind(user);
+//     introduceUser(); // Output: My name is Charlie.
+// Key Differences:
+// call() and apply() execute the function immediately, while bind() returns a new function for later execution.
+// call() takes arguments individually, while apply() takes arguments as an array.
+// bind() can also pre-set some arguments for the returned function.
+
+// const theOneFunc = delay => {
+//   console.log('Hello after ' + delay + ' seconds');
+// };
+// setTimeout(theOneFunc, 4 * 1000, 4);
+// setTimeout(theOneFunc, 8 * 1000, 8);
+
+// const user ={
+//   name: "saksham",
+//   greet(){
+//     console.log("hello", this.name);
+//   }
+// }
+
+// const greetFn =  user.greet;
+// // greetFn();
+// greetFn.call(user);
+
+// console.log(user.greet());
+
+// class MyClass {
+//   constructor() {
+//     this.myField = "foo";
+//     return {};
+//   }
+// }
+
+// console.log(new MyClass().myField); // undefined
+
+// console.log("start");
+// setTimeout(()=> console.log("timeout"),0);
+// setImmediate(()=> console.log("immediate"));
+
+// Promise.resolve().then(()=> console.log("promise"));
+// console.log("End");
+
+// console.log("start");
+// setTimeout(()=> console.log("timeout"),0); // macrostack
+// setTimeout(()=> console.log("timeout 2")); // macrostack
+
+// Promise.resolve().then(()=> console.log("promise"));// microstack
+// console.log("End")
+
+// function mysetInterval(fun,delay){
+//   let id =null;
+
+//   function tick(){
+//     fun();
+//     id = setTimeout(tick,delay);
+//   }
+//   id = setTimeout(tick,delay);
+//   return ()=> clearTimeout(id);
+// }
+
+// const clear  = mysetInterval(()=> console.log("Hi"),1000);
+
+// clear();
+
+// for(var i=0;i<3;i++){
+//   (function (x){
+//     setTimeout(()=> console.log(x),5000);
+//   })(i)
+// }
+
+// Promise
+
+// function customPromise(dataId){
+//   return new Promise((res,rej)=>{
+//     setTimeout(()=>{
+//       console.log("This is inside Promise",dataId);
+//       res("Success")
+//     },4000);
+//   })
+// }
+
+// function api(dataId){
+//   return customPromise(dataId);
+// }
+// function getDataById(dataId){
+//   return customPromise(dataId);
+// }
+
+// console.log("Fetching data by Id1...");
+
+// // Promise chaining
+// getDataById(1).then((res)=>{
+//   console.log("Fetch data by Id1...",res,"\n");
+//   return getDataById(2);
+// }).then((res)=>{
+//   console.log("Fetch data by Id2...",res,"\n");
+//   return getDataById(3);
+// }).then((res)=>{
+//   console.log("Fetchdata by Id3...",res,"\n");
+//   return getDataById(4);
+// }).then((res)=>{
+//   console.log("Fetched last data",res);
+// })
+
+// async function getAllDataById() {
+//   for(let i=0;i<10;i++){
+//     console.log("Fetching data id",i,"...");
+//     const res = await api(i);
+//     console.log("Data fetched id",i,"response => ",res,"\n");
+//   }
+// }
+// getAllDataById();
+
+// function createIterator(arr) {
+//   let idx=0;
+//   return {
+//     next() {
+//       if (idx < arr.length) {
+//         return { value: arr[idx++], done: false };
+//       }
+//       return { value: undefined, done: true };
+//     },
+//   };
+// }
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let g = createIterator(arr);
+
+// let res = g.next();
+// while (!res.done) {
+//   console.log(res.value);
+//   res = g.next();
+// }
+
+// function* generator(){
+//   yield 10;
+//   yield 20;
+//   yield 30;
+// }
+
+// for(let x of generator()){
+//   console.log(x);
+// }
+
+// function* cal(){
+//   const num = yield 10;
+//   yield num * 2;
+// }
+
+// const g = cal();
+
+// console.log(g.next());
+// console.log(g.next(5));
+
+// function* infy(){
+//   let i=0;
+//   while(true){
+//     yield i++;
+//   }
+// }
+
+// const g = infy();
+// console.log(g.next());
+// console.log(g.next());
+
+// function* range(start,end){
+//   for(let i=start;i<=end;i++){
+//     yield i;
+//   }
+// }
+// const g = range(1,5);
+// for(let x of g){
+//   console.log(x);
+// }
