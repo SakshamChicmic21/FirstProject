@@ -11,3 +11,5 @@ const fns = buildArray();
 fns[0]();
 fns[1]();
 fns[2]();
+
+"commit1"
