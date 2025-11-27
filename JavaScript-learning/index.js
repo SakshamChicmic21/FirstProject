@@ -635,18 +635,18 @@
 // setTimeout(theOneFunc, 4 * 1000, 4);
 // setTimeout(theOneFunc, 8 * 1000, 8);
 
-// const user ={
-//   name: "saksham",
-//   greet(){
-//     console.log("hello", this.name);
-//   }
-// }
+const user ={
+  name: "saksham",
+  greet(){
+    console.log("hello", this.name);
+  }
+}
 
 // const greetFn =  user.greet;
-// // greetFn();
+// greetFn();
 // greetFn.call(user);
 
-// console.log(user.greet());
+// user.greet();
 
 // class MyClass {
 //   constructor() {
@@ -796,3 +796,26 @@
 // for(let x of g){
 //   console.log(x);
 // }
+
+// promise quesions output
+// q1 -> A C B
+// q2 -> 1 4 3 2 
+// q3 -> Z X Y 
+// q4 -> ouside inside promise then 1: 10
+// q5 -> 1 2 caught after catch
+// q6 -> catch
+// q7 -> 1 2 caught 3
+// q8 -> start end promise 1 promise 2 timeout
+// q9 -> global start f start global end f middle
+// q10 -> after call then : 42
+// q11 -> catch fast
+// q12 -> all: A C all2 error
+// q13 -> fullfilled rejected
+// q14 -> fast 
+// q15 -> 1 6 3 4 5 2
+
+// const p1 = Promise.resolve("A");
+// const p2 = Promise.reject("B");
+// const p3 = Promise.resolve("C");
+// Promise.all([p1,p3]).then(values => console.log("all:",values)).catch((err=> console.log("all2 error")));
+
