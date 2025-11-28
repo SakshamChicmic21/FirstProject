@@ -12,4 +12,7 @@ fns[0]();
 fns[1]();
 fns[2]();
 
-"admin-feature2 first commit";
+
+console.log(Date.now());
+
+setInterval(() => console.log(new Date()), 10000);

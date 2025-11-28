@@ -819,3 +819,33 @@ const user ={
 // const p3 = Promise.resolve("C");
 // Promise.all([p1,p3]).then(values => console.log("all:",values)).catch((err=> console.log("all2 error")));
 
+// debouncing in js 
+// function debounce(fun,delay){
+//   let timer;
+//   return function(...args){
+//     clearTimeout(timer);
+//     timer = setTimeout(() => fun.apply(this,args),delay);
+//   };
+// }
+
+// const handleInput = debounce((arr)=>{
+//   console.log("Api call");
+//   console.log(arr);
+// },500);
+// handleInput([1,2,3]); // user for => auto save, search input, preventing api calls
+
+
+function throttle(fn,delay){
+  let last =0;
+  return function (...args){
+    const now = Date.now();
+    console.log(now," ",last," ",now-last);
+    if (now - last >= delay){
+      last = now;
+      fn.apply(this,args);
+    }
+  };
+}
+
+const onScroll= throttle(()=>{console.log("throttled scroll")},500);
+onScroll();
