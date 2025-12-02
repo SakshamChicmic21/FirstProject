@@ -853,7 +853,7 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 //   let last =0;
 //   return function (...args){
 //     const now = Date.now();
-//     console.log(now," ",last," ",now-last);
+//     // console.log(now," ",last," ",now-last);
 //     if (now - last >= delay){
 //       last = now;
 //       fn.apply(this,args);
