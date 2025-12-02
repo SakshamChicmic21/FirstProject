@@ -284,28 +284,26 @@
 //   { name: "Edward", value: 21 },
 //   { name: "Sharpe", value: 37 },
 //   { name: "And", value: 45 },
-//   { name: "The", value: -12 },
+//   { name: "Ahe", value: 5 },
 //   { name: "Magnetic", value: 13 },
 //   { name: "Zeros", value: 37 },
 //   { name:"The",value:5}
 // ];
 
 // // sort by value
-// items.sort((a, b) => a.value - b.value);
+// // items.sort((a, b) => a.value - b.value);
 
 // // sort by name
 // items.sort((a, b) => {
-//   const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-//   const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-//   if (nameA < nameB) {
-//     return -1;
+//   if (a.value==b.value){
+//     const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+//     const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+//     const res = nameA < nameB ? -1:1;
+//     return res ?? 0;
+//   }else{
+//     return a.value - b.value;
 //   }
-//   if (nameA > nameB) {
-//     return 1;
-//   }
-
-//   // names must be equal
-//   return 0;
+// //   // names must be equal
 // });
 
 // console.log(items);
@@ -692,7 +690,7 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 //   })(i)
 // }
 
-// Promise
+//* Promise
 
 // function customPromise(dataId){
 //   return new Promise((res,rej)=>{
@@ -712,7 +710,7 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 
 // console.log("Fetching data by Id1...");
 
-// // Promise chaining
+//* Promise chaining
 // getDataById(1).then((res)=>{
 //   console.log("Fetch data by Id1...",res,"\n");
 //   return getDataById(2);
@@ -799,8 +797,8 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 
 // promise quesions output
 // q1 -> A C B
-// q2 -> 1 4 3 2 
-// q3 -> Z X Y 
+// q2 -> 1 4 3 2
+// q3 -> Z X Y
 // q4 -> ouside inside promise then 1: 10
 // q5 -> 1 2 caught after catch
 // q6 -> catch
@@ -811,7 +809,7 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 // q11 -> catch fast
 // q12 -> all: A C all2 error
 // q13 -> fullfilled rejected
-// q14 -> fast 
+// q14 -> fast
 // q15 -> 1 6 3 4 5 2
 
 // const p1 = Promise.resolve("A");
@@ -819,12 +817,13 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 // const p3 = Promise.resolve("C");
 // Promise.all([p1,p3]).then(values => console.log("all:",values)).catch((err=> console.log("all2 error")));
 
-// debouncing in js 
-// function debounce(fun,delay){
+//* debouncing in js
+
+// function debounce(fun, delay) {
 //   let timer;
-//   return function(...args){
+//   return function (...args) {
 //     clearTimeout(timer);
-//     timer = setTimeout(() => fun.apply(this,args),delay);
+//     timer = setTimeout(() => fun.apply(this, args), delay);
 //   };
 // }
 
@@ -834,6 +833,21 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 // },500);
 // handleInput([1,2,3]); // user for => auto save, search input, preventing api calls
 
+// setTimeout(() => {
+//   debounce(() => {
+//     console.log("Api call1");
+//   }, 500)();
+// }, 300);
+// setTimeout(() => {
+//   debounce(() => {
+//     console.log("Api call2");
+//   }, 500)();
+// }, 800);
+// setTimeout(() => {
+//   debounce(() => {
+//     console.log("Api call3");
+//   }, 500)();
+// }, 100);
 
 // function throttle(fn,delay){
 //   let last =0;
