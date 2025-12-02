@@ -863,3 +863,4 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 
 // const onScroll= throttle(()=>{console.log("throttled scroll")},500);
 // onScroll();
+
