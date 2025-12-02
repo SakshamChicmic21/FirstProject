@@ -58,8 +58,8 @@
 // console.log( NaN === NaN);// false
 // console.log( undefined === undefined);// true
 
-// console.log( Number("123") );// 123
-// console.log( Number("123.45") );// 123.45
+// console.log( Number("123") ); // 123
+// console.log( Number("123.45") ); // 123.45
 
 // console.log( Number("123abc") );// NaN
 // console.log( Number("abc123") );// NaN
@@ -108,7 +108,7 @@
 // console.log( String({a:1, b:2}) );// "[object Object]"
 // console.log( String(function() {}) );// "function() {}"
 
-// console.log( 123..toString() ); // "123"
+// console.log( 123.toString() ); // "123"
 // console.log( (123).toString() );// "123"
 // console.log( (123.45).toString() );// "123.45"
 // console.log( true.toString() );// "true"
@@ -121,23 +121,23 @@
 // console.log( null + "" ); // "null"
 // console.log( undefined + "" ); // "undefined"
 
-// console.log( {} + "" );
-// console.log( [] + "" );
-// console.log( [1,2,3] + "" );
+// console.log( {} + "" );// "[object Object]"
+// console.log( [] + "" );// ""
+// console.log( [1,2,3] + "" ); // "1,2,3"
 
-// console.log( {} + 1 );
-// console.log( [] + 1 );
-// console.log( [1,2,3] + 1 );
+// console.log( {} + 1 ); // "[object Object]1"
+// console.log( [] + 1 ); // "1"
+// console.log( [1,2,3] + 1 ); // "1,2,31"
 
-// console.log( {} - 1 );
-// console.log( [] - 1 );
-// console.log( [1,2,3] - 1 );
+// console.log( {} - 1 ); // NaN
+// console.log( [] - 1 ); // -1
+// console.log( [1,2,3] - 1 ); // NaN
 
 // console.log( "5" + [] );
 // console.log( "5" + {} );
 // console.log( "5" + [1,2,3] );
 
-// console.log( "5" - [] );//
+// console.log( "5" - [] );
 // console.log( "5" - {} );
 // console.log( "5" - [1,2,3] );
 // console.log( "5" * [] );
@@ -170,9 +170,7 @@
 // console.log( null + [] );
 // console.log( null + {} );
 // console.log( null + [1,2,3] );
-
 // console.log( null - [] );
-
 // console.log( null - {} );
 // console.log( null - [1,2,3] );
 // console.log( null * [] );
@@ -275,10 +273,11 @@
 // const months = ["March", "Jan", "Feb", "Dec"];
 // months.sort();
 // console.log(months);
-// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+// Expected output: Array ["Dec", "Feb", "Jan", "March"];
 
 // const array = [1, 30, 4, 21, 100000];
 // array.sort();
+// array.sort((a, b) => a - b);
 // console.log(array);
 
 // const items = [
@@ -312,10 +311,10 @@
 // console.log(items);
 
 // the array to be sorted
-// const data = ["delta", "alpha", "charlie", "bravo"];
+const data = ["delta", "alpha", "charlie", "bravo"];
 
 // // temporary array holds objects with position and sort-value
-// const mapped = data.map((v, i) => ({ i, value: someSlowOperation(v) }));
+// const mapped = data.map((v, i) => ({ i, value: v.toLowerCase() }));
 
 // // sorting the mapped array containing the reduced values
 // mapped.sort((a, b) => {
@@ -328,6 +327,7 @@
 //   return 0;
 // });
 
+// console.log(mapped);
 // const result = mapped.map((v) => data[v.i]);
 // console.log(result);
 // let a=20;
@@ -635,12 +635,12 @@
 // setTimeout(theOneFunc, 4 * 1000, 4);
 // setTimeout(theOneFunc, 8 * 1000, 8);
 
-const user ={
-  name: "saksham",
-  greet(){
-    console.log("hello", this.name);
-  }
-}
+// const user ={
+//   name: "saksham",
+//   greet(){
+//     console.log("hello", this.name);
+//   }
+// }
 
 // const greetFn =  user.greet;
 // greetFn();
@@ -661,11 +661,11 @@ const user ={
 // setTimeout(()=> console.log("timeout"),0);
 // setImmediate(()=> console.log("immediate"));
 
-// Promise.resolve().then(()=> console.log("promise"));
+// Promise.resolve().then(() => console.log("promise"));
 // console.log("End");
 
 // console.log("start");
-// setTimeout(()=> console.log("timeout"),0); // macrostack
+// setTimeout(()=> console.log("timeout")); // macrostack
 // setTimeout(()=> console.log("timeout 2")); // macrostack
 
 // Promise.resolve().then(()=> console.log("promise"));// microstack
@@ -835,17 +835,17 @@ const user ={
 // handleInput([1,2,3]); // user for => auto save, search input, preventing api calls
 
 
-function throttle(fn,delay){
-  let last =0;
-  return function (...args){
-    const now = Date.now();
-    console.log(now," ",last," ",now-last);
-    if (now - last >= delay){
-      last = now;
-      fn.apply(this,args);
-    }
-  };
-}
+// function throttle(fn,delay){
+//   let last =0;
+//   return function (...args){
+//     const now = Date.now();
+//     console.log(now," ",last," ",now-last);
+//     if (now - last >= delay){
+//       last = now;
+//       fn.apply(this,args);
+//     }
+//   };
+// }
 
-const onScroll= throttle(()=>{console.log("throttled scroll")},500);
-onScroll();
+// const onScroll= throttle(()=>{console.log("throttled scroll")},500);
+// onScroll();
