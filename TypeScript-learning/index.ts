@@ -5,6 +5,7 @@ console.log(message);
 interface Person {
     name: string;
     age: number;
+    greet(): void;
 }
 
 class User{
@@ -21,5 +22,5 @@ class User{
     }
 }
 
-const user : person = new User("Alice", 30);
+const user : Person = new User("Alice", 30);
 user.greet();
