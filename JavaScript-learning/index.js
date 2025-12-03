@@ -309,7 +309,7 @@
 // console.log(items);
 
 // the array to be sorted
-const data = ["delta", "alpha", "charlie", "bravo"];
+// const data = ["delta", "alpha", "charlie", "bravo"];
 
 // // temporary array holds objects with position and sort-value
 // const mapped = data.map((v, i) => ({ i, value: v.toLowerCase() }));
@@ -815,7 +815,7 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 // const p1 = Promise.resolve("A");
 // const p2 = Promise.reject("B");
 // const p3 = Promise.resolve("C");
-// Promise.all([p1,p3]).then(values => console.log("all:",values)).catch((err=> console.log("all2 error")));
+// Promise.any([p1,p3]).then(values => console.log("all:",values)).catch((err=> console.log("all2 error")));
 
 //* debouncing in js
 
@@ -864,3 +864,6 @@ const data = ["delta", "alpha", "charlie", "bravo"];
 // const onScroll= throttle(()=>{console.log("throttled scroll")},500);
 // onScroll();
 
+// debouncing ensures a function to run only after the user stops triggering the event for a certain time.
+
+// throttling ensures a function to run at most once in given interval of time.
