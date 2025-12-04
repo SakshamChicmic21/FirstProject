@@ -867,3 +867,21 @@
 // debouncing ensures a function to run only after the user stops triggering the event for a certain time.
 
 // throttling ensures a function to run at most once in given interval of time.
+
+// console.log("Start");
+// function asynFun(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//             console.log("inside Promise");
+//         },2000);
+//         res("successfully");
+//     })
+// }
+// asynFun();
+
+// setTimeout(()=>{
+//     console.log("inside settimeout");
+// },2000);
+
+
+// console.log("end");
