@@ -1,31 +1,5 @@
-console.log("ts");
-let message: string = "Hello, TypeScript!";
-console.log(message);
-
-interface Person {
-    name: string;
-    age: number;
-    greet(): void;
-}
-
-class User{
-    name: string;
-    age: number;
-    
-    constructor(name: string, age: number){
-        this.name = name;
-        this.age = age;
-    }
-
-    greet(): void {
-        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    }
-}
-
-const user : Person = new User("Alice", 30);
-user.greet();
 // console.log("ts");
-// let message: string = "Hello, TypeScript!";
+// let message = "Hello, TypeScript!";
 // console.log(message);
 
 // interface Car{
@@ -73,22 +47,98 @@ user.greet();
 // user.addCars(obj3);
 // user.addCars(obj4);
 
-
 // console.log(user.cars);
 
+// interface Backpack<Type> {
+//   add: (obj: Type) => void;
+//   get: () => Type;
+// }
+// class stringbackpack implements Backpack<string> {
+//   private item:string= "";
 
-interface Backpack<Type> {
-  add: (obj: Type) => void;
-  get: () => Type;
+//   add(obj:string):void{
+//     this.item = obj;
+//   }
+//   get():string {
+//     return this.item;
+//   }
+// };
+
+// const backpack : Backpack<string> = new stringbackpack();
+// backpack.add("saksham");
+// const object = backpack.get();
+// console.log(object);
+
+// union type
+let value: string | number;
+value = "hello";
+value = 10;
+
+console.log(value);
+
+// intersection type
+interface A {
+  x: number;
 }
- 
-// This line is a shortcut to tell TypeScript there is a
-// constant called `backpack`, and to not worry about where it came from.
-declare const backpack: Backpack<string>;
- 
-// object is a string, because we declared it above as the variable part of Backpack.
+interface B {
+  y: number;
+}
 
-// Since the backpack variable is a string, you can't pass a number to the add function.
-backpack.add("saksham");
-const object = backpack.get();
-console.log(object);
+type C = A & B;
+// const obj: C = { x: 1, y: 2 };
+
+// type Aliases
+type id = string | number;
+let userId: id = 133;
+
+// literal types
+let direction : "up" | "down" | "left" | "right";
+direction = "up";
+
+// nullable types
+// let name: string | null = null;
+
+// function types
+type Add = (a:number ,b: number)=> number;
+const sum: Add = (x,y) => x+y;
+
+// interface User {
+//     readonly id : number;
+//     name: string;    
+// }
+// const u: User = { id:1,name:"Saksham"};
+// // u.id = 2;
+// u.name = "sdf";
+
+
+interface stringArray{
+    [index:number] : string
+}
+// let arr : stringArray=["a","b","c"];
+// console.log(arr);
+
+type Role = "admin" | "user";
+const permission: Record<Role,boolean>={
+    admin: true,
+    user:false
+}
+
+console.log(permission.user);
+interface User{
+    name: string,
+    age:number
+}
+
+const updateUser: Partial<User> = {age:25};
+console.log(updateUser.age);
+type fullUser = Required<User>;
+type BasicUser = Pick<User,"name">
+type withoutAge = Omit<User,"age">
+console.log(updateUser.age);
+type LockedUser = Readonly<User>;
+
+type Optional<T> ={
+    [K in keyof T]?: T[K];
+}
+
+type newUser = Optional<User>;
