@@ -1,0 +1,8 @@
+.head{
+    border: 5px dotted blue;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 10rem;
+    text-align: center;
+    font-weight: 900;
+}
