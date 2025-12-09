@@ -253,7 +253,7 @@ let res = apiData.map((obj1,idx)=>{
     obj[idx] = {...obj[idx],...obj1};
     return obj[idx];
 })
-console.log(res);
+console.log(JSON.parse(JSON.stringify(res)));
 
 // let myCar = {
 //     // Parameters (Properties)

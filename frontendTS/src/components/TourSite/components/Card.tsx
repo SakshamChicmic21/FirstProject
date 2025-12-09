@@ -1,10 +1,9 @@
 import { useState } from "react"
-import Tours from "./Tours";
 import "./Card.css"
 
-function Card({ id, image, info, price, name ,removeTour}) {
+function Card({ id, image, info, price, name, removeTour }: { id: number; image: string; info: string; price: string; name: string; removeTour: (id: number) => void }) {
     const [readmore, setReadMore] = useState(false);
-    const description = readmore ? info: `${info.substring(0, 80)}...`
+    const  description = readmore ? info: `${info.substring(0, 80)}...`;
     function readmoreHandler() {
         setReadMore(!readmore);
     }
@@ -19,9 +18,7 @@ function Card({ id, image, info, price, name ,removeTour}) {
 
                 <div className="desc font-medium">
                     {description}
-                    <span className="readmore" onClick={readmoreHandler}>
-                        {readmore ? ' <<< Show less' : 'Read more'}
-                    </span>
+                    <span className="readmore" onClick={readmoreHandler}>{readmore ? ' <<< Show less' : 'Read more'}</span>
                 </div>
             </div>
             <button className = "btnred bg-red-300 border-2 border-red-400 p-2 rounded-lg hover:bg-red-200 transition-all" onClick={()=>removeTour(id)} >Not Interested</button>

@@ -1,4 +1,4 @@
-const data=[
+const data :{id:number, name:string, info:string, image:string, price:string}[] = [ 
     {
         id:1,
         name:"Agra",

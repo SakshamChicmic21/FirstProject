@@ -1,6 +1,6 @@
 import Card from "./Card"
 import "./Tours.css"
-function Tours({tours,removeTour}){
+function Tours({tours,removeTour}:{tours:{id:number,name:string,info:string,image:string,price:string}[],removeTour:(id:number)=>void}) {
     return (
         <div className="">
             <div className=" mx-auto">
