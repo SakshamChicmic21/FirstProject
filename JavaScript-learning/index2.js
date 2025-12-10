@@ -219,41 +219,41 @@
 // let strname = "saksham";
 // let str = [...strname];
 
-let apiData = [
-    {
-        name:"sam",
-    },
-    {
-        class:"8th"
-    },
-    {
-        phoneno:3224
-    },{},{class:"9th"}
-]
+// let apiData = [
+//     {
+//         name:"sam",
+//     },
+//     {
+//         class:"8th"
+//     },
+//     {
+//         phoneno:3224
+//     },{},{class:"9th"}
+// ]
 
-let obj = [
-    {
-        name:"sam",
-        class:"9th",
-        phoneno:243
-    },
-    {
-        name:"sam2",
-        class:"6th",
-        phoneno:2
-    },
-    {
-        name:"sam3",
-        class:"45th",
-        phoneno:24
-    },
-]
+// let obj = [
+//     {
+//         name:"sam",
+//         class:"9th",
+//         phoneno:243
+//     },
+//     {
+//         name:"sam2",
+//         class:"6th",
+//         phoneno:2
+//     },
+//     {
+//         name:"sam3",
+//         class:"45th",
+//         phoneno:24
+//     },
+// ]
 
-let res = apiData.map((obj1,idx)=>{
-    obj[idx] = {...obj[idx],...obj1};
-    return obj[idx];
-})
-console.log(JSON.parse(JSON.stringify(res)));
+// let res = apiData.map((obj1,idx)=>{
+//     obj[idx] = {...obj[idx],...obj1};
+//     return obj[idx];
+// })
+// console.log(JSON.parse(JSON.stringify(res)));
 
 // let myCar = {
 //     // Parameters (Properties)
@@ -287,3 +287,10 @@ console.log(JSON.parse(JSON.stringify(res)));
 // let arr2= str2.split("").sort().join("");
 
 // console.log(arr1===arr2);
+// let arr = [1,2,4,3,5,5];
+// let res = arr.filter((e)=>e%2==0);
+
+// let res = arr.forEach((e)=>{
+//     return e%2==0;
+// })
+// console.log(res);

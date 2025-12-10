@@ -1,48 +1,56 @@
 import React from "react";
 import Button from "../common/Button";
 import TourApp from "../TourSite/TourApp";
+import UseMemoHook from "./useMemoHook";
+import UseCallbackHook from "./useCallbackHook";
+import ReactMemoHook from "./ReactMemoHook";
 
 function HomePage() {
-    const data: {id: number, name: string}[] = [
-        {id: 1, name: "Item 1"},
-        {id: 2, name: "Item 2"},
-        {id: 3, name: "Item 3"}
-    ]
+  const data: { id: number; name: string }[] = [
+    { id: 1, name: "Item 1" },
+    { id: 2, name: "Item 2" },
+    { id: 3, name: "Item 3" },
+  ];
 
-    function showTable(){
-        let res ="";
-        for(let i=0; i<data.length; i++){
-            res += `<tr><td>${data[i].id}</td><td>${data[i].name}</td></tr>`;
-        }
-        const tableHTML = `<table border="1"><tr><th>ID</th><th>Name</th></tr>${res}</table>`;
-        const tableContainer = document.getElementById('table-container');
-        if(tableContainer){
-            tableContainer.innerHTML = tableHTML;
-        }   
+  function showTable() {
+    let res = "";
+    for (let i = 0; i < data.length; i++) {
+      res += `<tr><td>${data[i].id}</td><td>${data[i].name}</td></tr>`;
     }
+    const tableHTML = `<table border="1"><tr><th>ID</th><th>Name</th></tr>${res}</table>`;
+    const tableContainer = document.getElementById("table-container");
+    if (tableContainer) {
+      tableContainer.innerHTML = tableHTML;
+    }
+  }
   return (
     <div className="m-4">
       <h1>Home</h1>
       <div>
-        {
-            data.map((item, index) => (
-                <p key={index}>{item.id}: {item.name}</p>
-            ))
-        }
+        {data.map((item, index) => (
+          <p key={index}>
+            {item.id}: {item.name}
+          </p>
+        ))}
       </div>
       <div>
         <Button onClick={() => showTable()}>Show table</Button>
-        <div id = 'table-container'>
-
-        </div>
+        <div id="table-container"></div>
       </div>
       <Button className="border-2 border-gray-400 rounded-md bg-green-400 hover:bg-green-500 scale-3d transition-all duration-200">
         Submit
       </Button>
 
+      
+      {/* <TourApp></TourApp> */}
 
-      <h2>Tour site</h2>
-      <TourApp></TourApp>
+      <UseMemoHook />
+
+
+      <UseCallbackHook />
+      
+      <ReactMemoHook />
+
     </div>
   );
 }

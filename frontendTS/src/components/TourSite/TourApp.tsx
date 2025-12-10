@@ -10,6 +10,7 @@ function TourApp() {
   function removeTour(id: number){ 
     const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours); 
+    console.log(newTours.pop());
   }
 
   if (tours.length === 0){
@@ -22,6 +23,7 @@ function TourApp() {
   }
   return (
     <div>
+      <h2>Tour site</h2>
       <Tours tours={tours} removeTour={removeTour}></Tours>
     </div>
   );
