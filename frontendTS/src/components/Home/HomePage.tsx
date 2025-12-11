@@ -1,9 +1,12 @@
 import React from "react";
 import Button from "../common/Button";
 import TourApp from "../TourSite/TourApp";
-import UseMemoHook from "./useMemoHook";
-import UseCallbackHook from "./useCallbackHook";
+import UseMemoHook from "./UseMemoHook";
+import UseCallbackHook from "./UseCallbackHook";
 import ReactMemoHook from "./ReactMemoHook";
+import UseContextHook from "./UseContextApiLearning/UseContextHook";
+import EventApp from "./EventHandling/EventApp";
+import CounterReduxApp from "./counterReduxApp";
 
 function HomePage() {
   const data: { id: number; name: string }[] = [
@@ -37,19 +40,27 @@ function HomePage() {
         <Button onClick={() => showTable()}>Show table</Button>
         <div id="table-container"></div>
       </div>
+      <br />
       <Button className="border-2 border-gray-400 rounded-md bg-green-400 hover:bg-green-500 scale-3d transition-all duration-200">
         Submit
       </Button>
 
       
-      {/* <TourApp></TourApp> */}
-
+      <TourApp></TourApp>
+      <br />
       <UseMemoHook />
-
-
+      <br />
       <UseCallbackHook />
-      
+      <br />
       <ReactMemoHook />
+      <br />
+      <UseContextHook />
+      <br />
+      <EventApp />
+      <br />
+      <CounterReduxApp />
+
+
 
     </div>
   );

@@ -212,6 +212,11 @@
 //     return `hello, ${this.name}`;
 // }
 
+// let a = [1,2,3,4,5];
+// let b = a;
+// b[0]=32;
+// console.log(a,b);
+
 // const person1 = {name:"Alice"};
 // const person2 = {name:"Bob"};
 // const bg = greet.bind(person1);
