@@ -9,7 +9,8 @@ import { setSignupData } from "../../slices/authSlice";
 
 interface FormData {
   firstName: string;
-  lastName: string;  email: string;
+  lastName: string;
+  email: string;
   address: string;
   category: string;
   aboutYou: string;
@@ -34,11 +35,8 @@ function Form() {
     dispatch(setSignupData(data));
     localStorage.setItem("UserData", jsonData);
     toast.success("signup successfully");
-    navigate('/');
+    navigate("/");
   };
-  
-
-  
 
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center bg-gray-100 p-6 rounded-md">
@@ -47,7 +45,6 @@ function Form() {
         className="flex flex-col gap-2 w-full max-w-md bg-white p-8 rounded-lg shadow-md"
         onSubmit={handleSubmit(onFormSubmit)}
       >
-
         <Input
           {...register("firstName", {
             validate: (value: string) => value !== "admin" || "Nice try!",
@@ -55,7 +52,9 @@ function Form() {
           placeholder="First Name"
         />
         {errors.firstName && (
-          <span className="text-red-500 text-sm">{errors.firstName.message}</span>
+          <span className="text-red-500 text-sm">
+            {errors.firstName.message}
+          </span>
         )}
         <Input {...register("lastName")} placeholder="Last Name" />
         <Input
@@ -93,7 +92,9 @@ function Form() {
       {fromdata && (
         <div className="mt-6 p-4 bg-gray-200 rounded-md w-full max-w-md">
           <h3 className="font-semibold text-gray-700 mb-2">Form Data:</h3>
-          <pre className="text-sm text-gray-600 whitespace-pre-wrap break-words">{fromdata}</pre>
+          <pre className="text-sm text-gray-600 whitespace-pre-wrap break-words">
+            {fromdata}
+          </pre>
         </div>
       )}
     </div>

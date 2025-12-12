@@ -23,6 +23,7 @@ import List from "./pages/List";
 import Dashboard from "./pages/Dashboard";
 import Stats from "./components/Dashboard/Stats";
 import PrivateRoute from "./pages/PrivateRoute";
+import useOnlineStatus from "./customHooks/useOnlineStatus";
 // import router from "./routes";
 
 // const router = createBrowserRouter([
@@ -149,10 +150,28 @@ import PrivateRoute from "./pages/PrivateRoute";
 //     ),
 //   },
 // ]);
+function StatusBar() {
+  const isOnline = useOnlineStatus();
+  return <h1>{isOnline ? "✅ Online" : "❌ Disconnected"}</h1>;
+}
+
+function SaveButton() {
+  const isOnline = useOnlineStatus();
+
+  function handleSaveClick() {
+    console.log("✅ Progress saved");
+  }
+
+  return (
+    <button disabled={!isOnline} onClick={handleSaveClick}>
+      {isOnline ? "Save progress" : "Reconnecting..."}
+    </button>
+  );
+}
 function App() {
   // const [count, setCount] = useState(0)
-  toast.success("Login successfully");
 
+  toast.success("Login successfully");
   const location = useLocation();
   const noNabbarPaths = ["/login", "/signup"];
   const showNavbar = !noNabbarPaths.includes(location.pathname);
@@ -166,6 +185,8 @@ function App() {
     <>
       {/* <RouterProvider router={router} /> */}
       {showNavbar && <Navbar />}
+      <SaveButton />
+      <StatusBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -190,12 +211,7 @@ function App() {
           <Route path="search" element={<Search />} />
           <Route path="list" element={<List />} />
         </Route>
-        <Route
-          path="/dashboard"                                      
-          element={
-              <Dashboard />
-          }
-        >
+        <Route path="/dashboard" element={<Dashboard />}>
           <Route path="stats" element={<Stats />} />
           <Route path="settings" element={<div>Dashboard Settings</div>} />
           <Route path="reports" element={<div>Dashboard Reports</div>} />
