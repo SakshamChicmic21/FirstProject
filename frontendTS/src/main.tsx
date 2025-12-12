@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
     <Router>
       <App />
-      <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="top-left" reverseOrder={false} />
     </Router>
   </Provider>
   // </StrictMode>
