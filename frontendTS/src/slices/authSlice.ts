@@ -7,21 +7,27 @@ export interface UserData {
   category: string;
   aboutYou: string;
 }
+
+const userDataString = localStorage.getItem("UserData")
+  ? JSON.parse(localStorage.getItem("UserData")!)
+  : null;
 const initialState = {
-  user: {
-    firstName: "",
-    lastName: "",
-    email: "",
-    address: "",
-    category: "",
-    aboutYou: "",
-  } as UserData,
+  user:
+    userDataString ??
+    ({
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      category: "",
+      aboutYou: "",
+    } as UserData),
   isLoding: false,
 };
 
 const authSlice = createSlice({
   name: "auth",
-  initialState: initialState,
+  initialState: initialState, 
   reducers: {
     setSignupData: (
       state,

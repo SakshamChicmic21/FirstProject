@@ -7,12 +7,22 @@ import ChildA from "./ChildA";
 // setp 3: pass value
 // step 4: consume k andar kaake consume karlo
 
-const TheamContext = createContext<{ theme: string; setTheme: (theme: string) => void }>({ theme: "light", setTheme: () => {} });
+const TheamContext = createContext<{
+  theme: string;
+  setTheme: (theme: string) => void;
+}>({ theme: "light", setTheme: () => {} });
 function UseContextHook() {
-  const [theme, setTheme ] = useState<string>("light");
+  const [theme, setTheme] = useState<string>("light");
   return (
-    <TheamContext.Provider value={{theme,setTheme}}>
-      <div id="container" style={{ backgroundColor:theme === "light" ? "beige" : "black", color:theme === "light" ? "#000" : "#fff", padding:"40px" }}>
+    <TheamContext.Provider value={{ theme, setTheme }}>
+      <div
+        id="container"
+        style={{
+          backgroundColor: theme === "light" ? "beige" : "black",
+          color: theme === "light" ? "#000" : "#fff",
+          padding: "40px",
+        }}
+      >
         {/* <h1>UseContext Hook</h1> */}
         <ChildA />
       </div>

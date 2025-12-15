@@ -10,6 +10,7 @@ import CounterReduxApp from "./CounterReduxApp";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import type { UserData } from "../../slices/authSlice";
+import Loading from "../common/Loading";
 interface FormData {
   firstName: string;
   lastName: string;
@@ -19,6 +20,18 @@ interface FormData {
   aboutYou: string;
 }
 function HomePage() {
+  const navigate = useNavigate();
+
+  const goToProfile = () => {
+    // navigate("/services/search", {
+    navigate("/services", {
+      state: { name: "saksham",age: 10}
+    });
+  };
+
+  const testQueryRoute=()=>{
+    navigate("/services/search?category=shoes&price=low");
+  }
   const data: { id: number; name: string }[] = [
     { id: 1, name: "Item 1" },
     { id: 2, name: "Item 2" },
@@ -27,8 +40,6 @@ function HomePage() {
   const userDataString = useSelector(
     (state: { auth: { user: UserData } }) => state.auth.user
   );
-
-  const navigate = useNavigate();
 
   function handleClickAbout() {
     navigate("/about");
@@ -66,6 +77,7 @@ function HomePage() {
   return (
     <div className="m-4">
       <h1>Home</h1>
+      {/* <Loading /> */}
 
       <div>
         <div>{UserData?.firstName}</div>
@@ -76,6 +88,11 @@ function HomePage() {
       </div>
 
       <Button onClick={handleClickAbout}>Go to About</Button>
+      <br />
+      <Button onClick={goToProfile}>Services page</Button>
+      <br />
+      <Button onClick={testQueryRoute}>Test Query Route</Button>
+      <br />
       <div>
         {data.map((item, index) => (
           <p key={index}>
