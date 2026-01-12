@@ -23,6 +23,7 @@ import List from "./pages/List";
 import Dashboard from "./pages/Dashboard";
 import Stats from "./components/Dashboard/Stats";
 import PrivateRoute from "./pages/PrivateRoute";
+import Loading from "./components/common/Loading";
 // import router from "./routes";
 
 // const router = createBrowserRouter([
@@ -150,7 +151,6 @@ import PrivateRoute from "./pages/PrivateRoute";
 //   },
 // ]);
 
-
 function App() {
   // const [count, setCount] = useState(0)
   // toast.success("Login successfully");
@@ -167,6 +167,7 @@ function App() {
     <>
       {/* <RouterProvider router={router} /> */}
       {showNavbar && <Navbar />}
+      {/* <Loading /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

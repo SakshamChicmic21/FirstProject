@@ -5,36 +5,28 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { setSignupData } from "../../slices/authSlice";
+import { setSignupData, type UserData } from "../../slices/authSlice";
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  address: string;
-  category: string;
-  aboutYou: string;
-}
 
 function Form() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<UserData>();
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [fromdata, setFromData] = useState("");
 
-  const onFormSubmit = (data: FormData) => {
+  const onFormSubmit = (data: UserData) => {
     // console.log(data);
     const jsonData = JSON.stringify(data);
     setFromData(jsonData);
     dispatch(setSignupData(data));
     localStorage.setItem("UserData", jsonData);
-    toast.success("signup successfully");
+    toast.success("Signup successfully");
     navigate("/");
   };
 
@@ -45,6 +37,7 @@ function Form() {
         className="flex flex-col gap-2 w-full max-w-md bg-white p-8 rounded-lg shadow-md"
         onSubmit={handleSubmit(onFormSubmit)}
       >
+        <label htmlFor="firstName">First Name:</label>
         <Input
           {...register("firstName", {
             validate: (value: string) => value !== "admin" || "Nice try!",
@@ -56,7 +49,9 @@ function Form() {
             {errors.firstName.message}
           </span>
         )}
+        <label htmlFor="lastName"></label>
         <Input {...register("lastName")} placeholder="Last Name" />
+        <label htmlFor="email"></label>
         <Input
           {...register("email", {
             required: "Required",
@@ -70,6 +65,7 @@ function Form() {
         {errors.email && (
           <span className="text-red-500 text-sm">{errors.email.message}</span>
         )}
+        <label htmlFor="address"></label>
         <Input {...register("address")} placeholder="Address" />
 
         <select
@@ -80,6 +76,7 @@ function Form() {
           <option value="A">Option A</option>
           <option value="B">Option B</option>
         </select>
+        <label htmlFor="aboutYou"></label>
         <textarea
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent resize-y min-h-[100px]"
           {...register("aboutYou")}

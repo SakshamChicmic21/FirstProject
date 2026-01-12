@@ -199,11 +199,141 @@
 // console.log( undefined % [] );
 // console.log( undefined % {} );
 // console.log( undefined % [1,2,3] );
-
-// let i = 0;
-// do {
-//   i += 1;
-//   console.log(i);
+console.log(Boolean([]));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({}));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(0));
+console.log(Boolean(-1));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log(Boolean([1, 2, 3]));
+console.log(Boolean({ a: 1, b: 2 }));
+console.log(Boolean(function () {}));
+console.log(Boolean(null));
 // } while (i < 5);
 
 // let x = 0;
@@ -616,12 +746,22 @@
 // Example:
 // JavaScript
 
-//     const user = { name: 'Charlie' };
-//     function introduce() {
-//       console.log(`My name is ${this.name}.`);
-//     }
-//     const introduceUser = introduce.bind(user);
-//     introduceUser(); // Output: My name is Charlie.
+// const user1 = { name: "Charlie" };
+// const user2 = { name: "Alice" };
+// function introduce() {
+//   console.log(`My name is ${this.name}.`);
+// }
+// const introduceUser = introduce.bind(user1);
+// introduceUser.call(user2); // Output: My name is Charlie.
+
+// function greet() {
+//   return `Hello, ${this.name}!`;
+// }
+// const person1 = { name: "Alice" };
+// const person2 = { name: "Bob" };
+// const boundGreet = greet.bind(person1);
+// console.log(boundGreet.call(person2));
+
 // Key Differences:
 // call() and apply() execute the function immediately, while bind() returns a new function for later execution.
 // call() takes arguments individually, while apply() takes arguments as an array.
@@ -640,8 +780,8 @@
 //   }
 // }
 
-// const greetFn =  user.greet;
-// greetFn();
+// const greetFn = user.greet;
+// // greetFn();
 // greetFn.call(user);
 
 // user.greet();
@@ -883,10 +1023,8 @@
 //     console.log("inside settimeout");
 // },2000);
 
-
 // console.log("end");
 
 // console.log();
 
 // console.log(Boolean({}));
-
