@@ -395,7 +395,7 @@ console.log(Boolean(null));
 // const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
 // const obj2 = { 0: 1, 1: 2, 2: 3, length: 3, [Symbol.isConcatSpreadable]: true };
 // console.log([0].concat(obj1, obj2));
-// // [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
+// [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
 
 // let arr = [1, 2, 3,4,5];
 // console.log(arr.filter(()=> false));
@@ -461,7 +461,7 @@ console.log(Boolean(null));
 // let a=20;
 // const obj={
 //   a :10,
-//   fun: function () {console.log(this.a)}
+//   fun: () => {console.log(this.a)}
 // }
 // obj.fun();
 
@@ -500,6 +500,11 @@ console.log(Boolean(null));
 // Example of Shallow Copy:
 // JavaScript
 
+let a = [10];
+let b = a;
+b[0]=20;
+console.log(a[0]);
+
 // let originalObject = { a: 1, b: { c: 2 } };
 // let shallowCopy = { ...originalObject };
 
@@ -523,8 +528,8 @@ console.log(Boolean(null));
 // JavaScript
 
 // let originalObject = { a: 1, b: { c: 2 } };
-// let deepCopy = JSON.parse(JSON.stringify(originalObject)); // Using JSON method for simplicity
-
+// // let deepCopy = JSON.parse(JSON.stringify(originalObject)); // Using JSON method for simplicity
+// let deepCopy = structuredClone(originalObject);
 // deepCopy.a = 5; // Modifies top-level property in deepCopy only
 // deepCopy.b.c = 3; // Modifies nested object in deepCopy only
 
@@ -536,7 +541,7 @@ console.log(Boolean(null));
 // Shallow Copy: Suitable for flat objects or arrays without nested objects, or when you intend to share references to nested data.
 // Deep Copy: Necessary when you need a completely independent copy of an object or array, especially with nested structures, to prevent unintended side effects on the original data.
 
-// for(let i=0;i<10;i++){
+// for(var i=0;i<10;i++){
 //   setTimeout(function(){
 //     console.log(i);
 //   },1000);
@@ -701,6 +706,8 @@ console.log(Boolean(null));
 // arrs.forEach((arr)=>{
 //   obj[arr[0]] = arr[1];
 // })
+
+// const obj = arrs.reduce((acc,curr,idx,[])=>  ,{});
 
 // console.log(obj);
 

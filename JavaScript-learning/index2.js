@@ -311,3 +311,27 @@
 //   console.log("Hi");
 // }
 // foo();
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayHi = function() {
+//   console.log("Hi " + this.name);
+// };
+
+// const p = new Person("Saksham");
+// console.log(p.__proto__ === Person.prototype); // true
+// p.sayHi(); // Hi Saksham
+
+function a() {
+  console.log(this);
+}
+
+a(); 
+
+function tag(strings, ...values) {
+  console.log(strings);
+  console.log(values);
+}
+
+tag`Hello ${name}, age ${age}`;
