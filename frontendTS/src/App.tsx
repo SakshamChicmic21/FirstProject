@@ -159,10 +159,12 @@ function App() {
   const showNavbar = !noNabbarPaths.includes(location.pathname);
 
   // return function will run during unmounting or when dependencies change
-  // useEffect(() => {
-  //   console.log("Effect runs");
-  //   return () => console.log("Cleanup runs");
-  // }, []);
+  // let a = 1;
+  const[a,setA] = useState(1);
+  useEffect(() => {
+    console.log(a);
+    setA(a+1);
+  }, [a]);
   return (
     <>
       {/* <RouterProvider router={router} /> */}

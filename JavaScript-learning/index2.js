@@ -223,6 +223,7 @@
 // console.log(bg.apply(person2));
 // let strname = "saksham";
 // let str = [...strname];
+// console.log(str);
 
 // let apiData = [
 //     {
@@ -265,7 +266,7 @@
 //     make: "Ford",
 //     model: "Mustang",
 //     year: 1969,
-    
+
 //     // A method (a function as a property)
 //     displayCar: function() {
 //         const result = `A beautiful ${this.year} ${this.make} ${this.model}`;
@@ -299,3 +300,14 @@
 //     return e%2==0;
 // })
 // console.log(res);
+
+// "use strict";
+// function foo({}) {
+//   console.log("Hello");
+// }
+// foo();
+
+// function foo() {
+//   console.log("Hi");
+// }
+// foo();

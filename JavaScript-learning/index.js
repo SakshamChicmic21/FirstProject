@@ -1,4 +1,4 @@
-"use-strict";
+// "use-strict";
 // let stand = function walk() {
 //   console.log("You are standing still.");
 // };
@@ -796,18 +796,18 @@ console.log(Boolean(null));
 // console.log(new MyClass().myField); // undefined
 
 // console.log("start");
-// setTimeout(()=> console.log("timeout"),0);
-// setImmediate(()=> console.log("immediate"));
+// setTimeout(() => console.log("timeout"), 0);
+// setImmediate(() => console.log("immediate"));
 
 // Promise.resolve().then(() => console.log("promise"));
 // console.log("End");
 
 // console.log("start");
-// setTimeout(()=> console.log("timeout")); // macrostack
-// setTimeout(()=> console.log("timeout 2")); // macrostack
+// setTimeout(() => console.log("timeout")); // macrostack
+// setTimeout(() => console.log("timeout 2")); // macrostack
 
-// Promise.resolve().then(()=> console.log("promise"));// microstack
-// console.log("End")
+// Promise.resolve().then(() => console.log("promise")); // microstack
+// console.log("End");
 
 // function mysetInterval(fun,delay){
 //   let id =null;
