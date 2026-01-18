@@ -1035,3 +1035,9 @@ console.log(a[0]);
 // console.log();
 
 // console.log(Boolean({}));
+
+let str = new String(23);
+console.log(str);
+
+console.log(typeof str);
+console.log(str instanceof String);
