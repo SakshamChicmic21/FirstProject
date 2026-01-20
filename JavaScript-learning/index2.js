@@ -335,3 +335,32 @@ function tag(strings, ...values) {
 }
 
 tag`Hello ${name}, age ${age}`;
+
+
+console.log("Script Start");
+
+setTimeout(() => {
+  console.log("SetTimeout 1");
+}, 0);
+
+Promise.resolve()
+  .then(() => {
+    console.log("Promise 1");
+  })
+  .then(() => {
+    console.log("Promise 2");
+  });
+
+(async () => {
+  console.log("Async Function Start");
+  await Promise.resolve(); // Resolves immediately (microtask)
+  console.log("Async Function End");
+})();
+
+setTimeout(() => {
+  Promise.resolve().then(() => {
+    console.log("Promise inside SetTimeout");
+  });
+}, 0);
+
+console.log("Script End");

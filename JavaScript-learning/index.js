@@ -3,6 +3,8 @@
 //   console.log("You are standing still.");
 // };
 
+import { type } from "os";
+
 // let stand2 = function walk() {
 //   console.log("you are standing still2.");
 // };
@@ -57,6 +59,8 @@
 
 // console.log( NaN === NaN);// false
 // console.log( undefined === undefined);// true
+// console.log( null === null);// true
+// console.log(typeof NaN); // "number"
 
 // console.log( Number("123") ); // 123
 // console.log( Number("123.45") ); // 123.45
@@ -133,9 +137,9 @@
 // console.log( [] - 1 ); // -1
 // console.log( [1,2,3] - 1 ); // NaN
 
-// console.log( "5" + [] );
-// console.log( "5" + {} );
-// console.log( "5" + [1,2,3] );
+// console.log( "5" + [] );// "5"
+// console.log( "5" + {} );// "5[object Object]"
+// console.log( "5" + [1,2,3] );    // "51,2,3"
 
 // console.log( "5" - [] );
 // console.log( "5" - {} );

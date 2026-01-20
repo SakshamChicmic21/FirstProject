@@ -1,0 +1,6 @@
+export enum MODAL_TYPE {
+  DELETE = 1,
+  SUSPEND = 2,
+  RESET_PASSWORD = 3,
+  IMPERSONATE = 4,
+}

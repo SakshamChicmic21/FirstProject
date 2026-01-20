@@ -1,0 +1,141 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
+import { cookies } from "next/headers";
+
+import { decrypt } from "./session";
+import { toQueryParams } from "./utils";
+
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+
+/**
+ * Creates an Axios instance with interceptors and auth headers.
+ */
+const createAxiosInstance = async (): Promise<AxiosInstance> => {
+  const token = await decrypt((await cookies()).get("session")?.value);
+
+  const instance = axios.create({
+    baseURL: BASE_URL,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  // Inject Authorization Header
+  instance.interceptors.request.use(
+    (config) => {
+      if (token?.token) {
+        // Mutate headers object directly
+        config.headers = config.headers || {};
+        config.headers["Authorization"] = `Bearer ${token.token as string}`;
+      }
+      return config;
+    },
+    (error) => Promise.reject(error),
+  );
+
+  // Global Error Handling
+  instance.interceptors.response.use(
+    (res) => res,
+    (error: AxiosError) => {
+      console.error("Axios error:", error?.config?.url, error);
+      return Promise.reject(error.response?.data || error.message);
+    },
+  );
+
+  return instance;
+};
+
+/**
+ * Common request executor
+ */
+type FetcherOptions<R, T = R> = {
+  transformer?: (data: R) => T;
+  headers?: Record<string, string>;
+  // Add more options here as needed
+};
+
+const request = async <R, T = R>(
+  config: AxiosRequestConfig,
+  options?: FetcherOptions<R, T>,
+): Promise<T> => {
+  try {
+    // Merge headers from config and options
+    const mergedHeaders = { ...config.headers, ...(options?.headers || {}) };
+    const axiosInstance = await createAxiosInstance();
+    const res = await axiosInstance.request<R>({
+      ...config,
+      headers: mergedHeaders,
+    });
+    console.log(`${config.method}, ${config.url}: `, res.data);
+    return options?.transformer
+      ? options.transformer(res.data)
+      : (res.data as unknown as T);
+  } catch (error: any) {
+    return error;
+  }
+};
+
+// =====================
+// HTTP METHODS
+// =====================
+
+export const getRequest = async <R, Q = undefined, T = R>(
+  url: string,
+  params?: Q,
+  options?: FetcherOptions<R, T>,
+): Promise<T> => {
+  const query = params ? toQueryParams<Q>(params) : "";
+  console.log(`${url}${query}`, params, "sdfjksadasdas");
+  return request<R, T>({ method: "GET", url: `${url}${query}` }, options);
+};
+
+export const postRequest = async <R, D, T = R>(
+  url: string,
+  data: D,
+  options?: FetcherOptions<R, T>,
+): Promise<T> => {
+  console.log(`${url}`, data, "sdfjksadasdas");
+  return request<R, T>(
+    {
+      method: "POST",
+      url,
+      data,
+      headers: options?.headers,
+    },
+    options,
+  );
+};
+
+export const putRequest = async <R, D, T = R>(
+  url: string,
+  data: D,
+  options?: FetcherOptions<R, T>,
+): Promise<T> => {
+  console.log(`${url}`, data, "sdfjksadasdas");
+  return request<R, T>(
+    {
+      method: "PUT",
+      url,
+      data,
+      headers: options?.headers,
+    },
+    options,
+  );
+};
+
+export const deleteRequest = async <R, D = undefined, T = R>(
+  url: string,
+  data?: D,
+  options?: FetcherOptions<R, T>,
+): Promise<T> => {
+  console.log(`${url}`, data, "sdfjksadasdas");
+  return request<R, T>(
+    {
+      method: "DELETE",
+      url,
+      data,
+      headers: options?.headers,
+    },
+    options,
+  );
+};
