@@ -323,44 +323,110 @@
 // console.log(p.__proto__ === Person.prototype); // true
 // p.sayHi(); // Hi Saksham
 
-function a() {
-  console.log(this);
+// function a() {
+//   console.log(this);
+// }
+
+// a(); 
+
+// function tag(strings, ...values) {
+//   console.log(strings);
+//   console.log(values);
+// }
+
+// tag`Hello ${name}, age ${age}`;
+
+
+// console.log("Script Start");
+
+// setTimeout(() => {
+//   console.log("SetTimeout 1");
+// }, 0);
+
+// Promise.resolve()
+//   .then(() => {
+//     console.log("Promise 1");
+//   })
+//   .then(() => {
+//     console.log("Promise 2");
+//   });
+
+// (async () => {
+//   console.log("Async Function Start");
+//   await Promise.resolve(); // Resolves immediately (microtask)
+//   console.log("Async Function End");
+// })();
+
+// setTimeout(() => {
+//   Promise.resolve().then(() => {
+//     console.log("Promise inside SetTimeout");
+//   });
+// }, 0);
+
+// console.log("Script End");
+
+
+// const obj ={
+//     name:"harpinder",
+//     age:21,
+//     city:"Lucknow",
+//     address:{
+//         state:"UP",
+//         country:"India",
+//         c:{
+//           pincode:226001
+//         }
+//     }
+// }
+// const res = {};
+// for(const key in obj){
+//   if (typeof obj[key] === "object"){
+//     checkNestedObj(res,obj[key]);
+//   }else{
+//     res[key] = obj[key];
+//   }
+// }
+
+// function checkNestedObj(res,obj){
+//   for(const key in obj){
+//     if (typeof obj[key] === "object"){
+//       checkNestedObj(res,obj[key]);
+//     }else{
+//       res[key] = obj[key];
+//     }
+//   }
+// } 
+// console.log(res);
+
+const obj = {
+    name: "harpinder",
+    age: 21,
+    city: "Lucknow",
+    address: {
+        state: "UP",
+        country: "India",
+        c: {
+            pincode: 226001
+        }
+    }
 }
 
-a(); 
+const res = {};
 
-function tag(strings, ...values) {
-  console.log(strings);
-  console.log(values);
+function checkNestedObj(result, obj, prefix = '') {
+    for (const key in obj) {
+        // Build the full key path with dot notation
+        const fullKey = prefix ? `${prefix}.${key}` : key;
+        
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+            // Recursively process nested objects
+            checkNestedObj(result, obj[key], fullKey);
+        } else {
+            // Add the flattened key-value pair
+            result[fullKey] = obj[key];
+        }
+    }
 }
 
-tag`Hello ${name}, age ${age}`;
-
-
-console.log("Script Start");
-
-setTimeout(() => {
-  console.log("SetTimeout 1");
-}, 0);
-
-Promise.resolve()
-  .then(() => {
-    console.log("Promise 1");
-  })
-  .then(() => {
-    console.log("Promise 2");
-  });
-
-(async () => {
-  console.log("Async Function Start");
-  await Promise.resolve(); // Resolves immediately (microtask)
-  console.log("Async Function End");
-})();
-
-setTimeout(() => {
-  Promise.resolve().then(() => {
-    console.log("Promise inside SetTimeout");
-  });
-}, 0);
-
-console.log("Script End");
+checkNestedObj(res, obj);
+console.log(res);
