@@ -1,1 +1,0 @@
-console.log("Navbar component loaded");
