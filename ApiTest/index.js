@@ -14,7 +14,7 @@ export async function textToSpeech() {
       },
       {
         headers: {
-          "xi-api-key": "sk_3a8a27c8fedb14b0cc333175737f59af660f33ade5a89311",
+          "xi-api-key": "",
           "Content-Type": "application/json"
         },
         responseType: "arraybuffer"
