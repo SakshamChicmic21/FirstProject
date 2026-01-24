@@ -19,28 +19,14 @@ export default function CameraAccess() {
 
     startCamera();
   }, []);
-  
-  useEffect(() => {
-    let stream: MediaStream;
 
-    navigator.mediaDevices
-      .getUserMedia({ video: true, audio: true })
-      .then((s) => {
-        stream = s;
-        if (videoRef.current) videoRef.current.srcObject = stream;
-      });
-
-    return () => {
-      stream?.getTracks().forEach((track) => track.stop());
-    };
-  }, []);
   return (
     <video
       ref={videoRef}
       autoPlay
       muted
       playsInline
-      className="w-full h-full rounded-lg"
+      className="w-full h-80% rounded-lg"
     />
   );
 }

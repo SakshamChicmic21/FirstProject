@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
+    const ELEVENLABS_API_KEY = process.env.NEXT_ELEVENLABS_API_KEY;
     const NEXT_ELEVEN_API_URL = process.env.NEXT_ELEVEN_API_URL;
     const VOICE_ID = 'EXAVITQu4vr4xnSDxMaL'; // Default voice ID (Sarah)
 

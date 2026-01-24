@@ -1,7 +1,8 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import CameraAccess from '@/components/cameraAccess';
+import toast from 'react-hot-toast';
+import CameraAccess from '../../components/cameraAccess';
 
 // Sample interview questions
 const QUESTIONS = [
@@ -14,6 +15,7 @@ const QUESTIONS = [
   "How do you ensure code quality and maintainability in your projects?",
   "What is your approach to debugging complex issues?",
 ];
+
 const MAX_TIME_PER_QUESTION = 300; // 5 minutes in seconds
 
 type AnswersMap = Record<number, string>;
@@ -30,7 +32,7 @@ export default function InterviewPage() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [timeSpent, setTimeSpent] = useState(0);
   const [questionTimes, setQuestionTimes] = useState<QuestionTimesMap>({});
-  const [showEvaluation, setShowEvaluation] = useState(true);
+  const [showEvaluation, setShowEvaluation] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -67,7 +69,6 @@ export default function InterviewPage() {
     } else {
       setAnswer('');
     }
-    setShowEvaluation(true);
   }, [currentQuestionIndex]);
 
   const formatTime = (seconds: number): string => {
@@ -122,7 +123,7 @@ export default function InterviewPage() {
 
   const handleSaveAndNext = async () => {
     if (!answer.trim()) {
-      alert('Please provide an answer before proceeding.');
+      toast.error('Please provide an answer before proceeding.');
       return;
     }
 
@@ -139,36 +140,35 @@ export default function InterviewPage() {
     }));
 
     // Evaluate answer
-    // setIsEvaluating(true);
-    // try {
-    //   const response = await fetch('/api/evaluate', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       question: currentQuestion,
-    //       answer: answer,
-    //     }),
-    //   });
+    setIsEvaluating(true);
+    try {
+      // const response = await fetch('/api/evaluate', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     question: currentQuestion,
+      //     answer: answer,
+      //   }),
+      // });
 
-    //   if (!response.ok) {
-    //     throw new Error('Failed to evaluate answer');
-    //   }
+      if (true) {
+        throw new Error('Failed to evaluate answer');
+      }
 
-    //   const data = await response.json();
-    //   setEvaluations((prev) => ({
-    //     ...prev,
-    //     [currentQuestionIndex]: data.evaluation,
-    //   }));
-    //   setShowEvaluation(true);
-    // } catch (error) {
-    //   console.error('Error evaluating answer:', error);
-    //   alert('Failed to evaluate answer. Please try again.');
-    // } finally {
-    //   setIsEvaluating(false);
-    // }
-    handleNextQuestion();
+      // const data = await response.json();
+      // setEvaluations((prev) => ({
+      //   ...prev,
+      //   [currentQuestionIndex]: data.evaluation,
+      // }));
+      setShowEvaluation(true);
+    } catch (error) {
+      console.error('Error evaluating answer:', error);
+      toast.error('Failed to evaluate answer. Please try again.');
+    } finally {
+      setIsEvaluating(false);
+    }
   };
 
   const handleNextQuestion = () => {
@@ -178,7 +178,7 @@ export default function InterviewPage() {
       setShowEvaluation(false);
     } else {
       // Interview completed
-      alert('Interview completed! Thank you for your responses.');
+      toast.success('Interview completed! Thank you for your responses.');
       router.push('/');
     }
   };
@@ -258,17 +258,17 @@ export default function InterviewPage() {
                 'Save & Evaluate'
               )}
             </button>
-
             {showEvaluation && (
-              <button 
+              <button
                 className="flex-1 min-w-50 px-8 py-4 text-base font-semibold rounded-xl flex items-center justify-center gap-3 transition-all duration-300 bg-gradient-secondary text-white shadow-glow-pink hover:shadow-glow-pink-lg hover:-translate-y-0.5"
                 onClick={handleNextQuestion}
               >
                 {currentQuestionIndex < QUESTIONS.length - 1
                   ? 'Next Question →'
-                  : 'Complete Interview'} 
+                  : 'Complete Interview'}
               </button>
             )}
+
           </div>
         </div>
       </div>
@@ -278,11 +278,11 @@ export default function InterviewPage() {
         {/* Video Section */}
         <div className="bg-dark-card rounded-3xl p-4 border border-accent-purple/20 shadow-2xl">
           <div className="aspect-video bg-accent-blue/5 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-accent-purple/20 gap-3">
-            {/* <div className="text-5xl opacity-50">📹</div>
+            <div className="text-5xl opacity-50">📹</div>
             <p className="text-text-secondary font-semibold">Camera Preview</p>
-            <p className="text-text-secondary text-sm opacity-70">Video feature coming soon</p> */}
-            <CameraAccess />
+            <p className="text-text-secondary text-sm opacity-70">Video feature coming soon</p>
           </div>
+          {/* <CameraAccess /> */}
         </div>
 
         {/* Question Navigation */}
@@ -292,19 +292,16 @@ export default function InterviewPage() {
             {QUESTIONS.map((_, index) => (
               <button
                 key={index}
-                className={`aspect-square bg-accent-purple/10 border-2 rounded-lg md:rounded-xl flex items-center justify-center font-semibold text-text-secondary transition-all duration-300 relative hover:bg-accent-purple/20 hover:border-accent-purple hover:scale-105 ${
-                  index === currentQuestionIndex 
-                    ? 'bg-gradient-primary text-white border-transparent shadow-glow-purple' 
+                className={`aspect-square bg-accent-purple/10 border-2 rounded-lg md:rounded-xl flex items-center justify-center font-semibold text-text-secondary transition-all duration-300 relative hover:bg-accent-purple/20 hover:border-accent-purple hover:scale-105 ${index === currentQuestionIndex
+                  ? 'bg-gradient-primary text-white border-transparent shadow-glow-purple'
+                  : ''
+                  } ${answers[index] && index !== currentQuestionIndex
+                    ? 'bg-green-500/10 border-green-500'
                     : ''
-                } ${
-                  answers[index] && index !== currentQuestionIndex
-                    ? 'bg-green-500/10 border-green-500' 
-                    : ''
-                } ${
-                  answers[index] && index === currentQuestionIndex
+                  } ${answers[index] && index === currentQuestionIndex
                     ? 'bg-linear-to-br from-green-500 to-green-600'
                     : ''
-                }`}
+                  }`}
                 onClick={() => handleQuestionNavigation(index)}
               >
                 <span className="text-sm md:text-base">{index + 1}</span>

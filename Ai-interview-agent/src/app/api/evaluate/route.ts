@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import OpenAI from 'openai';
+import { GoogleGenAI } from "@google/genai";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// The client gets the API key from the environment variable `GEMINI_API_KEY`.
+const ai = new GoogleGenAI({ apiKey: process.env.NEXT_GEMINI_API_KEY });
 
 interface EvaluateRequest {
   question: string;
@@ -21,37 +20,51 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!process.env.OPENAI_API_KEY) {
+    if (!process.env.NEXT_GEMINI_API_KEY) {
       return NextResponse.json(
-        { error: 'OpenAI API key not configured' },
+        { error: 'Gemini API key not configured' },
         { status: 500 }
       );
     }
 
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
-      messages: [
-        {
-          role: 'system',
-          content: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions. 
-          Provide constructive feedback that includes:
-          1. An overall assessment (Excellent/Good/Fair/Needs Improvement)
-          2. Key strengths of the answer
-          3. Areas for improvement
-          4. Specific suggestions for better answers
-          Be encouraging but honest in your evaluation.`,
-        },
-        {
-          role: 'user',
-          content: `Interview Question: ${question}\n\nCandidate's Answer: ${answer}\n\nPlease evaluate this answer.`,
-        },
-      ],
-      temperature: 0.7,
-      max_tokens: 500,
-    });
+    // const completion = await openai.chat.completions.create({
+    //   model: 'gpt-3.5-turbo',
+    //   messages: [
+    //     {
+    //       role: 'system',
+    //       content: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions. 
+    //       Provide constructive feedback that includes:
+    //       1. An overall assessment (Excellent/Good/Fair/Needs Improvement)
+    //       2. Key strengths of the answer
+    //       3. Areas for improvement
+    //       4. Specific suggestions for better answers
+    //       Be encouraging but honest in your evaluation.`,
+    //     },
+    //     {
+    //       role: 'user',
+    //       content: `Interview Question: ${question}\n\nCandidate's Answer: ${answer}\n\nPlease evaluate this answer.`,
+    //     },
+    //   ],
+    //   temperature: 0.7,
+    //   max_tokens: 500,
+    // });
 
-    console.log(completion);
-    const evaluation = completion.choices[0].message.content;
+    const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions. 
+    Provide constructive feedback that includes:
+    1. An overall assessment (Excellent/Good/Fair/Needs Improvement)
+    2. Key strengths of the answer
+    3. Areas for improvement
+    4. Specific suggestions for better answers
+    Be encouraging but honest in your evaluation.
+    Interview Question: ${question}
+    Candidate's Answer: ${answer}
+    Please evaluate this answer. Give response in 50 to 80 words only, and not give markdown file format response.`,
+  }); 
+
+    console.log(response);
+    const evaluation = response.text;
 
     return NextResponse.json({
       evaluation,
