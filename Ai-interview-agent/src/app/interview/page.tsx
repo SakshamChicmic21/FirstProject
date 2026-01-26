@@ -33,6 +33,7 @@ export default function InterviewPage() {
   const [timeSpent, setTimeSpent] = useState(0);
   const [questionTimes, setQuestionTimes] = useState<QuestionTimesMap>({});
   const [showEvaluation, setShowEvaluation] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -40,9 +41,9 @@ export default function InterviewPage() {
 
   // Timer is 5min per question
   useEffect(() => {
-    // if (timeSpent >= MAX_TIME_PER_QUESTION) {
-    //   handleNextQuestion();
-    // }
+    if (timeSpent >= MAX_TIME_PER_QUESTION) {
+      handleNextQuestion();
+    }
   }, [timeSpent]);
 
   // Timer logic
@@ -60,9 +61,6 @@ export default function InterviewPage() {
 
   // Auto-play question on load
   useEffect(() => {
-    if (currentQuestion) {
-      speakQuestion(currentQuestion);
-    }
     // Load saved answer if exists
     if (answers[currentQuestionIndex]) {
       setAnswer(answers[currentQuestionIndex]);
@@ -98,6 +96,7 @@ export default function InterviewPage() {
       const audioUrl = URL.createObjectURL(audioBlob);
 
       if (audioRef.current) {
+        audioRef.current.src = audioUrl;
         audioRef.current.play();
       }
 
@@ -142,26 +141,27 @@ export default function InterviewPage() {
     // Evaluate answer
     setIsEvaluating(true);
     try {
-      // const response = await fetch('/api/evaluate', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     question: currentQuestion,
-      //     answer: answer,
-      //   }),
-      // });
+      const response = await fetch('/api/evaluate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question: currentQuestion,
+          answer: answer,
+        }),
+      });
 
-      if (true) {
+      if (!response.ok) {
         throw new Error('Failed to evaluate answer');
       }
-
-      // const data = await response.json();
-      // setEvaluations((prev) => ({
-      //   ...prev,
-      //   [currentQuestionIndex]: data.evaluation,
-      // }));
+      console.log(response);
+      const data = await response.json();
+      console.log(data);
+      setEvaluations((prev) => ({
+        ...prev,
+        [currentQuestionIndex]: data.evaluation,
+      }));
       setShowEvaluation(true);
     } catch (error) {
       console.error('Error evaluating answer:', error);
@@ -171,11 +171,20 @@ export default function InterviewPage() {
     }
   };
 
+  const handleStart = () => {
+    setHasStarted(true);
+    if (currentQuestion) {
+      speakQuestion(currentQuestion);
+    }
+  };
+
   const handleNextQuestion = () => {
     if (currentQuestionIndex < QUESTIONS.length - 1) {
-      setCurrentQuestionIndex((prev) => prev + 1);
+      const nextIndex = currentQuestionIndex + 1;
+      setCurrentQuestionIndex(nextIndex);
       setTimeSpent(0);
       setShowEvaluation(false);
+      speakQuestion(QUESTIONS[nextIndex]);
     } else {
       // Interview completed
       toast.success('Interview completed! Thank you for your responses.');
@@ -189,10 +198,33 @@ export default function InterviewPage() {
     }
     setCurrentQuestionIndex(index);
     setTimeSpent(questionTimes[index] || 0);
+    speakQuestion(QUESTIONS[index]);
   };
 
   return (
     <div className="flex min-h-screen bg-dark-bg gap-6 p-4">
+      {/* Start Overlay */}
+      {!hasStarted && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+          <div className="bg-dark-card border border-accent-purple/30 rounded-3xl p-8 max-w-lg w-full text-center shadow-2xl animate-scale-in">
+            <div className="w-20 h-20 bg-accent-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-4xl">🎙️</span>
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">Ready for your Interview?</h2>
+            <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+              We'll ask you a series of technical questions. Your answers will be evaluated in real-time.
+              Click start when you're ready to begin.
+            </p>
+            <button
+              onClick={handleStart}
+              className="w-full py-4 text-xl font-bold bg-gradient-primary text-white rounded-xl shadow-glow-purple hover:shadow-glow-purple-lg transform hover:-translate-y-1 transition-all duration-300"
+            >
+              Start Interview
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="flex-1 flex flex-col gap-6 max-w-[calc(100%-300px)]">
         {/* Question Display */}
         <div className="bg-dark-card rounded-3xl p-4 border border-accent-purple/20 shadow-2xl flex-1 animate-slide-in-left flex flex-col gap-6">

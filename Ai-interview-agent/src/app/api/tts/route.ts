@@ -8,7 +8,6 @@ interface TTSRequest {
 export async function POST(request: NextRequest) {
   try {
     const { text }: TTSRequest = await request.json();
-
     if (!text) {
       return NextResponse.json(
         { error: 'Text is required' },
@@ -17,8 +16,8 @@ export async function POST(request: NextRequest) {
     }
 
     const ELEVENLABS_API_KEY = process.env.NEXT_ELEVENLABS_API_KEY;
-    const NEXT_ELEVEN_API_URL = process.env.NEXT_ELEVEN_API_URL;
-    const VOICE_ID = 'EXAVITQu4vr4xnSDxMaL'; // Default voice ID (Sarah)
+    const ELEVENLABS_API_URL = process.env.NEXT_ELEVENLABS_API_URL;
+    const VOICE_ID = process.env.NEXT_ELEVENLABS_VOICEID;
 
     if (!ELEVENLABS_API_KEY) {
       return NextResponse.json(
@@ -28,10 +27,9 @@ export async function POST(request: NextRequest) {
     }
 
     const response = await axios.post<ArrayBuffer>(
-      `${NEXT_ELEVEN_API_URL}v1/text-to-speech/${VOICE_ID}`,
+      `${ELEVENLABS_API_URL}v1/text-to-speech/${VOICE_ID}`,
       {
         text,
-        model_id: 'eleven_monolingual_v1',
         voice_settings: {
           stability: 0.5,
           similarity_boost: 0.75,
@@ -39,14 +37,23 @@ export async function POST(request: NextRequest) {
       },
       {
         headers: {
-          'Content-Type': 'application/json',
           'xi-api-key': ELEVENLABS_API_KEY,
+          'Content-Type': 'application/json',
         },
         responseType: 'arraybuffer',
       }
     );
 
-    console.log(response);
+    // console.log("Status:", response.status);
+    // console.log("Content-Type:", response.headers["content-type"]);
+
+    // if (response.status === 200) {
+    //   // fs.writeFileSync("output.mp3", response.data);
+    //   console.log("✅ Audio file created successfully: output.mp3");
+    // } else {
+    //   console.error("❌ Failed to generate audio. Status:", response.status);
+    //   console.error("Response:", Buffer.from(response.data).toString());
+    // }
 
     // Return the audio as a blob
     return new NextResponse(response.data, {
