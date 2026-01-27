@@ -42,7 +42,6 @@ export async function POST(request: NextRequest) {
       `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoiceId}`,
       {
         text: text,
-        model_id: "eleven_monolingual_v1",
         voice_settings: {
           stability: stability,
           similarity_boost: similarityBoost,
