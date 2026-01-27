@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
 
 // The client gets the API key from the environment variable `GEMINI_API_KEY`.
@@ -15,15 +15,15 @@ export async function POST(request: NextRequest) {
 
     if (!question || !answer) {
       return NextResponse.json(
-        { error: 'Question and answer are required' },
-        { status: 400 }
+        { error: "Question and answer are required" },
+        { status: 400 },
       );
     }
 
     if (!process.env.NEXT_GEMINI_API_KEY) {
       return NextResponse.json(
-        { error: 'Gemini API key not configured' },
-        { status: 500 }
+        { error: "Gemini API key not configured" },
+        { status: 500 },
       );
     }
 
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     //   messages: [
     //     {
     //       role: 'system',
-    //       content: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions. 
+    //       content: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions.
     //       Provide constructive feedback that includes:
     //       1. An overall assessment (Excellent/Good/Fair/Needs Improvement)
     //       2. Key strengths of the answer
@@ -50,8 +50,8 @@ export async function POST(request: NextRequest) {
     // });
 
     const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions. 
+      model: "gemini-2.5-flash",
+      contents: `You are an expert technical interviewer. Your task is to evaluate candidate answers to interview questions. 
     Provide constructive feedback that includes:
     1. An overall assessment (Excellent/Good/Fair/Needs Improvement)
     2. Key strengths of the answer
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
     Interview Question: ${question}
     Candidate's Answer: ${answer}
     Please evaluate this answer. Give response in 50 to 80 words only, and not give markdown file format response.`,
-  }); 
+    });
 
     console.log(response);
     const evaluation = response.text;
@@ -71,11 +71,11 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
-    console.error('Evaluation error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error("Evaluation error:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: 'Failed to evaluate answer', details: errorMessage },
-      { status: 500 }
+      { error: "Failed to evaluate answer", details: errorMessage },
+      { status: 500 },
     );
   }
 }

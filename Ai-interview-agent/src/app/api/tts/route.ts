@@ -44,16 +44,16 @@ export async function POST(request: NextRequest) {
       }
     );
 
-    // console.log("Status:", response.status);
-    // console.log("Content-Type:", response.headers["content-type"]);
+    console.log("Status:", response.status);
+    console.log("Content-Type:", response.headers["content-type"]);
 
-    // if (response.status === 200) {
-    //   // fs.writeFileSync("output.mp3", response.data);
-    //   console.log("✅ Audio file created successfully: output.mp3");
-    // } else {
-    //   console.error("❌ Failed to generate audio. Status:", response.status);
-    //   console.error("Response:", Buffer.from(response.data).toString());
-    // }
+    if (response.status === 200) {
+      // fs.writeFileSync("output.mp3", response.data);
+      console.log("✅ Audio file created successfully: output.mp3");
+    } else {
+      console.error("❌ Failed to generate audio. Status:", response.status);
+      console.error("Response:", Buffer.from(response.data).toString());
+    }
 
     // Return the audio as a blob
     return new NextResponse(response.data, {
@@ -62,9 +62,9 @@ export async function POST(request: NextRequest) {
       },
     });
   } catch (error) {
-    console.error('Text-to-speech error:', error);
+    console.error("Text-to-speech error:", error);
     return NextResponse.json(
-      { error: 'Failed to generate speech' },
+      { error: "Failed to generate speech" },
       { status: 500 }
     );
   }
