@@ -321,29 +321,39 @@ export default function InterviewPage() {
         <div className="bg-dark-card rounded-3xl p-4 border border-accent-purple/20 shadow-2xl flex-1">
           <h3 className="text-lg font-semibold mb-4 text-text-primary">Questions</h3>
           <div className="grid grid-cols-4 gap-3">
-            {QUESTIONS.map((_, index) => (
-              <button
-                key={index}
-                className={`aspect-square bg-accent-purple/10 border-2 rounded-lg md:rounded-xl flex items-center justify-center font-semibold text-text-secondary transition-all duration-300 relative hover:bg-accent-purple/20 hover:border-accent-purple hover:scale-105 ${index === currentQuestionIndex
-                  ? 'bg-gradient-primary text-white border-transparent shadow-glow-purple'
-                  : ''
-                  } ${answers[index] && index !== currentQuestionIndex
-                    ? 'bg-green-500/10 border-green-500'
-                    : ''
-                  } ${answers[index] && index === currentQuestionIndex
-                    ? 'bg-linear-to-br from-green-500 to-green-600'
-                    : ''
-                  }`}
-                onClick={() => handleQuestionNavigation(index)}
-              >
-                <span className="text-sm md:text-base">{index + 1}</span>
-                {answers[index] && (
-                  <span className="absolute -top-1 -right-1 bg-green-500 text-white w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold">
-                    ✓
-                  </span>
-                )}
-              </button>
-            ))}
+            {QUESTIONS.map((_, index) => {
+              const isAnswered = !!answers[index];
+              const isCurrent = index === currentQuestionIndex;
+              const isDisabled = isAnswered && !isCurrent;
+
+              return (
+                <button
+                  key={index}
+                  disabled={isDisabled}
+                  className={`aspect-square bg-accent-purple/10 border-2 rounded-lg md:rounded-xl flex items-center justify-center font-semibold text-text-secondary transition-all duration-300 relative ${isDisabled
+                    ? 'opacity-50 cursor-not-allowed'
+                    : 'hover:bg-accent-purple/20 hover:border-accent-purple hover:scale-105'
+                    } ${isCurrent
+                      ? 'bg-gradient-primary text-white border-transparent shadow-glow-purple'
+                      : ''
+                    } ${isAnswered && !isCurrent
+                      ? 'bg-green-500/10 border-green-500'
+                      : ''
+                    } ${isAnswered && isCurrent
+                      ? 'bg-linear-to-br from-green-500 to-green-600'
+                      : ''
+                    }`}
+                  onClick={() => !isDisabled && handleQuestionNavigation(index)}
+                >
+                  <span className="text-sm md:text-base">{index + 1}</span>
+                  {isAnswered && (
+                    <span className="absolute -top-1 -right-1 bg-green-500 text-white w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold">
+                      ✓
+                    </span>
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
