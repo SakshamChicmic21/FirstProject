@@ -2,7 +2,7 @@ import './globals.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI Interview Agent',
+  title: 'AI Interview Panel',
   description: 'Intelligent AI-powered interview platform',
 }
 

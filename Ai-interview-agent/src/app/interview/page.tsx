@@ -309,12 +309,12 @@ export default function InterviewPage() {
       <div className="w-70 flex flex-col gap-6 animate-slide-in-right">
         {/* Video Section */}
         <div className="bg-dark-card rounded-3xl p-4 border border-accent-purple/20 shadow-2xl">
-          <div className="aspect-video bg-accent-blue/5 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-accent-purple/20 gap-3">
+          {/* <div className="aspect-video bg-accent-blue/5 rounded-xl flex flex-col items-center justify-center border-2 border-dashed border-accent-purple/20 gap-3">
             <div className="text-5xl opacity-50">📹</div>
             <p className="text-text-secondary font-semibold">Camera Preview</p>
             <p className="text-text-secondary text-sm opacity-70">Video feature coming soon</p>
-          </div>
-          {/* <CameraAccess /> */}
+          </div> */}
+          <CameraAccess />
         </div>
 
         {/* Question Navigation */}

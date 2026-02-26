@@ -13,7 +13,7 @@ export default function Home() {
       <div className="max-w-4xl w-full animate-fade-in">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-gradient animate-slide-in-left">
-            AI Interview Agent
+            AI Interview Panel
           </h1>
           <div className="text-xl md:text-2xl text-text-secondary animate-slide-in-right px-4">
             Your intelligent companion for technical interviews
