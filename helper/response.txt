@@ -1,0 +1,55 @@
+Api-> admin/interviews/{interview_id}
+path -> interview_id
+response ->  InterviewSession {
+    id: number; // PK
+    access_token: string;
+    admin_id: User {
+                id: string;
+                email: string;
+                full_name: string;
+                role: string;
+                profile_image: null;
+            }; // FK
+    candidate_id: User {
+                id: string;
+                email: string;
+                full_name: string;
+                role: string;
+                profile_image: null;
+            }; // FK
+    paper_id: QuestionPaper {
+                id: number; // PK
+                name: string;
+                description: string;
+                adminUser: User; // FK
+                question_count?: number;
+                questions?: Question[];
+                total_marks?: number;
+                created_at: string; // datetime
+            }
+    schedule_time: string; // datetime
+    duration_minutes: number;
+    max_questions: number;
+    start_time?: string; // datetime
+    end_time?: string; // datetime
+    status: "SCHEDULED" | "LIVE" | "COMPLETED" | "EXPIRED" | "CANCELLED";
+    total_score?: number; // float
+    current_status:
+        | "INVITED"
+        | "LINK_ACCESSED"
+        | "AUTHENTICATED"
+        | "ENROLLMENT_STARTED"
+        | "ENROLLMENT_COMPLETED"
+        | "INTERVIEW_ACTIVE"
+        | "INTERVIEW_PAUSED"
+        | "INTERVIEW_COMPLETED"
+        | "SUSPENDED";
+    last_activity: string; // datetime
+    warning_count: number;
+    max_warnings: number;
+    is_suspended: boolean;
+    suspension_reason?: string;
+    suspended_at?: string; // datetime
+    enrollment_audio_path?: string;
+    is_completed: boolean;
+}
