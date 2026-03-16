@@ -1,12 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
-import { decrypt } from "@/shared/session";
-import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./shared/routes";
+// import { cookies } from "next/headers";
+// import { decrypt } from "@/shared/session";
+// import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./shared/routes";
 
-const protectedRoutes = Object.values(PRIVATE_ROUTES);
-const publicRoutes = Object.values(PUBLIC_ROUTES);
+// const protectedRoutes = Object.values(PRIVATE_ROUTES);
+// const publicRoutes = Object.values(PUBLIC_ROUTES);
 
 export default async function middleware(req: NextRequest) {
+  // ⚠️ AUTHENTICATION DISABLED - All routes are now publicly accessible
+  console.log("🔓 Middleware disabled - allowing all routes:", req.nextUrl.pathname);
+  return NextResponse.next();
+  
+  /* ORIGINAL CODE - COMMENTED OUT TO DISABLE AUTH
   const path = req.nextUrl.pathname;
   console.log("🔥 Middleware is running:", path);
   if (path === "/") {
@@ -48,6 +53,7 @@ export default async function middleware(req: NextRequest) {
   }
 
   return NextResponse.next();
+  */
 }
 
 // Routes Middleware should not run on

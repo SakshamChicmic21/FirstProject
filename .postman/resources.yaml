@@ -1,0 +1,8 @@
+# Use this workspace to collaborate
+workspace:
+  id: 332f319a-e0a2-42e0-8fb9-b52780d4a3e3
+
+localResources:
+  collections:
+    - ../api_collection.postman_collection.json
+    - ../Sweet Shop Management System/sweetShop.json

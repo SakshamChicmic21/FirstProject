@@ -144,3 +144,5 @@ ISC
 ## Author
 
 Built with ❤️ using Next.js and AI
+
+i successfully started this boilder plate but i unable to login user in this project boilder plate give to full guide to learn this project how routing works and how to login to this project 

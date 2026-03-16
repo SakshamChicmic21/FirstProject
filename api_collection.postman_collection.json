@@ -1,0 +1,1421 @@
+{
+    "info": {
+        "_postman_id": "e965f7cb-73c4-4be7-8612-cb3f6e278f28",
+        "name": "AI Interview Platform API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Gaze & Face Analysis",
+            "item": [
+                {
+                    "name": "Video Feed",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/analyze/video/video_feed",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "analyze",
+                                "video",
+                                "video_feed"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Offer",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/analyze/video/offer",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "analyze",
+                                "video",
+                                "offer"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Watch",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/analyze/video/watch/{target_session_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "analyze",
+                                "video",
+                                "watch",
+                                "{target_session_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "System",
+            "item": [
+                {
+                    "name": "Get System Status",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/status/",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "status"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "List Papers",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Paper",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Paper",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers/{paper_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers",
+                                "{paper_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Paper",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers/{paper_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers",
+                                "{paper_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Paper",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers/{paper_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers",
+                                "{paper_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Question To Paper",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers/{paper_id}/questions",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers",
+                                "{paper_id}",
+                                "questions"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List Paper Questions",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/papers/{paper_id}/questions",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "papers",
+                                "{paper_id}",
+                                "questions"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Upload Document",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/upload-doc",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "upload-doc"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Question",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/questions/{q_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "questions",
+                                "{q_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Question",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/questions/{q_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "questions",
+                                "{q_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Question",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/questions/{q_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "questions",
+                                "{q_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List All Questions",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/questions",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "questions"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Schedule Interview",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/schedule",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "schedule"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List Interviews",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Live Status Dashboard",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/live-status",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "live-status"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Interview",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Interview",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "{interview_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Interview",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List Candidates",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/candidates",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "candidates"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get All Results",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users/results",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "users",
+                                "results"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Result",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/results/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "results",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Result",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/results/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "results",
+                                "{interview_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Result",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/results/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "results",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Response",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/response/{response_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "response",
+                                "{response_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Response Audio",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/results/audio/{response_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "results",
+                                "audio",
+                                "{response_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Enrollment Audio",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/enrollment-audio/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "enrollment-audio",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "List Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "users"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create User",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "users"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users/{user_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "users",
+                                "{user_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users/{user_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "users",
+                                "{user_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users/{user_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "users",
+                                "{user_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Shutdown",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/shutdown",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "shutdown"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Candidate Status",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/interviews/{interview_id}/status",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "interviews",
+                                "{interview_id}",
+                                "status"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Test Email",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/test-email",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "test-email"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Test Email Sync",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/test-email-sync",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "admin",
+                                "test-email-sync"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Interview",
+            "item": [
+                {
+                    "name": "Access Interview",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/access/{token}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "access",
+                                "{token}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Start Session Logic",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/start-session/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "start-session",
+                                "{interview_id}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Upload Selfie Session",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/upload-selfie",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "upload-selfie"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Next Question",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/next-question/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "next-question",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Stream Question Audio",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/audio/question/{q_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "audio",
+                                "question",
+                                "{q_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Submit Answer Audio",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/submit-answer-audio",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "submit-answer-audio"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Submit Answer Text",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/submit-answer-text",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "submit-answer-text"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Finish Interview",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/finish/{interview_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "finish",
+                                "{interview_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Evaluate Answer",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/evaluate-answer",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "evaluate-answer"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Speech To Text Tool",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/tools/speech-to-text",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "tools",
+                                "speech-to-text"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Standalone Tts",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/interview/tts",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "interview",
+                                "tts"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Authentication",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/login",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "login"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login For Access Token",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/token",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "token"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/logout",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "logout"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/register",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "register"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Read Users Me",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/me",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "me"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Candidate",
+            "item": [
+                {
+                    "name": "My History",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/candidate/history",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "candidate",
+                                "history"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "My Interviews",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/candidate/interviews",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "candidate",
+                                "interviews"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Upload Selfie",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/candidate/upload-selfie",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "candidate",
+                                "upload-selfie"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Profile Image",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/candidate/profile-image/{user_id}",
+                            "host": [
+                                "base_url"
+                            ],
+                            "path": [
+                                "api",
+                                "candidate",
+                                "profile-image",
+                                "{user_id}"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "{{access_token}}",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:8000",
+            "type": "string"
+        },
+        {
+            "key": "access_token",
+            "value": "",
+            "type": "string"
+        }
+    ]
+}
