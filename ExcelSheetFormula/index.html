@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Oracle | Dynamic Excel Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1>Formula Oracle</h1>
+            <p>Define variables, craft formulas, see results instantly.</p>
+        </header>
+
+        <section class="calculator-card">
+            <div class="variables-section">
+                <h3><span class="icon">📊</span> Variables</h3>
+                <div id="variables-list" class="variables-list">
+                    <!-- Variable rows will be added here -->
+                    <div class="variable-row">
+                        <input type="text" placeholder="name" class="var-name" value="a">
+                        <span class="equals">=</span>
+                        <input type="number" placeholder="value" class="var-value" value="10">
+                        <button class="remove-btn" title="Remove">&times;</button>
+                    </div>
+                </div>
+                <button id="add-var-btn" class="secondary-btn">+ Add Variable</button>
+            </div>
+
+            <div class="formula-section">
+                <h3><span class="icon">🧪</span> Formula</h3>
+                <div class="formula-input-wrapper">
+                    <input type="text" id="formula-input" placeholder="e.g., (a + b) * c" value="(a + b) * c">
+                </div>
+                
+                <div class="result-display">
+                    <span class="result-label">Output</span>
+                    <div id="result-value" class="result-value">--</div>
+                </div>
+
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </section>
+
+        <footer class="info-footer">
+            <p>Try nested expressions like <code>(a * b) - (c / 2)</code></p>
+        </footer >
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
