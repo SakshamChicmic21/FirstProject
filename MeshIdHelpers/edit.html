@@ -1,0 +1,2805 @@
+<p class="text-center"><b><em>Loading with Stylesheet</em></b></p>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+/* :root {
+  --client-primary-color: #d4af37;       
+  --client-primary-color-light: #ffcc66; 
+  --client-secondary-color: #ff9f1c;     
+  --client-tertiary-color: #ffe8b3; 
+} */
+
+:root {
+  --client-primary-color: #005867;        /* Zeta teal */
+  --client-primary-color-light: #008B8E;  /* Zeta secondary teal */
+  --client-secondary-color: #FFB146;      /* Zeta amber accent */
+  --client-tertiary-color: #414042;       /* Zeta charcoal */
+}
+
+.preview .custom-meshid b{
+font-weight: bolder !important;
+}
+
+
+/* New */
+
+.preview .content .wrapper .custom-meshid:has(.card-body.active .rp .formio-component-radio) .edit-it button{
+  display: none;
+}
+
+.preview .custom-meshid .formio-component-editgrid .row .col-sm-2.showThis {
+  display: inline !important;
+}
+
+.preview .custom-meshid button.save-it {
+  display: none;
+  animation: smooth-beat 0.8s infinite;
+}
+
+.preview .custom-meshid button.both {
+    min-width: 100px;
+    height: 50px;
+}
+
+@keyframes smooth-beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.beat-effect {
+    animation: smooth-beat 1s ease-in-out infinite;
+}
+
+.preview .custom-meshid .buttons-set .fieldset-body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.preview .custom-meshid .row > .names.showThis{
+    font-weight: 700;
+    padding: 0;
+    font-size: 16px;
+}
+.preview .custom-meshid .row > .names.showThis:not(.first){
+    margin-right: 10px;
+}
+
+.preview .custom-meshid .tags {
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 12px;
+    margin-right: 5px;
+}
+
+.preview .custom-meshid .tags.tag-a {
+    background: #D9534F;
+}
+
+.preview .custom-meshid .tags.tag-b {
+    background: #4E5D6C;
+}
+
+.preview .custom-meshid .tags.tag-c {
+    background: #3A77D2;
+}
+
+.preview .formio-dialog.formio-dialog-theme-default .formio-dialog-close:before{
+  display: none;
+}
+
+.preview .formio-dialog-overlay{
+  pointer-events: none;
+}
+
+.preview .formio-dialog.formio-dialog-theme-default .formio-dialog-content {
+    position: fixed;
+    top: 370px;
+    right: 0;
+    left: 0;
+    width: max-content;
+}
+
+/* Modal Overlay */
+.preview .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  animation: fadeIn 0.3s;
+}
+
+/* Modal Content */
+.preview .modal-content {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s;
+}
+
+/* Modal Buttons Container */
+.preview .modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Modal Buttons */
+.preview .modal-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.preview .confirm-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.preview .confirm-button:hover {
+  background-color: #c0392b;
+}
+
+.preview .cancel-button {
+  background-color: #bdc3c7;
+}
+
+.preview .cancel-button:hover {
+  background-color: #95a5a6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.preview .fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* New */
+
+/* Misc */
+
+.preview .content .wrapper .custom-meshid .card-body .formio-component.hide-type{
+    background: #ff5353;
+    pointer-events: none;
+}
+
+.preview .content .wrapper .custom-meshid .card-body .formio-component.hide-type.validated{
+    background: #26be95;
+}
+
+.preview .content .wrapper .custom-meshid .card-body .formio-component.hide-type span{
+  color: #fff;
+}
+
+.preview .content .wrapper .custom-meshid .hide-type .checkbox{
+  padding-left: 0;
+}
+
+.preview .content .wrapper .custom-meshid .hide-type .checkbox input,
+.preview .content .wrapper .custom-meshid .hide-type .checkbox .invalid-feedback,
+.preview .content .wrapper .custom-meshid .hide-type label:after
+{
+  display: none;
+}
+
+/* Misc */
+
+/* Output */
+
+.contractVsSide input,
+.evidence-is-active input,
+.document-upload-no-list input{
+  pointer-events: none !important;
+}
+
+/* Output */
+
+
+/* Background-video */
+
+.preview .wrapper .first-page .bg-div video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    filter: brightness(0.70);
+    height: 100%;
+    object-fit: cover;
+}
+    
+
+/* Background-video */
+
+/* Utilities */
+
+.pe-none{
+  pointer-events: none;
+}
+
+/* Utilities */
+
+/* First Page */
+
+.preview .wrapper .first-page fieldset {
+  position: relative;  
+}
+
+.preview .wrapper .first-page fieldset:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(0.6);
+  animation: zoomOut 1s ease-in-out;
+  animation-delay: 5s; */
+}
+
+/* .preview .custom-meshid:has(.r-type.validated) .first-page fieldset:after {
+  animation-delay: unset;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+} */
+
+/* First Page */
+
+
+/* Loading MeshID Logo */
+
+.preview .wrapper {
+  position: relative;
+}
+
+.preview .wrapper:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(248, 246, 244) url('https://i.postimg.cc/wBmpBgcs/ezgif-com-gif-maker-1.gif') center/ cover;
+  z-index: 10000;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  animation: fadeOut 1s linear 5s forwards;
+}
+
+/* Loading MeshID Logo */
+
+/* Output Preview Container */
+
+.nav.nav-tabs{
+  z-index: 10000;
+}
+
+.contract-preview-html.d-flex.flex-column{
+  scrollbar-color: #ffffff #005867;
+}
+
+/* Output Preview Container */
+
+
+/* API Call  */
+
+
+.preview .content .wrapper .custom-meshid .search-field .fieldset-body{
+  display: flex;
+}
+
+.preview .content .wrapper .custom-meshid .search-field .formio-component-textfield{
+    padding: 0;
+    width: 45%;
+}
+
+.preview .content .wrapper .custom-meshid .search-field .form-control{
+    border: none;
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0 !important;
+    padding: 1rem;
+}
+
+.preview .content .wrapper .custom-meshid .search-field .search-btn button{
+    padding: 12.5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0;
+}
+
+
+.preview .content .wrapper .custom-meshid .api-info input{
+  text-transform: capitalize;
+  pointer-events: none;
+}
+
+.preview .custom-meshid .search-btn button{
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.preview .content .wrapper .custom-meshid:has(.search-field .formio-component-textfield.has-value) .search-btn button{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* API Call */
+
+
+/* Spinner */
+
+
+.spinner-square {
+  display: flex;
+  flex-direction: row;
+  width: 65px;
+  height: 80px;
+}
+
+.spinner-square > .square {
+  width: 12px;
+  height: 60px;
+  margin: auto auto;
+  border-radius: 4px;
+  margin-left: 0;
+}
+
+.square-1 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s infinite;
+}
+
+.square-2 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms infinite;
+}
+
+.square-3 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms infinite;
+}
+
+@keyframes square-anim {
+  0% {
+      height: 60px;
+      background-color: #34B5C7;
+  }
+  20% {
+      height: 60px;
+  }
+  40% {
+      height: 80px;
+      background-color: rgb(5 11 31);
+  }
+  80% {
+      height: 60px;
+  }
+  100% {
+      height: 60px;
+      background-color: #34B5C7;
+  }
+}
+
+/* Spinner */
+
+/* Form-Builder-Preview  */
+
+app-form-builder-preview .formio-wrapper:has(.preview.container){
+  min-height: unset;
+  max-height: unset;
+}
+
+app-form-builder:has(.preview.container) app-header header,
+app-form-builder:has(.preview.container) .content > h3.mt-3.mt-3.mb-2,
+app-form-builder:has(.preview.container) .content > h3 + div
+{
+  display: none !important;
+  pointer-events: none;
+}
+
+.formio-wrapper > .preview.container{
+  margin: 0;
+  padding: 0;
+}
+
+app-form-builder:has(.preview.container) .form-menu-wrapper {
+  position: fixed;
+  z-index: 10000;
+  opacity: 0.1;
+  background: #e5e5e5;
+  transform: translateY(150%);
+}
+
+app-form-builder:has(.preview.container) .form-menu-wrapper:hover{
+  opacity: 1;
+}
+
+/* Form-Builder-Preview  */
+
+
+/* Form-Container  */
+
+.preview .content .wrapper .custom-meshid>.card {
+  position: static;
+} 
+
+.preview .content .form-type-heading {
+  display: none !important;
+}
+
+.preview .wrapper formio {
+  font-family: Lato !important;
+  width: 60%;
+  z-index: 0;
+}
+
+.preview .content .wrapper {
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+  background: rgb(248, 246, 244);
+  width: 100vw;
+  justify-content: center;
+  padding: 0;
+}
+
+.preview .content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0vw;
+}
+
+.preview .content .wrapper .custom-meshid .glossary.formio-hidden+.formio-component-tabs>.card {
+  margin-top: 6rem;
+}
+
+
+.preview .content .wrapper .formio-form .custom-meshid:has(.glossary) .card:has(.dark-blur.active) {
+overflow: hidden;
+margin-top: 0;
+border-radius: 0 !important;
+}
+
+.preview .content .wrapper .formio-form .custom-meshid:has(.glossary.formio-hidden) .card:has(.dark-blur.active) {
+margin-top: 60px;
+}
+
+
+/* Form-Container  */
+
+/* Global */
+
+
+html {
+  overflow: hidden;
+}
+
+.wrapper *:not(i):not(.formio-choices *),
+.wrapper .card-header *:before,
+.wrapper .card-header *:after {
+  transition: transform 0.2s linear, width 0.2s linear, scale 0.2s linear;
+}
+
+
+*:disabled,
+.preview .custom-meshid .is-disabled,
+.preview .custom-meshid .formio-component:has(.is-disabled) .formio-select-autocomplete-input {
+  pointer-events: none !important;
+}
+
+.preview .custom-meshid .custom-fieldset fieldset {
+  padding: 1rem;
+  background: rgb(232 232 232 / 80%);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.preview .custom-meshid .card-body .small-block-section .custom-option ~ .formio-component-fieldset legend {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.preview .custom-meshid .card .formio-component,
+.preview .custom-meshid .card .invalid-feedback {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.preview .custom-meshid .card .formio-component.CP {
+  animation: none !important;
+}
+
+.preview .custom-meshid .custom-desc {
+  display: none;
+  font-style: italic;
+  margin-left: 0;
+  font-weight: 500;
+}
+
+.preview .wrapper .custom-meshid .card .card-body .first-page .dynamic-content {
+  display: none;
+}
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component-editGrid .page-title {
+  margin-top: 0;
+}
+
+.preview .wrapper .custom-meshid .card .card-body .page-title {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  width: max-content;
+  margin-top: 1rem;
+}
+
+
+.preview .wrapper .custom-meshid .card .card-body .page-title:after {
+  content: ' ';
+  width: 100px;
+  position: absolute;
+  background-color: rgb(5 11 31 / 10%);
+  border-radius: 10%;
+  left: 8px;
+  height: 15px;
+  top: -5px;
+  border-radius: 15px;
+}
+
+.preview .wrapper .custom-meshid .card .card-body .page-title p,
+.preview .wrapper .custom-meshid .card .card-body .page-title div {
+  color: var(--dark);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.preview .wrapper .custom-meshid .card .card-body a{
+  color: var(--blue);
+}
+
+.preview .custom-meshid .card-body .formio-component:not(.formio-component-panel) {
+  background: rgb(240, 240, 240);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+}
+
+.preview .wrapper .custom-meshid .card-body .note p,
+.preview .wrapper .custom-meshid .card-body .note div {
+  background: var(--client-secondary-color);
+  padding: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: justify;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.preview .wrapper .custom-meshid .card-body .note.noteB p,
+.preview .wrapper .custom-meshid .card-body .note.noteB div {
+  background: var(--client-primary-color);
+}
+
+.preview .custom-meshid .card .card-body .formio-component-fieldset,
+.preview .custom-meshid .card .card-body .formio-component-datagrid,
+.preview .custom-meshid .card .card-body .formio-component-survey,
+.preview .custom-meshid .card .card-body .formio-component-htmlelement,
+.preview .custom-meshid .card .card-body .formio-component-button,
+.preview .custom-meshid .card .card-body .formio-component-columns,
+.preview .custom-meshid .card .card-body .formio-component-hidden,
+.preview .custom-meshid .card .card-body .formio-hidden,
+.preview .custom-meshid .card .card-body .custom-option {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.preview .wrapper .custom-meshid .card .card-body>.formio-component-fieldset {
+  padding: 0 1rem;
+}
+
+.preview .custom-meshid .input-group-text {
+  transition: 0.3s;
+}
+
+
+.tingle-modal-box .high-risk {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+/* Global */
+
+/* Panel */
+
+.preview .wrapper .custom-meshid .formio-component-panel{
+    margin-bottom: 1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.preview .wrapper .custom-meshid .formio-component-panel .card.border{
+    border: none !important;
+}
+
+.preview .wrapper .custom-meshid .formio-component-panel .card-header{
+    background: var(--client-primary-color);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 2px;
+}
+
+.preview .wrapper .custom-meshid .formio-component-panel:has(.card-body) .card-header{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.preview .wrapper .custom-meshid .formio-component-panel .card-body .note p, 
+.preview .wrapper .custom-meshid .formio-component-panel .card-body .note div{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: var(--client-primary-color);
+}
+
+.preview .wrapper .custom-meshid .fa.fa-minus-square-o:before,
+.preview .wrapper .custom-meshid .fa.fa-plus-square-o:before{
+  color: #fff; 
+}
+
+/* Panel */
+
+
+/* Tingle Modal */
+
+.tingle-modal:before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  -webkit-backdrop-filter: unset !important;
+  backdrop-filter: unset !important;
+}
+
+.tingle-modal.tingle-modal--visible {
+  z-index: 100000;
+}
+
+.tingle-btn.tingle-btn--danger {
+  background-color: #e74c3c;
+  border-radius: 8px;
+  float: right;
+  padding: 12px 22px;
+}
+
+.tingle-modal.tingle-modal--visible .tingle-modal-box {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.tingle-modal-box h3,
+.tingle-modal-box dt{
+  color: var(--client-primary-color);
+}
+.tingle-modal-box ul,
+.tingle-modal-box ol{
+  padding: 1rem;
+}
+
+.tingle-modal.tingle-modal--visible .tingle-modal-box__footer {
+  background: transparent;
+}
+
+.tingle-enabled .tingle-modal.tingle-modal--visible .tingle-modal-box {
+  animation: tingle 0.3s ease-in-out forwards;
+}
+
+@keyframes tingle {
+  0% {
+    opacity: 0;
+    top: 90%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.preview .custom-meshid .glossary .fieldset-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+
+.preview .custom-meshid .glossary-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s linear;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.preview .custom-meshid .glossary .glossary-hide {
+  display: none;
+}
+
+.preview .custom-meshid:has(.c-type.validated .custom-meshid-radio:first-child.radio-selected) .modal-b {
+  display: none;
+}
+
+.preview .custom-meshid:has(.c-type.validated .custom-meshid-radio:nth-child(2).radio-selected) .modal-a {
+  display: none;
+}
+
+.preview .custom-meshid .tooltip {
+    display: none !important;
+}
+
+.preview .custom-meshid .g-tooltip {
+    position: relative;
+    background-color: var(--client-secondary-color);
+    color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.preview .custom-meshid .open-modal {
+  border: 2px solid var(--client-secondary-color);
+  padding: 0.7rem;
+  border-radius: 45px;
+  cursor: pointer;
+}
+
+.preview .custom-meshid .open-modal.no-border {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.preview .custom-meshid .open-modal.no-border:hover {
+  scale: 1.05;
+}
+
+/* Tingle Modal */
+
+/* Progress Bar */
+
+.preview .custom-meshid .progress {
+  height: 45px;
+  background: rgb(240, 240, 240);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000000;
+  border-radius: 0;
+}
+
+.preview .custom-meshid .progress-bar{
+  background-color: var(--client-primary-color);
+}
+
+/* Progress Bar */
+
+
+/* Custom Tooltip */
+
+
+
+
+.preview .custom-meshid [data-tooltip] .custom-tooltip {
+  bottom: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.preview .custom-meshid [data-tooltip]:hover .custom-tooltip {
+  bottom: 20px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.preview .custom-meshid .custom-tooltip {
+  background: #ffeec7;
+  border-radius: 25px;
+  border-bottom-left-radius: 0px;
+  position: absolute;
+  font-family: Lato;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 40px;
+  left: 5px;
+  font-size: 1rem;
+  transition: 0.3s;
+  line-height: 1.4rem;
+}
+
+.preview .custom-meshid .tooltip-inner {
+  width: 300px;
+  padding: 1rem;
+  text-align: center;
+  background-color: transparent;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+.preview .custom-meshid .fa-question-circle {
+  margin-left: 5px;
+  position: relative;
+  font-size: 0.9rem;
+  transform: translate(-3px, -5px);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* Custom Tooltip */
+
+
+/* Label */
+
+.preview .custom-meshid .formio-component:not(.formio-component-radio):not(.formio-component-selectboxes):focus-within>label,
+.preview .custom-meshid .formio-component-day .row:focus-within label,
+.preview .wrapper .custom-meshid .card .formio-component.has-value>label {
+  transform: translate(20px, -12px);
+}
+
+.preview .custom-meshid .formio-component label {
+  font-weight: 700;
+}
+
+.preview .custom-meshid .formio-component.formio-component-editgrid>label {
+  display: none;
+}
+
+.preview .custom-meshid .formio-component:has(input[disabled])>label span,
+.preview .custom-meshid .form-radio:has(input[disabled]),
+.preview .custom-meshid .formio-component:has(input[disabled])>.field-required:after,
+.preview .custom-meshid .formio-component:has(input[disabled])>.input-group,
+.preview .custom-meshid .formio-component:has(input[disabled])>div[ref="element"],
+.preview .custom-meshid .formio-component:has(input[disabled])>.is-disabled,
+.preview .custom-meshid .formio-component:has(input[disabled])>label .fa-question-circle {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.preview .custom-meshid .formio-component>.col-form-label, 
+.preview .custom-meshid .formio-component-day label {
+  z-index: 10;
+  position: absolute;
+  pointer-events: none;
+  color: var(--dark);
+  transform: translate(20px, 12px);
+  display: inline-flex;
+  justify-content: center;
+  padding: 0 5px;
+  background-color: rgb(240, 240, 240);
+  align-items: center;
+  padding-right: 10px;
+}
+
+.preview .custom-meshid .formio-component.prepop>.col-form-label{
+  transform: translate(20px, -12px);
+}
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component:has(>label ~ .checkbox, >label ~ .radio)>.col-form-label, 
+.preview .wrapper .custom-meshid .card .card-body .formio-component > .form-check > label {
+  position: relative;
+  padding: 0;
+  display: inline;
+}
+
+.preview .custom-meshid legend{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  background: rgb(5 11 31 / 60%);
+  padding: 1rem;
+  border-radius: 25px;
+  width: max-content;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.preview .custom-meshid .small-header legend,
+.preview .wrapper .custom-meshid .card .card-body .formio-component.formio-component-datagrid>label {
+  font-size: 1rem;
+  background: rgb(5 11 31 / 60%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  padding: 0.2rem 1rem;
+  border-radius: 25px;
+  width: max-content;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.preview .content .wrapper .custom-meshid .card .card-body .validated>label, 
+.preview .content .wrapper .custom-meshid .card .card-body .formio-component-day.validated label, 
+.preview .custom-meshid .card .validated .checkbox>.field-required:after, 
+.preview .custom-meshid .card .validated>.field-required:after
+ {
+  color: var(--client-primary-color);
+  content: "\f058";
+}
+
+.preview .custom-meshid .card th.validated:after{
+  color: #fff;
+  content: "\f058";
+}
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component-survey label {
+  position: relative;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  transform: none;
+}
+
+/* Label Overflow */
+
+.preview .content .wrapper .custom-meshid .formio-component-textfield>label span,
+  .preview .content .wrapper .custom-meshid .formio-component-textarea>label span,
+  .preview .content .wrapper .custom-meshid .formio-component-number>label span,
+  .preview .content .wrapper .custom-meshid .formio-component-select>label span,
+  .preview .content .wrapper .custom-meshid .formio-component-datetime>label span,
+  .preview .content .wrapper .custom-meshid .formio-component-email>label span{
+  text-overflow: ellipsis;
+}
+
+/* Label Overflow  */
+
+/* Label */
+
+
+/* First Page */
+
+
+.preview .custom-meshid .first-page {
+  min-height: 650px;
+}
+
+.preview .custom-meshid .sub-logo>div:first-child {
+  margin-bottom: 2rem;
+}
+
+.preview .custom-meshid .card .first-page:has(.showContinue.validated) .get-started
+ {
+  position: relative;
+  display: flex;
+  animation: fadeIn 1s ease-out;
+}
+
+
+
+/* First Page */
+
+
+/* Sidebar  */
+
+.preview .custom-meshid .card-header:-webkit-scrollbar,
+.preview .custom-meshid textarea:-webkit-scrollbar {
+  width: 0.5em;
+  display: none;
+}
+
+.preview .custom-meshid .card-header-tabs {
+  flex-direction: column;
+  margin: 0;
+}
+
+.preview .custom-meshid .nav-tabs .nav-item:first-child {
+  display: none !important;
+}
+
+.preview .custom-meshid .card-header:not(.bg-default) {
+    background: #303030;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    transition: left 0.5s ease-in-out;
+    z-index: 1000000;
+    padding-top: 2.5rem;
+    border-bottom: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 2rem;
+    border-radius: 12px;
+    min-width: 345px;
+    max-height: 700px;
+    scrollbar-color: var(--client-secondary-color) transparent;
+    max-width: 600px;
+}
+
+.preview .custom-meshid .nav-link {
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  border: 0;
+  pointer-events: auto;
+  color: var(--light);
+}
+
+.preview .custom-meshid .card-header .nav-tabs .nav-link.active {
+  background-color: transparent;
+  color: var(--dark);
+  pointer-events: none;
+}
+
+.preview .custom-meshid .nav-item {
+  position: relative;
+  padding-left: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.preview .custom-meshid .nav-tabs .nav-item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.preview .custom-meshid .nav-tabs .nav-item.active:before {
+  width: 100%;
+  transition: width 0.4s ease-in-out;
+}
+
+.preview .custom-meshid .nav-item:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  top: 0;
+  left: 0;
+  background-color: var(--client-secondary-color);
+  border-radius: 12px;
+}
+
+.preview .custom-meshid .nav-item.hovered:after {
+  width: 10px;
+  height: 100%;
+}
+
+.preview .custom-meshid .nav-item.active.hovered:after {
+  width: 0;
+}
+
+.preview .custom-meshid .nav-link:hover {
+  color: var(--client-secondary-color);
+  cursor: pointer;
+}
+
+.preview .custom-meshid .header {
+  display: none;
+  position: fixed;
+  padding: 15px;
+  z-index: 1000001;
+  top: 0;
+  left: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.preview .wrapper .custom-meshid .card:has(.hide-this) .header {
+  display: block;
+}
+
+.preview .custom-meshid .card-header.sidebarshow {
+  left: 0;
+}
+
+.preview .custom-meshid .switch-holder {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #303030;
+}
+
+.preview .custom-meshid .toggle {
+  position: relative;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.5s;
+  margin-bottom: 0;
+}
+
+.preview .custom-meshid .custom-switch {
+  display: none !important;
+}
+
+.preview .custom-meshid .custom-switch:checked+.toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+.preview .custom-meshid .custom-switch:checked+.toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+
+.preview .custom-meshid .custom-switch:checked+.toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+.preview .custom-meshid .custom-switch:checked+.toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+.preview .custom-meshid .custom-switch:checked+.toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+
+.preview .custom-meshid .bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(240 240 240);
+  border-radius: 4px;
+}
+
+.preview .custom-meshid #bar2 {
+  transition-duration: .8s;
+  width: 90%;
+}
+
+.preview .custom-meshid #bar1,
+.preview .custom-meshid #bar3 {
+  width: 50%;
+}
+
+/* Sidebar  */
+
+/* Main form  */
+
+
+.preview .content .custom-meshid .card {
+  border: none;
+  z-index: 1000;
+  background: transparent;
+}
+
+.preview .custom-meshid .card-body {
+  padding: 0;
+}
+
+
+/* Main form  */
+
+
+
+/* Categories  */
+
+.preview .wrapper .custom-meshid .categories .form-check{
+  padding: 0;
+  pointer-events: none;
+}
+
+.preview .wrapper .custom-meshid .categories input{
+  display: none;
+}
+
+/* Categories   */
+
+/* Custom-Option  */
+
+
+.preview .wrapper .custom-meshid .custom-option span {
+  display: none !important;
+}
+
+
+.preview .wrapper .custom-meshid .custom-option .custom-meshid-radio {
+  margin: 0;
+  padding: 0;
+}
+
+.preview .wrapper .custom-meshid .custom-option input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.preview .custom-meshid .custom-option,
+.preview .custom-meshid .custom-option .form-radio,
+.preview .custom-meshid .custom-option .radio-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview .custom-meshid .custom-option .form-check-inline{
+  position: relative;
+}
+
+.preview .custom-meshid .custom-option .form-check-inline .tooltiptext {
+  visibility: hidden;
+  background-color: rgb(0, 0, 0, 0.8);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s;
+  top: 100%;
+  left: -50%;
+  width: 250px;
+}
+
+.preview .custom-meshid .custom-option .form-check-inline:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  top: 110%;
+}
+
+.preview .custom-meshid .form-radio{
+  margin-top: 0.5rem
+}
+
+.preview .custom-meshid .custom-option:not(.c-type) {
+  margin: 3rem 0;
+}
+
+.preview .custom-meshid .custom-option .form-radio {
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
+  padding: 0 4rem;
+}
+
+.preview .custom-meshid .custom-option .radio-selected,
+.preview .custom-meshid .formio-component-radio .radio-selected
+ {
+  pointer-events: none;
+}
+
+
+.preview .custom-meshid .has-error .custom-option .radio-selected,
+.preview .custom-meshid .formio-error-wrapper .custom-option .radio-selected,
+.preview .custom-meshid .has-error.formio-component-radio .radio-selected,
+.preview .custom-meshid .formio-error-wrapper.formio-component-radio .radio-selected,
+.preview .custom-meshid .custom-option:has(.radio-selected ~ .radio-selected) .radio-selected,
+.preview .custom-meshid .formio-component-radio:has(.radio-selected ~ .radio-selected) .radio-selected {
+  pointer-events: auto;
+}
+
+.preview .custom-meshid .type .radio-tile {
+  flex-direction: column;
+  border: 2px solid var(--client-secondary-color);
+  border-radius: 7px;
+}
+
+.preview .custom-meshid .type.c-type .radio-tile, 
+.preview .custom-meshid .type.small-type .radio-tile {
+  border: 2px solid #005867;
+}
+
+.preview .formio-form .custom-meshid .card .c-type {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.2s forwards;
+}
+
+.preview .formio-form .custom-meshid:has(.hide-this) .card .c-type {
+  opacity: 1;
+  animation: none;
+}
+
+.preview .custom-meshid .c-type .radio-tile {
+  width: 125px;
+  height: 125px;
+  text-align: center;
+}
+
+.preview .custom-meshid .small-type .radio-tile {
+  padding: 1rem;
+}
+
+.preview .custom-meshid .radio-tile:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
+
+.preview .custom-meshid .small-block .radio-tile{
+  border: 2px solid var(--client-secondary-color);
+  height: 40px;
+  border-radius: 7px;
+  gap: 5px;
+  padding: 1rem;
+}
+
+.preview .custom-meshid .sof .radio-tile,
+.preview .custom-meshid .sow .radio-tile {
+  border: 2px solid var(--client-primary-color);
+  height: 40px;
+  border-radius: 7px;
+  gap: 5px;
+  padding: 1rem;
+}
+
+.preview .custom-meshid .custom-option .radio-tile label {
+  color: var(--client-secondary-color);
+  margin: 0;
+  pointer-events: none;
+}
+
+.preview .custom-meshid .custom-option.sof .radio-tile label, 
+.preview .custom-meshid .custom-option.sow .radio-tile label {
+  color: var(--client-primary-color);
+}
+
+
+.preview .custom-meshid .custom-option.c-type .radio-tile label, 
+.preview .custom-meshid .custom-option.small-type .radio-tile label {
+  color: #005867;
+}
+
+.preview .custom-meshid .custom-option.c-type i,
+.preview .custom-meshid .custom-option.small-type i {
+  color: #005867;
+}
+
+
+.preview .custom-meshid .custom-option i {
+  color: var(--client-secondary-color);
+}
+
+.preview .custom-meshid .custom-option.sof i, 
+.preview .custom-meshid .custom-option.sow i 
+{
+  color: var(--client-primary-color);
+}
+
+.preview .custom-meshid .sof i,
+.preview .custom-meshid .sow i {
+  font-size: 1.1rem;
+}
+
+.preview .custom-meshid .type i {
+  font-size: 1.7rem;
+}
+
+.preview .custom-meshid .small-block i,
+.preview .custom-meshid .small-block i {
+  font-size: 1.1rem;
+}
+
+.preview .custom-meshid .custom-option .radio-selected .radio-tile label,
+.preview .custom-meshid .custom-option .radio-selected .radio-tile i {
+  color: #fff;
+}
+
+.preview .custom-meshid .custom-option .radio-selected .radio-tile {
+  background: var(--client-secondary-color);
+  scale: 1.05;
+  border: var(--client-secondary-color);
+}
+/* Custom-Option  */
+
+/* Buttons  */
+
+.preview .content .wrapper .custom-meshid button,
+.preview .content .wrapper .custom-meshid button i {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.preview .wrapper .custom-meshid button:hover {
+  scale: 1.05;
+}
+
+.preview .wrapper .custom-meshid .datagrid-buttons button:hover {
+  scale: 0.85;
+}
+
+.preview .wrapper .custom-meshid button:active {
+  scale: 1;
+}
+
+.preview .content .wrapper .custom-meshid .card .card-body .hide-this, 
+.preview .content .wrapper .custom-meshid .card .card-body .hide-this-field:not(.col-sm-2) {
+  display: none !important;
+}
+
+.preview .wrapper .custom-meshid .navigation button,
+.preview .wrapper .formio-component-form .custom-meshid:has(.card-body:nth-child(4).active) .navigation-back button,
+.preview .wrapper .formio-component-form .custom-meshid:has(.card-body:nth-child(4).active) .progress:not(.progressBarInfo),
+.preview .wrapper .formio-component-form .custom-meshid:has(.card-body:last-child.active) .navigation-next button {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border: 2px solid var(--dark);
+}
+
+.preview .wrapper .custom-meshid .navigation button i {
+  color: var(--dark);
+}
+
+.preview .wrapper .formio-component-form .custom-meshid:has(.hide-this) .navigation button {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all 0.3s linear;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+.preview .wrapper .custom-meshid .navigation-back button:hover i {
+  animation: shake 0.7s ease infinite;
+}
+
+.preview .wrapper .custom-meshid:has(.card-body.active .validation-text) .navigation-next button {
+  border-color: var(--dark);
+}
+
+.preview .wrapper .custom-meshid:has(.card-body.active .validation-text) .navigation-next button i {
+  color: var(--dark);
+  animation: none;
+}
+
+.preview .wrapper .custom-meshid:has(.card-body.active .first-page .radio-selected) .navigation-next button {
+  border-color: var(--client-secondary-color);
+}
+
+.preview .wrapper .custom-meshid:has(.card-body.active .validation-text.section-completed) .navigation-next button i,
+.preview .wrapper .custom-meshid:has(.card-body.active) .navigation-next button i {
+  animation: beat 0.7s infinite;
+}
+
+.preview .wrapper .custom-meshid:has(.card-body.active .first-page .radio-selected) .navigation-next button i {
+  color: var(--client-secondary-color);
+  animation: beat 0.7s infinite;
+}
+
+
+.preview .custom-meshid .get-started {
+  display: none;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.preview .custom-meshid .get-started button,
+.preview .custom-meshid .review button {
+  pointer-events: auto;
+  padding: 0.6rem 2rem;
+  border: 2px solid transparent;
+  font-weight: 700;
+  background: var(--client-secondary-color) !important;
+}
+
+.preview .custom-meshid .review button {
+  margin-top: 8rem;
+  border-radius: 7px;
+}
+
+.preview .custom-meshid .review button:disabled {
+  color: #5d5d5d !important;
+  background: #dedede !important;
+  opacity: 0.8;
+}
+
+.preview .custom-meshid .get-started button:hover,
+.preview .custom-meshid .review button:not(:disabled):hover {
+  color: var(--client-secondary-color) !important;
+  background: transparent !important;
+  border-color: var(--client-secondary-color);
+}
+
+
+.preview .custom-meshid:has(.card .tab-pane:nth-child(4).active) .navigation{
+  z-index: 10000;
+}
+
+.preview .custom-meshid:has(.is-active) .navigation{
+  z-index: 1 !important;
+}
+
+.preview .custom-meshid .navigation {
+  position: fixed;
+  top: 50vh;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.preview .custom-meshid .navigation-back {
+  left: 8vw;
+}
+
+.preview .custom-meshid .navigation-next {
+  right: 8.75vw;
+}
+
+.preview .custom-meshid .datagrid-buttons,
+.preview .custom-meshid .formio-component-datagrid.formio-hidden~.datagrid-buttons {
+  display: none;
+}
+
+.preview .custom-meshid .navigation button{
+  background: transparent;
+}
+
+.preview .custom-meshid .navigation button,
+.preview .custom-meshid .datagrid-buttons button {
+  font-size: 2rem;
+  color: var(--dark);
+  padding: 4px 40px;
+  border-radius: 12px;
+}
+
+.preview .custom-meshid .card .datagrid-buttons button {
+  color: var(--client-primary-color);
+  border: 2px solid var(--client-primary-color);
+}
+
+/* Buttons  */
+
+/* Textfields + Textarea  */
+
+.preview .names input {
+  text-transform: capitalize;
+}
+
+.preview .custom-meshid .form-control {
+  min-height: 50px;
+  color: var(--dark);
+  border-radius: 10px !important;
+  box-shadow: 0 0 0px 1000px rgb(240, 240, 240) inset;
+  border: 1px solid var(--dark);
+}
+
+.preview .custom-meshid .formio-component-textarea .form-control {
+  height: 84px;
+  padding-top: 0.7rem;
+}
+
+.preview .custom-meshid .control-label--hidden:after {
+  display: none;
+}
+
+.preview .custom-meshid .validated>div[ref="element"] .input-group-text {
+  background: var(--client-primary-color-light);
+  color: #f0f0f0;
+  position: relative;
+  border-color: var(--client-primary-color);
+}
+
+.preview .custom-meshid .input-group-append,
+.preview .custom-meshid .input-group-prepend {
+  z-index: 10;
+}
+
+.preview .custom-meshid .input-group-append {
+  right: 0;
+  position: absolute;
+}
+
+
+.preview .custom-meshid .input-group-prepend+input {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.preview .custom-meshid .input-group-append span,
+.preview .custom-meshid .input-group-prepend span {
+  min-height: 50px;
+  border: none;
+  background: rgb(128 128 128 / 30%);
+}
+
+.preview .custom-meshid .input-group-append span {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.preview .custom-meshid .input-group-prepend span {
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  border: 1px solid #000;
+  border-right: 0;
+}
+
+/* Textfields + Textarea  */
+
+/* Formio-component-multiple + Survey + Datagrid + Editgrid */
+
+.preview .custom-meshid .form-group.formio-component-multiple tr[ref='row']:first-of-type .btn.btn-secondary,
+.preview .custom-meshid .form-group.formio-component-datagrid tr:first-of-type .btn.btn-secondary {
+  visibility: hidden;
+}
+
+.preview .custom-meshid .formio-component-multiple .choices__input {
+  background: transparent;
+}
+
+.preview .custom-meshid .formio-component-multiple .table-bordered,
+.preview .custom-meshid .formio-component-multiple .table-bordered th,
+.preview .custom-meshid .formio-component-multiple .table-bordered td {
+  padding-left: 0;
+  padding-bottom: 0;
+  transition: 0.3s;
+}
+
+.preview .wrapper .custom-meshid .card button[ref='removeRow'],
+.preview .wrapper .custom-meshid .card button.formio-button-remove-row {
+  transform: translate(0px, 5px);
+  margin-right: 0;
+}
+
+
+.preview .custom-meshid button[ref='removeRow'] i,
+.preview .custom-meshid button.formio-button-remove-row i {
+  color: var(--dark);
+  font-weight: 900;
+}
+
+
+.preview .custom-meshid .formio-component-multiple .table-bordered tr:not(:last-child) td:last-child {
+  width: 5%;
+}
+
+
+.preview .custom-meshid .formio-component-multiple:has(table tr:first-child td input:not([value=""])) label,
+.preview .custom-meshid .formio-component-multiple.formio-modified:not(.has-value):has(table tr:first-child:focus-within td input:not([value=""])) label {
+  transform: translate(20px, -12px);
+}
+
+.preview .custom-meshid .formio-component-multiple.formio-modified:not(.has-value):has(table tr:first-child td input:not([value=""])) label {
+  transform: translate(20px, 12px);
+}
+
+
+.preview .wrapper .custom-meshid .formio-component-multiple.has-value table tr .formio-button-add-another {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+
+.preview .wrapper .custom-meshid .formio-component-multiple .table-bordered tr:first-child td {
+  padding-top: 0;
+}
+
+
+
+.preview .wrapper .custom-meshid .formio-component > .table-bordered:not(.dynamicTable) th:first-child{
+  border-top-left-radius: 7px;
+}
+
+.preview .wrapper .custom-meshid .formio-component > .table-bordered:not(.dynamicTable) th:last-child{
+  border-top-right-radius: 7px;
+}
+
+.preview .wrapper .custom-meshid .table-bordered tr:last-child td:first-child{
+  border-bottom-left-radius: 7px;
+}
+
+.preview .wrapper .custom-meshid .table-bordered tr:last-child td:last-child{
+  border-bottom-right-radius: 7px;
+}
+
+.preview .wrapper .custom-meshid .formio-component-survey label{
+  background: transparent;
+}
+
+
+.preview .custom-meshid .formio-component-editgrid ul .list-group-item:nth-child(2) .btn-danger {
+  display: none;
+}
+
+.preview .custom-meshid .formio-component-editgrid:has(ul .list-group-item:nth-child(3) .pull-right) .list-group-item:nth-child(2) .btn-danger {
+  display: inline-block;
+}
+
+.preview .custom-meshid .formio-component-editgrid:has(.editgrid-actions) .list-group + button,
+.preview .custom-meshid .formio-component-editgrid:has(.editgrid-actions) .pull-right {
+  display: none;
+}
+
+.preview .custom-meshid .formio-component-editgrid .list-group-item:not(.list-group-header)>.row:not(.formio-component) {
+  padding: 1.5rem;
+  background: rgb(240, 240, 240);
+  color: var(--dark);
+  border-radius: 12px;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.preview .custom-meshid .formio-component-editgrid .row .col-sm-2 {
+  display: none;
+}
+
+
+.preview .custom-meshid .formio-component-editgrid .row .col-sm-2:last-child {
+  display: inline;
+  width: max-content;
+}
+
+
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component-datagrid .formio-component,
+.preview .wrapper .custom-meshid .card .card-body .formio-component.formio-component-editgrid {
+  padding: 0;
+  background: transparent;
+}
+
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component.formio-component-datagrid>label {
+  transform: none;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component-datagrid th.field-required:has(span):after,
+.preview .wrapper .custom-meshid .card .card-body .formio-component-datagrid th:last-child span {
+  display: none;
+}
+
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component-datagrid th {
+  min-width: 20%;
+}
+
+
+.preview .wrapper .custom-meshid .table-bordered,
+.preview .wrapper .custom-meshid .table-bordered thead,
+.preview .wrapper .custom-meshid .table-bordered td,
+.preview .wrapper .custom-meshid .table-bordered th {
+  border: none;
+}
+
+.preview .wrapper .custom-meshid .table-bordered,
+.preview .wrapper .custom-meshid .table-bordered thead,
+.preview .wrapper .custom-meshid .table-bordered tbody{
+  border-radius: 7px;
+}
+
+.preview .wrapper .custom-meshid .dynamicTable.table-bordered thead tr:first-child th {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background: var(--client-primary-color);
+  color: #fff;
+  padding: 0.6rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.preview .wrapper .custom-meshid .table-bordered tfoot td {
+  padding-left: 0;
+}
+
+.preview .wrapper .custom-meshid .table-bordered thead {
+  background-color: var(--client-primary-color) ;
+  color: #fefefe;
+}
+
+.preview .wrapper .custom-meshid .formio-component:not(.formio-component-multiple) > .table-bordered tbody, 
+.preview .wrapper .custom-meshid .dynamicTable tbody {
+  background: rgb(5 11 31 / 10%);
+}
+
+.preview .wrapper .custom-meshid .formio-component.formio-component-survey > .table-bordered tbody {
+  background: rgb(240, 240, 240);
+  font-weight: 600;
+}
+
+.preview .wrapper .custom-meshid .dynamicTable {
+display: none;
+width: 100%;
+font-size: 0.8rem;
+margin-bottom: 1rem;
+}
+
+.preview .wrapper .custom-meshid .dynamicTable th, 
+.preview .wrapper .custom-meshid .dynamicTable td {
+padding: 0.7rem;
+max-width: 80px;
+}
+
+.preview .wrapper .custom-meshid .dynamicTable th, 
+.preview .wrapper .custom-meshid .dynamicTable td {
+border-right: 1px solid var(--dark);
+border-bottom: 1px solid var(--dark);   
+}
+.preview .wrapper .custom-meshid .dynamicTable th:last-child, 
+.preview .wrapper .custom-meshid .dynamicTable td:last-child {
+border-right: none;
+}
+
+
+.preview .wrapper .custom-meshid .dynamicTable tr:last-child td {
+border-bottom: none;   
+}
+
+
+
+.preview .custom-meshid .formio-button-add-another,
+.preview .custom-meshid .formio-component-editgrid .editgrid-listgroup+button,
+.preview .custom-meshid .formio-component-editgrid .editgrid-actions button,
+.preview .custom-meshid .formio-button-add-row,
+.preview .custom-meshid button.formio-button-remove-row,
+.preview .custom-meshid button[ref='removeRow'] {
+  background: transparent !important;
+  color: var(--dark) !important;
+  font-weight: 600;
+  border-radius: 7px;
+  border: 2px solid var(--dark) !important;
+  margin-right: 10px;
+}
+
+.preview .custom-meshid .formio-component-editgrid .editgrid-actions{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.preview .custom-meshid .formio-component-editgrid .editgrid-actions button, 
+.preview .custom-meshid .formio-component-editgrid button.save-it, 
+.preview .custom-meshid  button.edit-it, 
+.preview .custom-meshid  button.open-modal-button, 
+.preview .custom-meshid .formio-component-editgrid .cancel-it {
+    margin: 0;
+    border: none !important;
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.preview .custom-meshid  button.open-modal-button{
+    background: #FF6B6B;
+    margin-top: -20px;
+}
+
+.preview .custom-meshid .formio-component-editgrid .editgrid-actions button.btn-primary,
+.preview .custom-meshid .formio-component-editgrid button.save-it{
+  background-color: #17a2b8cc !important;
+}
+
+.preview .custom-meshid .formio-component-editgrid .editgrid-actions button.btn-danger {
+  background-color: #fe6c7a !important;
+  margin-left: 1rem;
+}
+
+.preview .custom-meshid .formio-component-editgrid .editgrid-listgroup+button,
+.preview .custom-meshid .formio-component-datagrid:has(.validated) button.formio-button-add-row{
+  padding: 0.8rem 1rem;
+  border: none !important;
+  background: var(--client-primary-color)!important;
+  color: #fff !important;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.preview .list-group-item {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.preview .custom-meshid .formio-component-datagrid:has(.required:not(.validated):not(.formio-hidden)) button.formio-button-add-row
+{
+  display: none;
+}
+
+
+/* Formio-component-multiple + Survey + Datagrid + Editgrid */
+
+
+
+/* Custom Drop Text */
+
+
+.preview .custom-meshid .custom-droptext .fieldset-body {
+  display: flex;
+}
+
+.preview .custom-meshid .custom-droptext .fieldset-body {
+  flex-direction: row-reverse;
+  margin-bottom: 0.5rem;
+}
+
+.preview .custom-droptext:not(.reverse) .choices[data-type*=select-one] .choices__button,
+.preview .custom-droptext:not(.reverse) .choices[data-type*=select-one]:after {
+  display: none;
+}
+
+.preview .custom-droptext .choices__item.choices__item--selectable {
+  overflow: hidden;
+}
+
+.preview .custom-meshid .custom-droptext .fieldset-body .formio-component-number,
+.preview .custom-meshid .custom-droptext .fieldset-body .formio-component-textfield {
+  padding-left: 0;
+  width: 70%;
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.preview .custom-meshid .custom-droptext .fieldset-body .formio-component-number .form-control,
+.preview .custom-meshid .custom-droptext .fieldset-body .formio-component-textfield .form-control {
+  border-left: none;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.preview .custom-meshid .custom-droptext:not(.reverse) .formio-component-select div.form-control {
+  border-right: none;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.preview .custom-meshid .custom-droptext .fieldset-body .formio-component-select {
+  padding-right: 0;
+  width: 30%;
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.preview .custom-meshid .custom-droptext .fieldset-body .formio-component-select .field-required:after {
+  display: none;
+}
+
+
+.preview .custom-meshid .custom-droptext.reverse .fieldset-body {
+  flex-direction: row;
+}
+
+.preview .custom-meshid .custom-droptext.reverse .fieldset-body .formio-component-textfield {
+  padding-right: 0;
+  margin-bottom: 0;
+  width: 70%;
+  max-width: 680px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.preview .custom-meshid .custom-droptext.reverse .fieldset-body .formio-component-textfield .form-control {
+  border-right: none;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.preview .custom-meshid .custom-droptext.reverse .formio-component-select div.form-control {
+  border-left: none;
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+.preview .custom-meshid .custom-droptext.reverse .fieldset-body .formio-component-select {
+  padding-left: 0;
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* Custom Drop Text */
+
+/* Dropdown */
+
+.preview .custom-meshid .choices__item.choices__item--selectable{
+  margin-top: 6px;
+}
+
+.preview .custom-meshid .choices__list--multiple .choices__item {
+  background: var(--client-secondary-color);
+}
+
+.preview .custom-meshid .formio-component-multiple .choices__input.choices__input--cloned {
+  width: unset;
+  margin-bottom: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.preview .custom-meshid .is-active {
+  z-index: 100;
+  min-width: 300px;
+}
+
+/* Dropdown */
+
+
+/* Radio and Checkboxes  */
+
+.preview .custom-meshid .custom-meshid-radio label span,
+.preview .custom-meshid .form-radio label span,
+.preview .custom-meshid .form-check label span {
+  display: inline;
+  cursor: pointer;
+}
+
+.preview .custom-meshid .form-check-label:hover {
+  color: var(--client-primary-color);
+}
+
+.preview .custom-meshid label input[type='radio'], 
+.preview .custom-meshid input[type='checkbox'], 
+.preview .formio-component-survey input[type='radio'] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--client-primary-color);
+  mix-blend-mode: darken;
+  cursor: pointer;
+  position: static;
+  margin-right: 0.2rem;
+  transform: translateY(2px);
+}
+
+.preview .wrapper .custom-meshid input[type='checkbox']{
+margin-right: 0;
+}
+
+.preview input[type='radio']:checked~span,
+.preview input[type='checkbox']:checked~span {
+  color: var(--client-primary-color);
+}
+
+/* Radio and Checkboxes  */
+
+
+/* Animations  */
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Animations  */
+
+/* Validations  */
+
+.preview .custom-meshid .field-required:after,
+.preview .custom-meshid th.field-required>span:after {
+  color: #ff5353;
+  font-size: 0.8rem;
+  font-family: 'Font Awesome 6 Free';
+  top: -5px;
+  left: 5px;
+  content: "\f02e";
+}
+
+.preview .content .wrapper .custom-meshid .validated>div[ref="element"] .form-control, 
+.preview .content .wrapper .custom-meshid .validated>div.address-autocomplete-container .form-control, 
+.preview .content .wrapper .custom-meshid .validated>.table .form-control, 
+.preview .content .wrapper .custom-meshid .validated>.choices>.form-control {
+  border-color: var(--client-primary-color);
+}
+
+.preview .custom-meshid .card .card-body .has-error:not(.formio-component-editgrid) .form-control,
+.preview .custom-meshid .card .card-body .formio-error-wrapper:not(.formio-component-editgrid) .form-control,
+.preview .custom-meshid .card .card-body .formio-component.required>div[ref="element"]:has(.is-invalid) .input-group-text,
+.preview .custom-meshid .card .card-body .formio-component-number.required .is-invalid
+ {
+  border-color: #ff5353;
+  background: #ff5353;
+  box-shadow: 0 0 0px 1000px rgb(240, 240, 240) inset;
+}
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component.required>div[ref="element"]:has(.is-invalid) .input-group-text{
+  box-shadow: none;
+}
+
+.preview .custom-meshid .custom-option.formio-error-wrapper .radio-tile,
+.preview .custom-meshid .custom-option.has-error .radio-tile{
+border-color: #ff5353;
+}
+
+.preview .custom-meshid .card .card-body .has-error>label,
+.preview .custom-meshid .card .card-body .formio-error-wrapper> label,
+.preview .custom-meshid .card .card-body .formio-error-wrapper> .checkbox> label,
+.preview .custom-meshid .card .card-body .has-error>.form-radio label,
+.preview .custom-meshid .card .card-body .has-error>.form-radio label .fa-solid,
+.preview .custom-meshid .card .card-body .formio-error-wrapper>.form-radio label,
+.preview .custom-meshid .card .card-body .formio-error-wrapper>.form-radio label .fa-solid,
+.preview .custom-meshid .card .card-body .formio-component.required:not(.formio-component-datetime):has(.input-group .is-invalid) > label,
+.preview .custom-meshid .card .card-body .formio-errors .error,
+.preview .custom-meshid .fa-bookmark {
+  color: #ff5353;
+}
+
+.preview .custom-meshid .card .card-body .formio-errors .error {
+  font-weight: 600;
+}
+
+.preview .custom-meshid .card .card-body .formio-component>div[ref="element"]:has(.is-invalid) .input-group-text, 
+.preview .custom-meshid .card .card-body .formio-component>div[ref="element"]:has(.is-invalid) .input-group-text i
+{
+  color: #fff;
+}
+
+.preview .custom-meshid .validation-text {
+  text-align: center;
+  font-weight: 700;
+}
+
+.preview .custom-meshid .validation-text div {
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 1rem;
+}
+
+.preview .custom-meshid .validation-text .fa-solid {
+  margin-right: 0.3rem;
+}
+
+.preview .custom-meshid .validation-icon i {
+  margin-left: 0.3rem;
+  font-size: 1rem;
+}
+
+.preview .custom-meshid .validation-icon .fa-circle-check {
+  color: #f5f5f5;
+}
+
+.preview .custom-meshid .validation-text .fa-circle-check,
+.preview .custom-meshid .nav-item.active .validation-icon .fa-circle-check {
+  color: var(--client-primary-color);
+}
+
+.preview .custom-meshid .validation-text .fa-circle-info,
+.preview .custom-meshid .validation-icon .fa-circle-info {
+  color: #1e1e1e
+}
+
+.preview .custom-meshid .validation-icon.percentage {
+  font-size: 0.8rem;
+  margin-left: 5px;
+  font-style: italic;
+  font-weight: bold;
+  position: relative;
+  top: -2px;
+}
+
+/* Validations  */
+
+
+/* Error Alert  */
+
+.preview .custom-meshid .iziToast-wrapper-bottomCenter {
+  bottom: 10% !important;
+}
+
+.preview .custom-meshid .iziToast-message {
+  font-weight: 700 !important;
+}
+
+/* Error Alert  */
+
+/* Signing Page  */
+
+
+.preview .custom-meshid .tab-pane:last-child.dark-blur {
+  pointer-events: none;
+  position: relative;
+}
+
+.preview .custom-meshid .tab-pane:last-child.dark-blur:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM11 15.7324V18H13V15.7324C13.5978 15.3866 14 14.7403 14 14C14 12.8954 13.1046 12 12 12C10.8954 12 10 12.8954 10 14C10 14.7403 10.4022 15.3866 11 15.7324ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16Z' fill='rgba(183,183,183,1)'%3E%3C/path%3E%3C/svg%3E");
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-size: 140px;
+  border-radius: 7px;
+  background-color: rgb(0 0 0 / 90%);
+}
+
+.preview .custom-meshid .tab-pane:last-child.dark-blur:after {
+  content: 'This section will unlock after completing all others';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  pointer-events: none;
+  color: #b7b7b7;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Custom Sign  */
+
+.preview .wrapper .custom-meshid .signature-pad label {
+  display: none;
+}
+
+.preview .wrapper .custom-meshid .signature-pad canvas {
+  border-radius: 12px;
+  background: rgb(240,240,240);
+}
+
+.preview .custom-meshid .formio-component-generate {
+  width: max-content;
+}
+
+.preview .custom-meshid .generate button{
+  display: none;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: none;
+  background: var(--client-secondary-color)  !important;
+}
+
+.preview .custom-meshid:has(.formio-component-signature.validated) .generate button{
+  display: block;
+}
+
+.preview .custom-meshid .generate i {
+  margin-right: 0.4rem;
+}
+
+.preview .custom-meshid .formio-component-customSignField .custom-sign {
+  font-family: 'Sacramento', cursive;
+  font-style: italic;
+  padding: 0;
+  background: none;
+  color: black;
+  font-size: 1.7rem;
+  font-weight: normal;
+  padding-top: 1.5rem;
+  text-align: left;
+}
+
+.preview .custom-meshid .formio-component-customSignField .box {
+  padding-left: 30px;
+  position: relative;
+  border-bottom: 4px solid var(--client-secondary-color);
+  border-bottom-left-radius: 8px;
+  height: 83px;
+  min-width: 300px;
+  width: max-content;
+}
+
+.preview .custom-meshid .formio-component-customSignField .box.top:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  border-top: 4px solid var(--client-secondary-color) ;
+}
+
+.preview .custom-meshid .formio-component-customSignField .box.bottom:before {
+  border-bottom: 4px solid var(--client-secondary-color) ;
+}
+
+.preview .custom-meshid .formio-component-customSignField .box.left:before {
+  height: 83px;
+  border-left: 4px solid var(--client-secondary-color) ;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.preview .custom-meshid .formio-component-customSignField .div-title {
+  position: absolute;
+  margin-top: -0.5em;
+  margin-left: 0.2em;
+}
+
+.preview .custom-meshid .formio-component-customSignField .img {
+  position: absolute;
+  opacity: 0.3;
+  width: 90px;
+  transform: translateX(220px) translateY(-88px);
+}
+
+
+.choices__item--choice[aria-disabled="true"] {
+  color: #aaa;
+  background-color: #f9f9f9;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.preview .custom-meshid .no-select .form-radio:has(input[disabled]),
+.preview .custom-meshid .no-select2 .form-radio:has(input[disabled])
+{
+	opacity:1 !important;
+  pointer-events: inherit;
+}
+
+
+
+/* Media Queries  */
+
+
+@media only screen and (max-width: 1850px) {
+
+  .preview .wrapper formio {
+    width: 65%;
+  }
+
+}
+
+@media only screen and (max-width: 1600px) {
+
+  .preview .wrapper formio {
+    width: 75%;
+  }
+
+  .preview .wrapper .custom-meshid .navigation {
+    position: relative;
+    top: 0;
+  }
+
+  .preview .wrapper .custom-meshid .nav-buttons {
+    padding-bottom: 10rem;
+  }
+
+  .preview .wrapper .custom-meshid .navigation-back {
+    left: 0;
+  }
+
+  .preview .wrapper .custom-meshid .navigation-next {
+    right: 0;
+  }
+
+  
+.preview .wrapper .formio-component-form .custom-meshid:has(.card-body.dark-blur.active) .navigation button{
+  border: 2px solid #005867;
+}
+
+.preview .wrapper .formio-component-form .custom-meshid:has(.card-body.dark-blur.active) .navigation button i{
+  color: #fff;
+}
+
+.preview .custom-meshid .first-page{
+	min-height:350px !important;
+}
+
+}
+
+@media only screen and (max-width: 1450px) {
+
+  .preview .wrapper formio {
+    width: 85%;
+  }
+
+}
+
+@media only screen and (max-width: 1300px) {
+
+.preview .wrapper .custom-meshid .card .card-body .formio-component.formio-component-editgrid {
+  padding: 1rem;
+}
+
+.preview .content .wrapper .custom-meshid .card .card-header:not(.bg-default).sidebarshow {
+  left: 0;
+  padding-bottom: 4rem;
+  border-radius: 0;
+}
+
+  .preview .wrapper formio {
+    width: 100%;
+  }
+
+  .preview .custom-meshid .header {
+    padding: 0;
+    width: 100%;
+  }
+
+  .preview .custom-meshid .switch-holder {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0;
+  }
+
+  .preview .content .wrapper .custom-meshid .card .card-header:not(.bg-default) {
+    margin-left: 0;
+    border-radius: 0;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+    left: -100%;
+    bottom: -3rem;
+    max-height: unset;
+  }
+
+
+
+  .preview .content .wrapper .custom-meshid .card .page-title p,
+  .preview .content .wrapper .custom-meshid .card .page-title div {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .preview .custom-meshid .custom-droptext .fieldset-body .formio-component-select {
+    max-width: 35%;
+  }
+
+  .preview .custom-droptext .choices__item.choices__item--selectable {
+    overflow: hidden;
+  }
+
+  .preview .custom-droptext .choices__item.choices__item--selectable:not(.choices__item--choice) {
+   padding: 0;
+  }
+
+  .preview .custom-meshid .tab-pane:last-child.dark-blur:before {
+    border-radius: 0;
+  }
+
+  
+
+
+}
+
+
+@media only screen and (max-width: 1150px) {
+
+  .col,
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col-auto,
+  .col-lg,
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg-auto,
+  .col-md,
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-auto,
+  .col-sm,
+  .col-sm-1,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-auto,
+  .col-xl,
+  .col-xl-1,
+  .col-xl-2,
+  .col-xl-3,
+  .col-xl-4,
+  .col-xl-5,
+  .col-xl-6,
+  .col-xl-7,
+  .col-xl-8,
+  .col-xl-9,
+  .col-xl-10,
+  .col-xl-11,
+  .col-xl-12,
+  .col-xl-auto {
+    flex: unset;
+    max-width: 100%;
+  }
+
+  .preview .wrapper .custom-meshid .nav-buttons .col-md-6 {
+    width: 50%;
+  }
+
+  .tingle-modal-box .high-risk {
+    flex-direction: column;
+  }
+
+  .tingle-modal-box .high-risk ul{
+    margin: 0;
+  }
+  
+  
+
+  /* Datagrid Carousel */
+
+.preview .wrapper .custom-meshid .formio-component > .table-bordered:not(.dynamicTable) th.shown-column{
+  border-top-left-radius: 7px;
+}
+
+.preview .wrapper .custom-meshid .formio-component > .table-bordered:not(.dynamicTable) tr:last-child td.shown-column{
+  border-bottom-left-radius: 7px;
+}
+
+  .preview .wrapper .custom-meshid .formio-component-datagrid.formio-hidden ~ .dynamicTable{
+    display: none;
+  }
+
+
+  .preview .custom-meshid .formio-component-datagrid .hidden-column {
+    display: none;
+  }
+
+  .preview .custom-meshid .datagrid-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .preview .custom-meshid .datagrid-buttons button {
+    scale: 0.8;
+  }
+
+  .preview .custom-meshid .formio-component-datagrid th:last-child {
+    width: 5%;
+  }
+
+  .preview .custom-meshid .formio-component-datagrid td:not(:first-child):not(:last-child):not(.shown-column),
+  .preview .custom-meshid .formio-component-datagrid th:not(:first-child):not(:last-child):not(.shown-column) {
+    display: none;
+  }
+
+  /* Datagrid Carousel */
+
+
+}
+
+
+@media only screen and (max-width: 730px) {
+
+  .preview .custom-meshid .custom-option.sof .radio-tile,
+  .preview .custom-meshid .custom-option.sow .radio-tile {
+    border: 2px solid var(--client-primary-color);
+    width: 330px;
+    height: 40px;
+    border-radius: 7px;
+    gap: 5px;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .preview .custom-meshid .sof i,
+  .preview .custom-meshid .sow i {
+    display: none;
+  }
+
+  
+  
+  .preview .content .wrapper .custom-meshid .search-field .formio-component-textfield{
+    width: 100%;
+  }
+
+  .preview .wrapper:after {
+    animation: fadeOut 1s linear 10s forwards;
+}
+
+  .preview .custom-meshid .small-block i,
+  .preview .custom-meshid .small-block i {
+    display: none;
+  }
+
+
+  .preview .custom-meshid .validation-text div {
+    background: #dedede;
+  }
+
+
+  .preview .content .wrapper .custom-meshid .card .card-header:not(.bg-default) {
+    border-bottom-right-radius: 0px;
+    max-width: 100%;
+  }
+
+  .preview .custom-meshid .formio-component-textfield>label span,
+  .preview .custom-meshid .formio-component-textarea>label span,
+  .preview .custom-meshid .formio-component-number>label span,
+  .preview .custom-meshid .formio-component-select>label span,
+  .preview .custom-meshid .formio-component-datetime>label span,
+  .preview .custom-meshid .formio-component-email>label span {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+
+  .preview .wrapper .custom-meshid .card .card-body .page-title {
+    width: 100%;
+  }
+
+  .preview .content .wrapper .custom-meshid .card .page-title p,
+  .preview .content .wrapper .custom-meshid .card .page-title div {
+    font-size: 1.5rem;
+
+  }
+
+  .preview .custom-meshid .custom-desc {
+    display: block;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .preview .custom-meshid .tooltip-inner {
+    width: 160px;
+    font-size: 0.8rem;
+}
+
+}
+
+@media only screen and (min-width: 767px) {
+  .preview .marginTop {
+    margin-top: 5rem !important;
+  }
+  }
+
+
+
+.preview .choices-bottom .choices__list--dropdown {
+  z-index: 100000;
+  line-height:1;
+}
+
+.preview .choices-bottom.is-active {
+  padding-bottom: 250px !important;
+}
+</style>
