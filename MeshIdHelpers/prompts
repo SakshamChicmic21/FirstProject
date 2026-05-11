@@ -1,0 +1,23 @@
+What client wants instead
+
+👉 Create a hidden field
+
+Do the calculation in logic
+Send final processed value to RAM
+Country Matching Logic
+
+UID: c29922ad...
+
+Question:
+
+👉 Is bank country same as any of:
+
+Nationality
+DOB country
+Address
+Tax residency
+Source of wealth/funds country
+Output:
+Yes → if match found
+No → if no match
+Not Applicable → if data missing

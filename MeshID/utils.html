@@ -1,0 +1,69 @@
+  <!-- page-9 -->
+                {{#each taxDetails}}
+                <div class="page-9">
+                    <h3 class="section-title" style="font-size: 16px; margin-top: 20px;">Section 2 – Additional
+                        information
+                    </h3>
+
+                    <h4
+                        style="color: var(--brand); font-size: 12px; font-weight: bold; margin-bottom: 10px; margin-top: 15px;">
+                        Country(ies) in which you are resident for tax</h4>
+                    <div class="grid-2-col" style="margin-left: 23px; margin-top: 10px;">
+                        <!-- Row 1 -->
+                        <div style="margin-top: 10px;">
+                            <div class="form-row">
+                                <div class="form-label" style="width: 60px;">Country:</div>
+                                <div class="form-input-wrapper" style="width: 100%;">
+                                    <input type="text" value="{{jurisdiction}}" class="form-input" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label" style="width: 160px;">Tax Identification Number:</div>
+                                <div class="form-input-wrapper" style="width: 100%;">
+                                    <input type="text" value="{{taxReferenceNumber}}" class="form-input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <div class="form-label" style="margin-left: 23px;">If the applicant is unable to provide a TIN
+                            number, please provide an explanation here:</div>
+                        <div class="form-input-wrapper ml-form-field">
+                            <textarea class="form-input">
+                            {{pleaseSpecifyTheReason}}
+                        </textarea>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{#with taxDetailsJoint}}
+                    {{#each taxDetails}}
+                    <div class="grid-2-col" style="margin-left: 23px; margin-top: 10px;">
+                        <!-- Row 1 -->
+                        <div style="margin-top: 10px;">
+                            <div class="form-row">
+                                <div class="form-label" style="width: 60px;">Country:</div>
+                                <div class="form-input-wrapper" style="width: 100%;">
+                                    <input type="text" value="{{jurisdiction}}" class="form-input" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-label" style="width: 160px;">Tax Identification Number:</div>
+                                <div class="form-input-wrapper" style="width: 100%;">
+                                    <input type="text" value="{{taxReferenceNumber}}" class="form-input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <div class="form-label" style="margin-left: 23px;">If the applicant is unable to provide a TIN
+                            number, please provide an explanation here:</div>
+                        <div class="form-input-wrapper ml-form-field">
+                            <textarea class="form-input">
+                            {{pleaseSpecifyTheReason}}
+                        </textarea>
+                        </div>
+                    </div>
+               
+                    {{/with}}
+                </div>
+                {{/each}}

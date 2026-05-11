@@ -2,7 +2,7 @@ Hi @dipin Sir,
 Please upload and share Build V- of -- form on SharePoint. The file is provided below.
 
 Hi @dipin sir,
-Please proceed with testing of Hatstone form tickets marked as "In Progress" in Build v19.
+Please proceed with testing of JTC form tickets marked as "Working on it" in Build v7.
 
 
 Hi @dipin Sir, 
@@ -10,3 +10,16 @@ Please upload and share Build V27 of Anthos form on SharePoint. The file is prov
 
 Hi sir,
 in JTC form i'm facing issue during testing data is showing two times on stagging meshId app and showing single time on demo meshid app but demo meshid app scroll feature is not working properly that why i not been able to fix issues 
+
+Good morning sir,
+out of 151 tickets 126 tickets are done and 25 tickets are in progress these tickets should be done by today. 
+Good morning Sir,
+Out of 151 tickets, 126 have been completed and 25 are currently in progress. The remaining tickets are expected to be completed by today.
+
+
+Hi sir,
+I try to fix the RAM issues as per the reqest of tamzid sir in buildv19 but i see previous issues are reverted in that build. because you start worked on previous Build version. fileupload will not working in Build V19 as i fixed this issue in BuildV14. for eg: "EvidenceToCreate" this key reverted back to "profileEvidenceToCreate".
+so please can you upated your changes in provided build bellow. without effected the changes in provided build.
+
+Hi @ankit.babbar  sir,
+please add this reply with build provided bellow
