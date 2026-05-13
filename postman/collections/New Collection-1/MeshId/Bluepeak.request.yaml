@@ -1,0 +1,24 @@
+$kind: http-request
+name: Bluepeak
+url: https://staging.meshid.app/api/pdf/generatepdf
+method: POST
+headers:
+  accept: application/json, text/plain, */*
+  accept-language: en-GB,en-US;q=0.9,en;q=0.8
+  content-type: application/json
+  origin: https://staging.meshid.app
+  priority: u=1, i
+  referer: https://staging.meshid.app/form-builder
+  sec-ch-ua: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: '"macOS"'
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-origin
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+  x-timezone-offset: "-330"
+  Cookie: SRVNAME=ONE; _legacy_auth0.XzROnudn6PWXxVL47e0uvN583K4ctQTF.is.authenticated=true; auth0.XzROnudn6PWXxVL47e0uvN583K4ctQTF.is.authenticated=true
+body:
+  type: json
+  content: '{"htmlTemplateFile":"Bluepeak-main-from","jsonData":"{\"isCollaborator\":\"\",\"smartFormLink\":\"\",\"tabContainerComp\":{\"oakGroup\":\"\",\"gen\":false,\"customClasses\":\"\",\"loading\":\"\",\"customComps\":\"\",\"externalScripts\":\"\",\"display\":\"\",\"modal\":\"\",\"sidebar\":\"\",\"navigation\":\"\",\"validation\":\"\",\"customDatagrid\":\"\",\"customSign\":\"\",\"rp\":[],\"extract\":{},\"hiddenSign\":\"\",\"MID_NP_First\":\"\",\"MID_NP_Middle\":\"\",\"MID_NP_Last\":\"\",\"MID_NP_Former_First\":\"\",\"MID_NP_Former_Last\":\"\",\"MID_NP_Gender\":\"\",\"MID_NP_Email\":\"\",\"MID_NP_DOB\":\"\",\"MID_NP_Occupation\":\"\",\"MID_NP_Nationality\":\"\",\"MID_NP_Tax_ID_Number\":\"\",\"MID_NP_Dual_Nationality\":\"\",\"MID_NP_Country_Of_Birth\":\"\",\"MID_NP_Place_Of_Birth\":\"\",\"MID_NP_Country_Of_Residence\":\"\",\"MID_NP_Address\":\"\",\"MID_NP_Address_City\":\"\",\"MID_NP_Address_Country\":\"\",\"MID_NP_Postalcode\":\"\",\"MID_LP_Name\":\"\",\"MID_LP_Trade_Name\":\"\",\"MID_LP_Number\":\"\",\"MID_LP_Type\":\"\",\"MID_LP_Legal_Entity_Identifier\":\"\",\"MID_LP_Regulated\":\"\",\"MID_LP_Regulator\":\"\",\"MID_LP_Tax_Number\":\"\",\"MID_LP_Country_Of_Registration\":\"\",\"MID_LP_Date_Of_Registration\":\"\",\"MID_LP_Address\":\"\",\"MID_LP_Address_City\":\"\",\"MID_LP_Address_Country\":\"\",\"MID_LP_Postalcode\":\"\",\"chooseType\":\"legalPerson\",\"getStarted\":true,\"relatedPartyRole\":\"boardGoverningMembers\",\"boardGoverningBodyMembersInformation\":[{\"firstBodyType\":\"Saksham\",\"middleBodyType\":\"\",\"lastBodyType\":\"Garg\",\"addressBodyType\":\"sdfas\",\"cityBodyType\":\"sdfgsd\",\"postalCodeBodyType\":\"sdfgsd\",\"address_CountryBodyType\":\"Åland Islands\",\"nationalityBodyType\":\"Albania\",\"citizenshipBodyType\":\"sdfgsd\",\"placeOfResidence\":\"Albania\",\"memberRoles\":{\"chairperson\":true,\"viceChairperson\":false,\"boardMember\":false,\"secretary\":false,\"treasurer\":false,\"other\":false}}],\"editGrid1\":[],\"declaration\":true,\"signeeFirst\":\"Saksham\",\"middleName\":\"\",\"signeeLast\":\"Garg\",\"behalfOf\":\"sdfsdg\",\"capacity\":\"sdfgsdfg\",\"signeeEmail\":\"saksham.garg@chicmicstudios.in\",\"signingDate\":\"13/05/2026\",\"signature\":\"Saksham Garg\",\"generate\":false,\"inviteASecondSigner\":true,\"submit\":true,\"back\":false,\"next\":true,\"signeeFirst2\":\"Saksham\",\"middleName2\":\"\",\"signeeLast2\":\"Garg\",\"behalfOf2\":\"sdfgs\",\"capacity2\":\"dsfgsdfg\",\"signeeEmail2\":\"saksham.garg@chicmicstudios.in\",\"signingDate2\":\"13/05/2026\",\"signature2\":\"Saksham Garg\",\"generate2\":false},\"constantData\":{\"firstName\":\"\",\"lastName\":\"\",\"dateOfBirth\":\"\"},\"reportFileFormat\":\"html\",\"generatedOnText\":\"Document signed on\",\"orgId\":\"ff5be05c-878e-40ed-b711-85cccbbc2744\",\"mode\":\"draft\"}","mergeDocuments":"","contract":true}'
+order: 3304939549693032
