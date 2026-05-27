@@ -1,0 +1,2072 @@
+{
+    "smartFormLink": "",
+    "countries": [
+        {
+            "value": "AF",
+            "label": "Afghanistan"
+        },
+        {
+            "value": "AL",
+            "label": "Albania"
+        },
+        {
+            "value": "DZ",
+            "label": "Algeria"
+        },
+        {
+            "value": "AO",
+            "label": "Angola"
+        },
+        {
+            "value": "AI",
+            "label": "Anguilla"
+        },
+        {
+            "value": "AR",
+            "label": "Argentina"
+        },
+        {
+            "value": "AM",
+            "label": "Armenia"
+        },
+        {
+            "value": "AU",
+            "label": "Australia"
+        },
+        {
+            "value": "AT",
+            "label": "Austria"
+        },
+        {
+            "value": "AZ",
+            "label": "Azerbaijan"
+        },
+        {
+            "value": "BS",
+            "label": "Bahamas"
+        },
+        {
+            "value": "BH",
+            "label": "Bahrain"
+        },
+        {
+            "value": "BD",
+            "label": "Bangladesh"
+        },
+        {
+            "value": "BB",
+            "label": "Barbados"
+        },
+        {
+            "value": "BY",
+            "label": "Belarus"
+        },
+        {
+            "value": "BE",
+            "label": "Belgium"
+        },
+        {
+            "value": "BZ",
+            "label": "Belize"
+        },
+        {
+            "value": "BJ",
+            "label": "Benin"
+        },
+        {
+            "value": "BM",
+            "label": "Bermuda"
+        },
+        {
+            "value": "BT",
+            "label": "Bhutan"
+        },
+        {
+            "value": "BO",
+            "label": "Bolivia (Plurinational State of)"
+        },
+        {
+            "value": "BA",
+            "label": "Bosnia and Herzegovina"
+        },
+        {
+            "value": "BW",
+            "label": "Botswana"
+        },
+        {
+            "value": "BR",
+            "label": "Brazil"
+        },
+        {
+            "value": "VG",
+            "label": "Virgin Islands (British)"
+        },
+        {
+            "value": "BN",
+            "label": "Brunei Darussalam"
+        },
+        {
+            "value": "BG",
+            "label": "Bulgaria"
+        },
+        {
+            "value": "BF",
+            "label": "Burkina Faso"
+        },
+        {
+            "value": "BI",
+            "label": "Burundi"
+        },
+        {
+            "value": "KH",
+            "label": "Cambodia"
+        },
+        {
+            "value": "CM",
+            "label": "Cameroon"
+        },
+        {
+            "value": "CA",
+            "label": "Canada"
+        },
+        {
+            "value": "CV",
+            "label": "Cabo Verde"
+        },
+        {
+            "value": "KY",
+            "label": "Cayman Islands"
+        },
+        {
+            "value": "CF",
+            "label": "Central African Republic"
+        },
+        {
+            "value": "TD",
+            "label": "Chad"
+        },
+        {
+            "value": "CL",
+            "label": "Chile"
+        },
+        {
+            "value": "CN",
+            "label": "China"
+        },
+        {
+            "value": "CO",
+            "label": "Colombia"
+        },
+        {
+            "value": "KM",
+            "label": "Comoros"
+        },
+        {
+            "value": "CD",
+            "label": "Congo, Democratic Republic of"
+        },
+        {
+            "value": "CG",
+            "label": "Congo"
+        },
+        {
+            "value": "CR",
+            "label": "Costa Rica"
+        },
+        {
+            "value": "CI",
+            "label": "Côte d'Ivoire"
+        },
+        {
+            "value": "HR",
+            "label": "Croatia"
+        },
+        {
+            "value": "CU",
+            "label": "Cuba"
+        },
+        {
+            "value": "CW",
+            "label": "Curaçao"
+        },
+        {
+            "value": "CY",
+            "label": "Cyprus"
+        },
+        {
+            "value": "CZ",
+            "label": "Czechia"
+        },
+        {
+            "value": "DK",
+            "label": "Denmark"
+        },
+        {
+            "value": "DJ",
+            "label": "Djibouti"
+        },
+        {
+            "value": "DO",
+            "label": "Dominican Republic"
+        },
+        {
+            "value": "EC",
+            "label": "Ecuador"
+        },
+        {
+            "value": "EG",
+            "label": "Egypt"
+        },
+        {
+            "value": "SV",
+            "label": "El Salvador"
+        },
+        {
+            "value": "GQ",
+            "label": "Equatorial Guinea"
+        },
+        {
+            "value": "ER",
+            "label": "Eritrea"
+        },
+        {
+            "value": "EE",
+            "label": "Estonia"
+        },
+        {
+            "value": "SZ",
+            "label": "Eswatini"
+        },
+        {
+            "value": "ET",
+            "label": "Ethiopia"
+        },
+        {
+            "value": "FJ",
+            "label": "Fiji"
+        },
+        {
+            "value": "FI",
+            "label": "Finland"
+        },
+        {
+            "value": "FR",
+            "label": "France"
+        },
+        {
+            "value": "GA",
+            "label": "Gabon"
+        },
+        {
+            "value": "GM",
+            "label": "Gambia"
+        },
+        {
+            "value": "GE",
+            "label": "Georgia"
+        },
+        {
+            "value": "DE",
+            "label": "Germany"
+        },
+        {
+            "value": "GH",
+            "label": "Ghana"
+        },
+        {
+            "value": "GI",
+            "label": "Gibraltar"
+        },
+        {
+            "value": "GR",
+            "label": "Greece"
+        },
+        {
+            "value": "GD",
+            "label": "Grenada"
+        },
+        {
+            "value": "GT",
+            "label": "Guatemala"
+        },
+        {
+            "value": "GG",
+            "label": "Guernsey"
+        },
+        {
+            "value": "GN",
+            "label": "Guinea"
+        },
+        {
+            "value": "GW",
+            "label": "Guinea-Bissau"
+        },
+        {
+            "value": "GY",
+            "label": "Guyana"
+        },
+        {
+            "value": "HT",
+            "label": "Haiti"
+        },
+        {
+            "value": "HN",
+            "label": "Honduras"
+        },
+        {
+            "value": "HK",
+            "label": "Hong Kong"
+        },
+        {
+            "value": "HU",
+            "label": "Hungary"
+        },
+        {
+            "value": "IS",
+            "label": "Iceland"
+        },
+        {
+            "value": "IN",
+            "label": "India"
+        },
+        {
+            "value": "ID",
+            "label": "Indonesia"
+        },
+        {
+            "value": "IR",
+            "label": "Iran (Islamic Republic of)"
+        },
+        {
+            "value": "IQ",
+            "label": "Iraq"
+        },
+        {
+            "value": "IE",
+            "label": "Ireland"
+        },
+        {
+            "value": "IM",
+            "label": "Isle of Man"
+        },
+        {
+            "value": "IL",
+            "label": "Israel"
+        },
+        {
+            "value": "IT",
+            "label": "Italy"
+        },
+        {
+            "value": "JM",
+            "label": "Jamaica"
+        },
+        {
+            "value": "JP",
+            "label": "Japan"
+        },
+        {
+            "value": "JE",
+            "label": "Jersey"
+        },
+        {
+            "value": "JO",
+            "label": "Jordan"
+        },
+        {
+            "value": "KZ",
+            "label": "Kazakhstan"
+        },
+        {
+            "value": "KE",
+            "label": "Kenya"
+        },
+        {
+            "value": "KP",
+            "label": "Korea (Democratic People's Republic of)"
+        },
+        {
+            "value": "KR",
+            "label": "Korea, Republic of"
+        },
+        {
+            "value": "XK",
+            "label": "Kosovo"
+        },
+        {
+            "value": "KW",
+            "label": "Kuwait"
+        },
+        {
+            "value": "KG",
+            "label": "Kyrgyzstan"
+        },
+        {
+            "value": "LA",
+            "label": "Lao People's Democratic Republic"
+        },
+        {
+            "value": "LV",
+            "label": "Latvia"
+        },
+        {
+            "value": "LB",
+            "label": "Lebanon"
+        },
+        {
+            "value": "LS",
+            "label": "Lesotho"
+        },
+        {
+            "value": "LR",
+            "label": "Liberia"
+        },
+        {
+            "value": "LY",
+            "label": "Libya"
+        },
+        {
+            "value": "LI",
+            "label": "Liechtenstein"
+        },
+        {
+            "value": "LT",
+            "label": "Lithuania"
+        },
+        {
+            "value": "LU",
+            "label": "Luxembourg"
+        },
+        {
+            "value": "MK",
+            "label": "North Macedonia"
+        },
+        {
+            "value": "MG",
+            "label": "Madagascar"
+        },
+        {
+            "value": "MW",
+            "label": "Malawi"
+        },
+        {
+            "value": "MY",
+            "label": "Malaysia"
+        },
+        {
+            "value": "MV",
+            "label": "Maldives"
+        },
+        {
+            "value": "ML",
+            "label": "Mali"
+        },
+        {
+            "value": "MT",
+            "label": "Malta"
+        },
+        {
+            "value": "MH",
+            "label": "Marshall Islands"
+        },
+        {
+            "value": "MR",
+            "label": "Mauritania"
+        },
+        {
+            "value": "MU",
+            "label": "Mauritius"
+        },
+        {
+            "value": "MX",
+            "label": "Mexico"
+        },
+        {
+            "value": "FM",
+            "label": "Micronesia (Federated States of)"
+        },
+        {
+            "value": "MD",
+            "label": "Moldova, Republic of"
+        },
+        {
+            "value": "MC",
+            "label": "Monaco"
+        },
+        {
+            "value": "MN",
+            "label": "Mongolia"
+        },
+        {
+            "value": "MA",
+            "label": "Morocco"
+        },
+        {
+            "value": "MZ",
+            "label": "Mozambique"
+        },
+        {
+            "value": "MM",
+            "label": "Myanmar"
+        },
+        {
+            "value": "NA",
+            "label": "Namibia"
+        },
+        {
+            "value": "NR",
+            "label": "Nauru"
+        },
+        {
+            "value": "NP",
+            "label": "Nepal"
+        },
+        {
+            "value": "NL",
+            "label": "Netherlands"
+        },
+        {
+            "value": "NZ",
+            "label": "New Zealand"
+        },
+        {
+            "value": "NI",
+            "label": "Nicaragua"
+        },
+        {
+            "value": "NE",
+            "label": "Niger"
+        },
+        {
+            "value": "NG",
+            "label": "Nigeria"
+        },
+        {
+            "value": "NO",
+            "label": "Norway"
+        },
+        {
+            "value": "OM",
+            "label": "Oman"
+        },
+        {
+            "value": "PK",
+            "label": "Pakistan"
+        },
+        {
+            "value": "PA",
+            "label": "Panama"
+        },
+        {
+            "value": "PG",
+            "label": "Papua New Guinea"
+        },
+        {
+            "value": "PY",
+            "label": "Paraguay"
+        },
+        {
+            "value": "PE",
+            "label": "Peru"
+        },
+        {
+            "value": "PH",
+            "label": "Philippines"
+        },
+        {
+            "value": "PL",
+            "label": "Poland"
+        },
+        {
+            "value": "PT",
+            "label": "Portugal"
+        },
+        {
+            "value": "PR",
+            "label": "Puerto Rico"
+        },
+        {
+            "value": "QA",
+            "label": "Qatar"
+        },
+        {
+            "value": "RO",
+            "label": "Romania"
+        },
+        {
+            "value": "RU",
+            "label": "Russian Federation"
+        },
+        {
+            "value": "RW",
+            "label": "Rwanda"
+        },
+        {
+            "value": "SA",
+            "label": "Saudi Arabia"
+        },
+        {
+            "value": "SN",
+            "label": "Senegal"
+        },
+        {
+            "value": "SC",
+            "label": "Seychelles"
+        },
+        {
+            "value": "SL",
+            "label": "Sierra Leone"
+        },
+        {
+            "value": "SG",
+            "label": "Singapore"
+        },
+        {
+            "value": "SX",
+            "label": "Sint Maarten (Dutch part)"
+        },
+        {
+            "value": "SK",
+            "label": "Slovakia"
+        },
+        {
+            "value": "SB",
+            "label": "Solomon Islands"
+        },
+        {
+            "value": "SO",
+            "label": "Somalia"
+        },
+        {
+            "value": "ZA",
+            "label": "South Africa"
+        },
+        {
+            "value": "SS",
+            "label": "South Sudan"
+        },
+        {
+            "value": "ES",
+            "label": "Spain"
+        },
+        {
+            "value": "LK",
+            "label": "Sri Lanka"
+        },
+        {
+            "value": "KN",
+            "label": "Saint Kitts and Nevis"
+        },
+        {
+            "value": "LC",
+            "label": "Saint Lucia"
+        },
+        {
+            "value": "VC",
+            "label": "Saint Vincent and the Grenadines"
+        },
+        {
+            "value": "SD",
+            "label": "Sudan"
+        },
+        {
+            "value": "SR",
+            "label": "Suriname"
+        },
+        {
+            "value": "SE",
+            "label": "Sweden"
+        },
+        {
+            "value": "CH",
+            "label": "Switzerland"
+        },
+        {
+            "value": "SY",
+            "label": "Syrian Arab Republic"
+        },
+        {
+            "value": "TW",
+            "label": "Taiwan, Province of China"
+        },
+        {
+            "value": "TJ",
+            "label": "Tajikistan"
+        },
+        {
+            "value": "TZ",
+            "label": "Tanzania, United Republic of"
+        },
+        {
+            "value": "TH",
+            "label": "Thailand"
+        },
+        {
+            "value": "TL",
+            "label": "Timor-Leste"
+        },
+        {
+            "value": "TG",
+            "label": "Togo"
+        },
+        {
+            "value": "TT",
+            "label": "Trinidad and Tobago"
+        },
+        {
+            "value": "TN",
+            "label": "Tunisia"
+        },
+        {
+            "value": "TR",
+            "label": "Turkey"
+        },
+        {
+            "value": "TM",
+            "label": "Turkmenistan"
+        },
+        {
+            "value": "TC",
+            "label": "Turks and Caicos Islands"
+        },
+        {
+            "value": "UG",
+            "label": "Uganda"
+        },
+        {
+            "value": "UA",
+            "label": "Ukraine"
+        },
+        {
+            "value": "AE",
+            "label": "United Arab Emirates"
+        },
+        {
+            "value": "UK",
+            "label": "United Kingdom"
+        },
+        {
+            "value": "US",
+            "label": "United States of America"
+        },
+        {
+            "value": "UY",
+            "label": "Uruguay"
+        },
+        {
+            "value": "UZ",
+            "label": "Uzbekistan"
+        },
+        {
+            "value": "VU",
+            "label": "Vanuatu"
+        },
+        {
+            "value": "VE",
+            "label": "Venezuela (Bolivarian Republic of)"
+        },
+        {
+            "value": "VN",
+            "label": "Vietnam"
+        },
+        {
+            "value": "PS",
+            "label": "Palestine, State of"
+        },
+        {
+            "value": "YE",
+            "label": "Yemen"
+        },
+        {
+            "value": "ZM",
+            "label": "Zambia"
+        },
+        {
+            "value": "ZW",
+            "label": "Zimbabwe"
+        }
+    ],
+    "tabContainerComp": {
+        "anthosCas": "",
+        "goBack": false,
+        "gen": false,
+        "customClasses": "",
+        "loading": "",
+        "externalScripts": "",
+        "display": "",
+        "modal": "",
+        "sidebar": "",
+        "navigation": "",
+        "validation": "",
+        "customDatagrid": "",
+        "customComps": "",
+        "customSign": "",
+        "mainProfileFields": {
+            "RegisteredName": "dgfg",
+            "CountryOfRegistration": "Algeria",
+            "DateOfRegistration": "05/05/2026",
+            "PhoneNumber": "44788877",
+            "RegisteredAddressCity": "dfgdg",
+            "RegisteredAddressCountry": "Algeria",
+            "RegisteredAddressNumber": "gdfgdg",
+            "RegisteredAddressPostalCode": "12323",
+            "RegisteredAddressStreet": "dgdgd",
+            "RegistrationNumber": "fsfsf",
+            "Regulated": true,
+            "Regulator": "dgfg",
+            "TaxNumber": "4545456",
+            "TradeNames": "sgdfg"
+        },
+        "mainProfileEvidenceToCreate": [],
+        "MID_NP_First": "",
+        "MID_NP_Middle": "",
+        "MID_NP_Last": "",
+        "MID_NP_Former_First": "",
+        "MID_NP_Former_Last": "",
+        "MID_NP_Gender": "",
+        "MID_NP_Email": "",
+        "MID_NP_DOB": "",
+        "MID_NP_Occupation": "",
+        "MID_NP_Nationality": "",
+        "MID_NP_Tax_ID_Number": "",
+        "MID_NP_Dual_Nationality": "",
+        "MID_NP_Country_Of_Birth": "",
+        "MID_NP_Country_Of_Residence": "",
+        "MID_NP_Address": "",
+        "MID_NP_Address_City": "",
+        "MID_NP_Address_Country": "",
+        "MID_NP_Postalcode": "",
+        "MID_LP_Name": "",
+        "MID_LP_Trade_Name": "",
+        "MID_LP_Number": "",
+        "MID_LP_Type": "",
+        "MID_LP_Legal_Entity_Identifier": "",
+        "MID_LP_Regulated": "",
+        "MID_LP_Regulator": "",
+        "MID_LP_Tax_Number": "",
+        "MID_LP_Country_Of_Registration": "",
+        "MID_LP_Date_Of_Registration": "",
+        "MID_LP_Address": "",
+        "MID_LP_Address_City": "",
+        "MID_LP_Address_Country": "",
+        "MID_LP_Postalcode": "",
+        "DEFAULT_COUNTRY_CODE": {
+            "name": "United Kingdom",
+            "region": "Europe",
+            "timezones": {
+                "Europe/London": "+01:00"
+            },
+            "iso": {
+                "code": "GB",
+                "alpha-3": "GBR",
+                "numeric": "826"
+            },
+            "phone": [
+                "+44"
+            ],
+            "emoji": "🇬🇧",
+            "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GB.svg"
+        },
+        "rp": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Beneficiary",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Saeea",
+                    "LastName": "Trtrtr",
+                    "Title": "hgjg",
+                    "MiddleNames": "",
+                    "Gender": "Unknown",
+                    "DateOfBirth": "2026-05-23T00:00:00+05:30",
+                    "CountryOfBirth": "Anguilla",
+                    "Nationality": "Angola",
+                    "DualNationality": "Argentina",
+                    "CountryOfResidence": "Angola",
+                    "AddressStreet": "rrerere",
+                    "AddressNumber": "4434",
+                    "AddressCity": "dfgdg",
+                    "AddressCountry": "Angola",
+                    "AddressPostalCode": "12323"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Protector",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "kajal",
+                    "CountryOfRegistration": "France",
+                    "DateOfRegistration": "2026-05-05T00:00:00+05:30",
+                    "RegisteredAddressStreet": "dgdgd gdfgdg",
+                    "RegisteredAddressNumber": "gdfgdg",
+                    "RegisteredAddressCity": "dfgdg",
+                    "RegisteredAddressPostalCode": "12323",
+                    "RegisteredAddressCountry": "Austria"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Settlor",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "kajal",
+                    "CountryOfRegistration": "Anguilla",
+                    "DateOfRegistration": "2026-05-21T00:00:00+05:30",
+                    "RegisteredAddressStreet": "dgdgd gdfgdg",
+                    "RegisteredAddressNumber": "gdfgdg",
+                    "RegisteredAddressCity": "dfgdg",
+                    "RegisteredAddressPostalCode": "12323",
+                    "RegisteredAddressCountry": "Virgin Islands (British)"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Trustee",
+                    "Title": "gsfgdf",
+                    "MiddleNames": "",
+                    "Gender": "Female",
+                    "DateOfBirth": "2026-05-14T00:00:00+05:30",
+                    "CountryOfBirth": "Azerbaijan",
+                    "CountryOfResidence": "Botswana",
+                    "AddressStreet": "dgdgd",
+                    "AddressNumber": "gdfgdg",
+                    "AddressCity": "dfgdg",
+                    "AddressCountry": "Botswana",
+                    "AddressPostalCode": "12323"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Authorised Representative",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "Saeea Trtrtr",
+                    "CountryOfRegistration": "Albania",
+                    "DateOfRegistration": "2026-05-22T00:00:00+05:30",
+                    "RegisteredAddressStreet": "rrerere 4434",
+                    "RegisteredAddressNumber": "4434",
+                    "RegisteredAddressCity": "dfgdg",
+                    "RegisteredAddressPostalCode": "12323",
+                    "RegisteredAddressCountry": "Angola"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Shareholder",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Saeea",
+                    "LastName": "Trtrtr",
+                    "Title": "gdgf",
+                    "MiddleNames": "",
+                    "Gender": "Male",
+                    "DateOfBirth": "2026-05-11T00:00:00+05:30",
+                    "CountryOfBirth": "Algeria",
+                    "Nationality": "Argentina",
+                    "CountryOfResidence": "Albania",
+                    "TaxIDNumber": "ghjj",
+                    "AddressStreet": "rrerere",
+                    "AddressNumber": "4434",
+                    "AddressCity": "dfgdg",
+                    "AddressCountry": "Albania",
+                    "AddressPostalCode": "12323"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Director",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "Dipin",
+                    "CountryOfRegistration": "Albania",
+                    "DateOfRegistration": "2026-05-04T00:00:00+05:30",
+                    "RegisteredAddressStreet": "gdg dfggdf",
+                    "RegisteredAddressNumber": "dfggdf",
+                    "RegisteredAddressCity": "dfgdg",
+                    "RegisteredAddressPostalCode": "12323",
+                    "RegisteredAddressCountry": "Argentina"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "UltimateBeneficialOwner",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Bbmnb",
+                    "LastName": "Bmbnmbmb",
+                    "Title": "bnbmbmb",
+                    "MiddleNames": "",
+                    "Gender": "Female",
+                    "DateOfBirth": "2026-05-14T00:00:00+05:30",
+                    "CountryOfBirth": "Côte d'Ivoire",
+                    "Nationality": "Angola",
+                    "DualNationality": "Australia",
+                    "CountryOfResidence": "Congo",
+                    "TaxIDNumber": "bbjbjbj",
+                    "AddressStreet": "gdg",
+                    "AddressNumber": "dfggdf",
+                    "AddressCity": "dfgdg",
+                    "AddressCountry": "Congo",
+                    "AddressPostalCode": "12323"
+                }
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "UltimateBeneficialOwner",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Ttttt",
+                    "LastName": "Bbbbb",
+                    "Title": "44trtrt",
+                    "MiddleNames": "",
+                    "Gender": "Male",
+                    "DateOfBirth": "2026-05-14T00:00:00+05:30",
+                    "CountryOfBirth": "Burundi",
+                    "Nationality": "Australia",
+                    "DualNationality": "Bahamas",
+                    "CountryOfResidence": "Argentina",
+                    "TaxIDNumber": "ertet",
+                    "AddressStreet": "433",
+                    "AddressNumber": "45344",
+                    "AddressCity": "gerg",
+                    "AddressCountry": "Argentina",
+                    "AddressPostalCode": "434"
+                }
+            }
+        ],
+        "hiddenSign": "",
+        "extract": {
+            "EntityTypeDerived": {
+                "value": "Company",
+                "indicator": "SmartForm",
+                "questionId": "dfb40d3f-d693-498a-b8fa-6df91f97387b"
+            },
+            "IncorporationPlace": {
+                "value": "DZ",
+                "indicator": "Country",
+                "questionId": "a0cfeb3e-30a0-4c27-9840-14258c354ecc"
+            },
+            "Countrysof": {
+                "value": [
+                    "AL"
+                ],
+                "indicator": "Country",
+                "questionId": "68db9895-d635-497d-8fff-6971865212b2"
+            },
+            "Countrysow": {
+                "value": [
+                    "AL"
+                ],
+                "indicator": "Country",
+                "questionId": "9488339b-e3e8-43c3-8d0b-9c347e1ab4d6"
+            },
+            "CountryBA": {
+                "value": [
+                    "AL",
+                    "AI"
+                ],
+                "indicator": "Country",
+                "questionId": "248fc1a8-1866-4322-94e1-edfaac50e2ed"
+            },
+            "AreBearerSharesInIssue": {
+                "value": "yes",
+                "indicator": "SmartForm",
+                "questionId": "3b66a5bf-3ae7-472c-9a6c-5158c769a982"
+            },
+            "NonReg": {
+                "value": "yes",
+                "indicator": "SmartForm",
+                "questionId": "a855a5c7-2827-4281-bc03-3fe6e79f327a"
+            },
+            "Reg": {
+                "value": "yes",
+                "indicator": "SmartForm",
+                "questionId": "e9c3f219-4660-4f62-8b59-40a1f2632619"
+            },
+            "Detail": {
+                "value": null,
+                "indicator": "SmartForm",
+                "questionId": "54115c9d-f24e-4c04-b02c-cc68e48af5f4",
+                "additionalInfo": "dsfsffsfsf"
+            },
+            "Address_Country": {
+                "value": [
+                    "CG",
+                    "AR",
+                    "AL",
+                    "AO",
+                    "BW",
+                    "VG",
+                    "AT"
+                ],
+                "indicator": "Country",
+                "questionId": "acc2dc0b-76f4-4303-9aca-4e43fdea934a"
+            },
+            "PlaceOfBirth": {
+                "value": [
+                    "CI",
+                    "BI",
+                    "AL",
+                    "DZ",
+                    "AZ",
+                    "AI",
+                    "FR"
+                ],
+                "indicator": "Country",
+                "questionId": "ad706de1-bca4-4919-b399-3fe782f738e2"
+            },
+            "incomeRisk": {
+                "value": "yes",
+                "indicator": "SmartForm",
+                "questionId": "845c1062-843b-43d0-8ed6-b3b8988fc259"
+            }
+        },
+        "chooseType": "corporate",
+        "getStarted": true,
+        "customerFullName": "dgfg",
+        "tradingName": "sgdfg",
+        "designationKnown": "dfdfd",
+        "prev": "corporate",
+        "anyPreviousNames": "yes",
+        "address": "dgdgd",
+        "houseNumber": "gdfgdg",
+        "city": "dfgdg",
+        "postalCode": "12323",
+        "first": "Bbmnb",
+        "middle": "",
+        "last": "Bmbnmbmb",
+        "roleData": "Manager",
+        "mobile": "788877",
+        "codeMobile": {
+            "name": "United Kingdom",
+            "region": "Europe",
+            "timezones": {
+                "Europe/London": "+01:00"
+            },
+            "iso": {
+                "code": "GB",
+                "alpha-3": "GBR",
+                "numeric": "826"
+            },
+            "phone": [
+                "+44"
+            ],
+            "emoji": "🇬🇧",
+            "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/GB.svg"
+        },
+        "telephoneNoF": "+44788877",
+        "email": "kajal.bhatia@chimcistudios.in",
+        "customerType": {
+            "DT": false,
+            "LI": false,
+            "WT": false,
+            "CT": false,
+            "CO": false,
+            "LL": true,
+            "RO": false,
+            "FO": true,
+            "PC": false,
+            "OT": false
+        },
+        "entityTypeDerived": "Company",
+        "incorporationPlace": "Algeria",
+        "incorporationDate": "2026-05-05T00:00:00+05:30",
+        "incorporationDateF": "05/05/2026",
+        "registrationNo": "fsfsf",
+        "tax": "Afghanistan",
+        "haveUtr": "yes",
+        "hasTIN": "yes",
+        "purposeIntendedNatureOfBusinessRelationship": "Regulated ongoing advisory",
+        "sofDetails": "gdgdfg",
+        "countrysof": [
+            "Albania"
+        ],
+        "sowDetails": "gfdgfdgfg",
+        "countrysow": [
+            "Albania"
+        ],
+        "existingRelationshipsWithEnhance": "gdfgfgf",
+        "isRegulatorAvialable": "yes",
+        "additionalInformation1": "fgdgg",
+        "isPep": "yes",
+        "countryBA": [
+            "Albania",
+            "Anguilla"
+        ],
+        "isHighRiskTrader": "yes",
+        "isHoldingAssestsForInvestments": "yes",
+        "isCommisionFeesSow": "yes",
+        "isComplexStructure": "yes",
+        "areBearerSharesInIssue": "yes",
+        "nonReg": "yes",
+        "reg": "yes",
+        "isRegisteredPersonsAsNominee": "yes",
+        "isRiskSource": "yes",
+        "isAdverseMedia": "yes",
+        "rpsData": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "UltimateBeneficialOwner",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Bbmnb",
+                    "LastName": "Bmbnmbmb"
+                },
+                "gender": "female",
+                "title": "bnbmbmb",
+                "formerName": [
+                    "dfggdg"
+                ],
+                "address": "gdg dfggdf",
+                "houseNumber": "dfggdf",
+                "birthDate": "2026-05-14T00:00:00+05:30",
+                "birthDateF": "14/05/2026",
+                "placeOfBirth": "Côte d'Ivoire",
+                "nationalities": [
+                    "Angola",
+                    "Australia"
+                ],
+                "occupation": "self_employment_with_income",
+                "anyUsConnection": "yes",
+                "hasPIN": "yes",
+                "typeOfUbo": {
+                    "a": true,
+                    "b": false,
+                    "c": false
+                },
+                "uboByOtherMeans": {
+                    "director": false,
+                    "shareholder": false,
+                    "authorizedRepresentative": false,
+                    "trustee": false,
+                    "settlor": false,
+                    "protector": false,
+                    "vestedBeneficiary": false,
+                    "no": true
+                },
+                "role1": "UBO",
+                "are": "yes",
+                "first": "Bbmnb",
+                "middle": "",
+                "last": "Bmbnmbmb",
+                "streetName": "gdg",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Congo",
+                "govtIdentifier": "bbjbjbj",
+                "usConnectionDetails": "jhhjk",
+                "lastState": "yes"
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "UltimateBeneficialOwner",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Ttttt",
+                    "LastName": "Bbbbb"
+                },
+                "gender": "male",
+                "title": "44trtrt",
+                "formerName": [
+                    "rtwgd"
+                ],
+                "address": "433 45344",
+                "houseNumber": "45344",
+                "birthDate": "2026-05-14T00:00:00+05:30",
+                "birthDateF": "14/05/2026",
+                "placeOfBirth": "Burundi",
+                "nationalities": [
+                    "Australia",
+                    "Bahamas"
+                ],
+                "occupation": "no_income",
+                "anyUsConnection": "yes",
+                "hasPIN": "yes",
+                "typeOfUbo": {
+                    "a": false,
+                    "b": true,
+                    "c": false
+                },
+                "uboByOtherMeans": {
+                    "director": false,
+                    "shareholder": false,
+                    "authorizedRepresentative": false,
+                    "trustee": false,
+                    "settlor": false,
+                    "protector": false,
+                    "vestedBeneficiary": false,
+                    "no": true
+                },
+                "role1": "UBO",
+                "are": "no",
+                "first": "Ttttt",
+                "middle": "",
+                "last": "Bbbbb",
+                "streetName": "433",
+                "city": "gerg",
+                "postalCode": "434",
+                "address_Country": "Argentina",
+                "usConnectionDetails": "3tregt",
+                "govtIdentifier": "ertet",
+                "edit": "(Edit this entry to add more UBOs)",
+                "lastState": "no"
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Director",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "Dipin"
+                },
+                "evd18": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "ProofOfRegulation"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Proof Of Regulation"
+                },
+                "evd19": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "CertificateOfIncorporation"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Certificate of Incorporation"
+                },
+                "evd20": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "AuthorisedSignatoryList"
+                    ],
+                    "fields": {
+                        "Notes": "For new accounts, the authorized signatories list should be no older than 3 months."
+                    },
+                    "customEvidenceType": "Authorised Signatory List"
+                },
+                "evd21": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "ShareholderRegister"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Shareholder Register"
+                },
+                "evd22": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "MemorandumOfAssociation"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Memorandum/Articles of Association"
+                },
+                "evd23": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "DocumentShowingTheTaxTrustNumber"
+                    ],
+                    "fields": {
+                        "Notes": "If no such document is available, please just upload a note that states the tax trust number is not available"
+                    },
+                    "customEvidenceType": "Document Showing the Tax Trust Number"
+                },
+                "evd24": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "FinancialStatements"
+                    ],
+                    "fields": {
+                        "Notes": "If no such document is available, please just upload a note that states the financial statements are not available"
+                    },
+                    "customEvidenceType": "Financial statements"
+                },
+                "directorType": "corporate",
+                "are": "no",
+                "formerName": [
+                    "gfgf"
+                ],
+                "streetName": "gdg",
+                "address": "gdg dfggdf",
+                "houseNumber": "dfggdf",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Argentina",
+                "birthDate": "2026-05-04T00:00:00+05:30",
+                "birthDateF": "04/05/2026",
+                "placeOfBirth": "Albania",
+                "anyUsConnection": "yes",
+                "directorByOtherMeans": {
+                    "shareholder": false,
+                    "authorizedRepresentative": true,
+                    "trustee": true,
+                    "settlor": true,
+                    "protector": true,
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Director",
+                "usConnectionDetails": "ghjgjgjg",
+                "role6": "Protector",
+                "role7": "Vested beneficiary",
+                "role5": "Settlor",
+                "role4": "Trustee",
+                "role3": "Authorised Representative",
+                "edit": "(Edit this entry to add more directors)",
+                "lastState": "no",
+                "fullNameOfSubscriber": "Dipin",
+                "signatories": "dfsfdf"
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Shareholder",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Saeea",
+                    "LastName": "Trtrtr"
+                },
+                "shareholderType": "a",
+                "are": "no",
+                "first": "Saeea",
+                "middle": "",
+                "last": "Trtrtr",
+                "gender": "male",
+                "title": "gdgf",
+                "occupation": "self_employment_with_income",
+                "formerName": [
+                    "ergerg"
+                ],
+                "streetName": "rrerere",
+                "address": "rrerere 4434",
+                "houseNumber": "4434",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Albania",
+                "nationalities": [
+                    "Argentina"
+                ],
+                "hasPIN": "yes",
+                "birthDate": "2026-05-11T00:00:00+05:30",
+                "birthDateF": "11/05/2026",
+                "placeOfBirth": "Algeria",
+                "anyUsConnection": "yes",
+                "shareholderByOtherMeans": {
+                    "authorizedRepresentative": false,
+                    "trustee": false,
+                    "settlor": false,
+                    "protector": true,
+                    "vestedBeneficiary": false,
+                    "no": false
+                },
+                "role1": ">10% Shareholder",
+                "percentageOfHolding": 44,
+                "usConnectionDetails": "dfgdfg",
+                "role5": "Protector",
+                "lastState": "no",
+                "edit": "(Edit this entry to add more shareholders)",
+                "govtIdentifier": "ghjj"
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Authorised Representative",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "Saeea Trtrtr"
+                },
+                "ARType": "corporate",
+                "are": "no",
+                "fullNameOfSubscriber": "Saeea Trtrtr",
+                "formerName": [
+                    "nnnlnkl"
+                ],
+                "streetName": "rrerere",
+                "address": "rrerere 4434",
+                "houseNumber": "4434",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Angola",
+                "birthDate": "2026-05-22T00:00:00+05:30",
+                "birthDateF": "22/05/2026",
+                "placeOfBirth": "Albania",
+                "anyUsConnection": "no",
+                "ARByOtherMeans": {
+                    "trustee": true,
+                    "settlor": true,
+                    "protector": true,
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Authorised Representative",
+                "role2": "Trustee",
+                "role3": "Settlor",
+                "role4": "Protector",
+                "role5": "Authorized Representative",
+                "edit": "(Edit this entry to add more authorized representative)",
+                "lastState": "no"
+            }
+        ],
+        "isGovernanceTrust": "yes",
+        "editgridSettingsRps": "",
+        "ubo": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "UltimateBeneficialOwner",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Bbmnb",
+                    "LastName": "Bmbnmbmb"
+                },
+                "gender": "female",
+                "title": "bnbmbmb",
+                "formerName": [
+                    "dfggdg"
+                ],
+                "address": "gdg dfggdf",
+                "houseNumber": "dfggdf",
+                "birthDate": "2026-05-14T00:00:00+05:30",
+                "birthDateF": "14/05/2026",
+                "placeOfBirth": "Côte d'Ivoire",
+                "nationalities": [
+                    "Angola",
+                    "Australia"
+                ],
+                "occupation": "self_employment_with_income",
+                "anyUsConnection": "yes",
+                "hasPIN": "yes",
+                "typeOfUbo": {
+                    "a": true,
+                    "b": false,
+                    "c": false
+                },
+                "uboByOtherMeans": {
+                    "director": false,
+                    "shareholder": false,
+                    "authorizedRepresentative": false,
+                    "trustee": false,
+                    "settlor": false,
+                    "protector": false,
+                    "vestedBeneficiary": false,
+                    "no": true
+                },
+                "role1": "UBO",
+                "are": "yes",
+                "first": "Bbmnb",
+                "middle": "",
+                "last": "Bmbnmbmb",
+                "streetName": "gdg",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Congo",
+                "govtIdentifier": "bbjbjbj",
+                "usConnectionDetails": "jhhjk",
+                "lastState": "yes"
+            },
+            {
+                "rpData": {
+                    "RelatedPartyRole": "UltimateBeneficialOwner",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Ttttt",
+                    "LastName": "Bbbbb"
+                },
+                "gender": "male",
+                "title": "44trtrt",
+                "formerName": [
+                    "rtwgd"
+                ],
+                "address": "433 45344",
+                "houseNumber": "45344",
+                "birthDate": "2026-05-14T00:00:00+05:30",
+                "birthDateF": "14/05/2026",
+                "placeOfBirth": "Burundi",
+                "nationalities": [
+                    "Australia",
+                    "Bahamas"
+                ],
+                "occupation": "no_income",
+                "anyUsConnection": "yes",
+                "hasPIN": "yes",
+                "typeOfUbo": {
+                    "a": false,
+                    "b": true,
+                    "c": false
+                },
+                "uboByOtherMeans": {
+                    "director": false,
+                    "shareholder": false,
+                    "authorizedRepresentative": false,
+                    "trustee": false,
+                    "settlor": false,
+                    "protector": false,
+                    "vestedBeneficiary": false,
+                    "no": true
+                },
+                "role1": "UBO",
+                "are": "no",
+                "first": "Ttttt",
+                "middle": "",
+                "last": "Bbbbb",
+                "streetName": "433",
+                "city": "gerg",
+                "postalCode": "434",
+                "address_Country": "Argentina",
+                "usConnectionDetails": "3tregt",
+                "govtIdentifier": "ertet",
+                "edit": "(Edit this entry to add more UBOs)",
+                "lastState": "no"
+            }
+        ],
+        "areB": "yes",
+        "areTrusteeC": "yes",
+        "areSettlorsC": "yes",
+        "areProtectorsC": "yes",
+        "areVBC": "yes",
+        "trustee": [],
+        "areA": "",
+        "areProtectors": "",
+        "signers": [
+            {
+                "signeeFirst": "Kajal",
+                "signeeMiddle": "",
+                "signeeLast": "Bhatia",
+                "email": "kajal.bhatia@chimcistudios.in",
+                "signingDate": "25/05/2026",
+                "index": 1,
+                "signature": "Kajal Bhatia"
+            },
+            {
+                "signeeFirst": "Bbmnb",
+                "signeeMiddle": "",
+                "signeeLast": "Bmbnmbmb",
+                "email": "kajal.bhatia@chimcistudios.in",
+                "signingDate": "25/05/2026",
+                "index": 2,
+                "signature": "Bbmnb Bmbnmbmb"
+            }
+        ],
+        "submit": true,
+        "back": true,
+        "next": true,
+        "previoustype": "corporate",
+        "address_Country": "Algeria",
+        "previousNames": [
+            "dfgdg"
+        ],
+        "utrNo": "ert5r454",
+        "nameOfRegulator": "dgfg",
+        "details": "gfdgfdg",
+        "details3": "gfdgg",
+        "details4": "gdgfgfd",
+        "details5": "gdgdg",
+        "details6": "gdgd",
+        "details7": "dggggh",
+        "details9": "gdgeggg",
+        "details10": "dgfgg",
+        "details11": "gfdggtrtr",
+        "areThereAnyNonVestedBeneficiaries": "yes",
+        "director": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Director",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "Dipin"
+                },
+                "evd18": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "ProofOfRegulation"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Proof Of Regulation"
+                },
+                "evd19": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "CertificateOfIncorporation"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Certificate of Incorporation"
+                },
+                "evd20": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "AuthorisedSignatoryList"
+                    ],
+                    "fields": {
+                        "Notes": "For new accounts, the authorized signatories list should be no older than 3 months."
+                    },
+                    "customEvidenceType": "Authorised Signatory List"
+                },
+                "evd21": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "ShareholderRegister"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Shareholder Register"
+                },
+                "evd22": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "MemorandumOfAssociation"
+                    ],
+                    "fields": {},
+                    "customEvidenceType": "Memorandum/Articles of Association"
+                },
+                "evd23": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "DocumentShowingTheTaxTrustNumber"
+                    ],
+                    "fields": {
+                        "Notes": "If no such document is available, please just upload a note that states the tax trust number is not available"
+                    },
+                    "customEvidenceType": "Document Showing the Tax Trust Number"
+                },
+                "evd24": {
+                    "type": "Other",
+                    "purposesOfUse": [
+                        "FinancialStatements"
+                    ],
+                    "fields": {
+                        "Notes": "If no such document is available, please just upload a note that states the financial statements are not available"
+                    },
+                    "customEvidenceType": "Financial statements"
+                },
+                "directorType": "corporate",
+                "are": "no",
+                "formerName": [
+                    "gfgf"
+                ],
+                "streetName": "gdg",
+                "address": "gdg dfggdf",
+                "houseNumber": "dfggdf",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Argentina",
+                "birthDate": "2026-05-04T00:00:00+05:30",
+                "birthDateF": "04/05/2026",
+                "placeOfBirth": "Albania",
+                "anyUsConnection": "yes",
+                "directorByOtherMeans": {
+                    "shareholder": false,
+                    "authorizedRepresentative": true,
+                    "trustee": true,
+                    "settlor": true,
+                    "protector": true,
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Director",
+                "usConnectionDetails": "ghjgjgjg",
+                "role6": "Protector",
+                "role7": "Vested beneficiary",
+                "role5": "Settlor",
+                "role4": "Trustee",
+                "role3": "Authorised Representative",
+                "edit": "(Edit this entry to add more directors)",
+                "lastState": "no",
+                "fullNameOfSubscriber": "Dipin",
+                "signatories": "dfsfdf"
+            }
+        ],
+        "noMoreDirectorsLeft": true,
+        "noMoreDirectorsLeftcc": true,
+        "areShareholders": "yes",
+        "shareholder": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Shareholder",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Saeea",
+                    "LastName": "Trtrtr"
+                },
+                "shareholderType": "a",
+                "are": "no",
+                "first": "Saeea",
+                "middle": "",
+                "last": "Trtrtr",
+                "gender": "male",
+                "title": "gdgf",
+                "occupation": "self_employment_with_income",
+                "formerName": [
+                    "ergerg"
+                ],
+                "streetName": "rrerere",
+                "address": "rrerere 4434",
+                "houseNumber": "4434",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Albania",
+                "nationalities": [
+                    "Argentina"
+                ],
+                "hasPIN": "yes",
+                "birthDate": "2026-05-11T00:00:00+05:30",
+                "birthDateF": "11/05/2026",
+                "placeOfBirth": "Algeria",
+                "anyUsConnection": "yes",
+                "shareholderByOtherMeans": {
+                    "authorizedRepresentative": false,
+                    "trustee": false,
+                    "settlor": false,
+                    "protector": true,
+                    "vestedBeneficiary": false,
+                    "no": false
+                },
+                "role1": ">10% Shareholder",
+                "percentageOfHolding": 44,
+                "usConnectionDetails": "dfgdfg",
+                "role5": "Protector",
+                "lastState": "no",
+                "edit": "(Edit this entry to add more shareholders)",
+                "govtIdentifier": "ghjj"
+            }
+        ],
+        "areAuthorizedRepresentatives": "yes",
+        "authorizedRepresentative": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Authorised Representative",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "Saeea Trtrtr"
+                },
+                "ARType": "corporate",
+                "are": "no",
+                "fullNameOfSubscriber": "Saeea Trtrtr",
+                "formerName": [
+                    "nnnlnkl"
+                ],
+                "streetName": "rrerere",
+                "address": "rrerere 4434",
+                "houseNumber": "4434",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Angola",
+                "birthDate": "2026-05-22T00:00:00+05:30",
+                "birthDateF": "22/05/2026",
+                "placeOfBirth": "Albania",
+                "anyUsConnection": "no",
+                "ARByOtherMeans": {
+                    "trustee": true,
+                    "settlor": true,
+                    "protector": true,
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Authorised Representative",
+                "role2": "Trustee",
+                "role3": "Settlor",
+                "role4": "Protector",
+                "role5": "Authorized Representative",
+                "edit": "(Edit this entry to add more authorized representative)",
+                "lastState": "no"
+            }
+        ],
+        "trusteeC": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Trustee"
+                },
+                "trusteeType": "individual",
+                "are": "no",
+                "formerName": [
+                    "gdfgd"
+                ],
+                "streetName": "dgdgd",
+                "address": "dgdgd gdfgdg",
+                "houseNumber": "gdfgdg",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Botswana",
+                "birthDate": "2026-05-14T00:00:00+05:30",
+                "birthDateF": "14/05/2026",
+                "placeOfBirth": "Azerbaijan",
+                "anyUsConnection": "no",
+                "trusteeByOtherMeans": {
+                    "settlor": false,
+                    "protector": true,
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Trustee",
+                "role3": "Protector",
+                "role4": "Vested beneficiary",
+                "lastState": "no",
+                "editC": "(Edit this entry to add more settlors)",
+                "first": "Gfgh",
+                "middle": "",
+                "last": "Rergt",
+                "title": "gsfgdf",
+                "occupation": "self_employment_with_income",
+                "gender": "female"
+            }
+        ],
+        "settlorsC": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Settlor",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "kajal"
+                },
+                "settlorType": "corporate",
+                "are": "no",
+                "fullNameOfSubscriber": "kajal",
+                "formerName": [
+                    ""
+                ],
+                "isSettlorAliveC5": "yes",
+                "birthDate": "2026-05-21T00:00:00+05:30",
+                "birthDateF": "21/05/2026",
+                "placeOfBirth": "Anguilla",
+                "settlorByOtherMeans": {
+                    "protector": true,
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Settlor",
+                "streetName": "dgdgd",
+                "address": "dgdgd gdfgdg",
+                "houseNumber": "gdfgdg",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Virgin Islands (British)",
+                "anyUsConnection": "no",
+                "role3": "Vested beneficiary",
+                "role2": "Protector",
+                "editC": "(Edit this entry to add more settlors)",
+                "lastState": "no"
+            }
+        ],
+        "protectorsC": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Protector",
+                    "TypeOfInvestor": "LegalPerson",
+                    "Type": "Company",
+                    "RegisteredName": "kajal"
+                },
+                "protectorType": "corporate",
+                "are": "no",
+                "fullNameOfSubscriber": "kajal",
+                "formerName": [
+                    "vnbvnvbnv"
+                ],
+                "streetName": "dgdgd",
+                "address": "dgdgd gdfgdg",
+                "houseNumber": "gdfgdg",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Austria",
+                "birthDate": "2026-05-05T00:00:00+05:30",
+                "birthDateF": "05/05/2026",
+                "placeOfBirth": "France",
+                "anyUsConnection": "yes",
+                "protectorByOtherMeans": {
+                    "vestedBeneficiary": true,
+                    "no": false
+                },
+                "role1": "Protector",
+                "usConnectionDetails": "ghjgjgj",
+                "role2": "Vested beneficiary",
+                "edit": "(Edit this entry to add more protectors)",
+                "lastState": "no"
+            }
+        ],
+        "vestedBenificiaries": [
+            {
+                "rpData": {
+                    "RelatedPartyRole": "Beneficiary",
+                    "TypeOfInvestor": "NaturalPerson",
+                    "FirstName": "Saeea",
+                    "LastName": "Trtrtr"
+                },
+                "beneficiaryType": "individual",
+                "are": "no",
+                "first": "Saeea",
+                "middle": "",
+                "last": "Trtrtr",
+                "gender": "other",
+                "title": "hgjg",
+                "occupation": "employment_with_income",
+                "formerName": [
+                    "7yyg"
+                ],
+                "streetName": "rrerere",
+                "address": "rrerere 4434",
+                "houseNumber": "4434",
+                "city": "dfgdg",
+                "postalCode": "12323",
+                "address_Country": "Angola",
+                "nationalities": [
+                    "Angola",
+                    "Argentina"
+                ],
+                "hasPIN": "no",
+                "birthDate": "2026-05-23T00:00:00+05:30",
+                "birthDateF": "23/05/2026",
+                "placeOfBirth": "Anguilla",
+                "anyUsConnection": "no",
+                "role1": "Vested Beneficiaries",
+                "edit": "(Edit this entry to add more beneficiaries)",
+                "lastState": "no"
+            }
+        ],
+        "nonVestedBeneficiaries": [
+            {
+                "beneficiaryType": "corporate",
+                "birthDate": "2026-05-14T00:00:00+05:30",
+                "birthDateF": "14/05/2026",
+                "placeOfBirth": "Angola",
+                "roleCustomNV": "Non-Vested Beneficiaries",
+                "legalName": "tuytutyt",
+                "formerName": [
+                    "cbcvbcbnv"
+                ]
+            }
+        ],
+        "trustTIN": "4545456",
+        "description": "34,535.34",
+        "currency": {
+            "code": "GBP",
+            "symbol": "£"
+        },
+        "valueOfAssetsC": "£ 34,535.34",
+        "amountWithMb": "Full",
+        "doYouHaveAnLei": "yes",
+        "detail": "dsfsffsfsf",
+        "accountName": "gdgdf",
+        "ibanNum": "54464564",
+        "swift": "456464",
+        "reference": "45645646",
+        "accountNameS": "45645645",
+        "ibanNumS": "34242342",
+        "swiftS": "324323",
+        "referenceS": "32424",
+        "bankNameCS": "sbi",
+        "bankBranchCS": "talwara",
+        "correspondentBankSwiftCodeS": "43343",
+        "incomeOptions": "Pay to nominated bank account",
+        "clientNumber": "765567576",
+        "portfolioGrid1": [
+            {
+                "portfolioNumber": "42343242"
+            }
+        ],
+        "confirmation": true,
+        "accountHolder": "dgfg",
+        "companyName": "Enhance Wealth Consultancy Limited",
+        "regulatedBy": "Jersey Financial Services Commission",
+        "legalStatusOfCompany": "Regulated Entity",
+        "agreementPoA": true,
+        "accountActivity": "erttert",
+        "legalEntityIdentifier": "12345678901234567890",
+        "accNum": 4355445,
+        "sc": 45645645,
+        "accNumS": 45645646,
+        "scS": 2424323
+    },
+    "constantData": {
+        "firstName": "",
+        "lastName": "",
+        "dateOfBirth": ""
+    },
+    "reportFileFormat": "html",
+    "generatedOnText": "Document signed on",
+    "orgId": "ff5be05c-878e-40ed-b711-85cccbbc2744",
+    "mode": "draft"
+}
