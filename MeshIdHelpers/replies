@@ -8,20 +8,12 @@ Please proceed with testing of JTC form tickets marked as "Working on it" in Bui
 Hi @dipin Sir, 
 Please upload and share Build V27 of Anthos form on SharePoint. The file is provided below.
 
-Hi sir,
-in JTC form i'm facing issue during testing data is showing two times on stagging meshId app and showing single time on demo meshid app but demo meshid app scroll feature is not working properly that why i not been able to fix issues 
+Hi Sir,
 
-Good morning sir,
-out of 151 tickets 126 tickets are done and 25 tickets are in progress these tickets should be done by today. 
-Good morning Sir,
-Out of 151 tickets, 126 have been completed and 25 are currently in progress. The remaining tickets are expected to be completed by today.
+As mentioned in the ticket, the issue is that the Related Parties page is not visible in the Smart Form. However, during my testing, the Related Parties page is visible, as shown in the video.
 
-Hi sir,
-I try to fix the RAM issues as per the reqest of tamzid sir in buildv19 but i see previous issues are reverted in that build. because you start worked on previous Build version. fileupload will not working in Build V19 as i fixed this issue in BuildV14. for eg: "EvidenceToCreate" this key reverted back to "profileEvidenceToCreate".
-so please can you upated your changes in provided build bellow. without effected the changes in provided build.
+Ticket link:
+https://meshidcs.monday.com/boards/1963495527/pulses/2930261256
 
-Hi @ankit.babbar  sir,
-please add this reply with build provided bellow
-
-Hi sir,
-this issue is not from our side. this issue is due to meshid platform this issue showing in all forms as i test it 
+Video link:
+https://www.awesomescreenshot.com/video/53015344?key=fe780fbecb5cee4ca620d72b8f70b5b7

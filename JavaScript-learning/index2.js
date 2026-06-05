@@ -208,19 +208,19 @@
 // console.log(a);
 // var a;
 
-// function greet(){
-//     return `hello, ${this.name}`;
-// }
+function greet(){
+    return `hello, ${this.name}`;
+}
 
 // let a = [1,2,3,4,5];
 // let b = a;
 // b[0]=32;
 // console.log(a,b);
 
-// const person1 = {name:"Alice"};
-// const person2 = {name:"Bob"};
-// const bg = greet.bind(person1);
-// console.log(bg.apply(person2));
+const person1 = {name:"Alice"};
+const person2 = {name:"Bob"};
+const bg = greet.bind(person1);
+console.log(bg.apply(person2));
 // let strname = "saksham";
 // let str = [...strname];
 // console.log(str);
@@ -313,30 +313,30 @@
 // foo();
 
 
-console.log("Script Start");
+// console.log("Script Start");
 
-setTimeout(() => {
-  console.log("SetTimeout 1");
-}, 0);
+// setTimeout(() => {
+//   console.log("SetTimeout 1");
+// }, 0);
 
-Promise.resolve()
-  .then(() => {
-    console.log("Promise 1");
-  })
-  .then(() => {
-    console.log("Promise 2");
-  });
+// Promise.resolve()
+//   .then(() => {
+//     console.log("Promise 1");
+//   })
+//   .then(() => {
+//     console.log("Promise 2");
+//   });
 
-(async () => {
-  console.log("Async Function Start");
-  await Promise.resolve(); // Resolves immediately (microtask)
-  console.log("Async Function End");
-})();
+// (async () => {
+//   console.log("Async Function Start");
+//   await Promise.resolve(); // Resolves immediately (microtask)
+//   console.log("Async Function End");
+// })();
 
-setTimeout(() => {
-  Promise.resolve().then(() => {
-    console.log("Promise inside SetTimeout");
-  });
-}, 0);
+// setTimeout(() => {
+//   Promise.resolve().then(() => {
+//     console.log("Promise inside SetTimeout");
+//   });
+// }, 0);
 
-console.log("Script End");
+// console.log("Script End");
